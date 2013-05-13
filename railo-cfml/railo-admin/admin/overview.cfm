@@ -87,18 +87,21 @@ Error Output --->
         <cfset arguments.usage=qry>
 		<cfset var ret = "" />
 		<cfsavecontent variable="ret"><cfoutput>
-   			<h3>#pool[usage.type]#</h3>
+   			<h5>#pool[usage.type]#</h5>
 			<cfloop query="usage">
        			<cfset local._used=int(width/arguments.usage.max*arguments.usage.used)>
         		<cfset local._free=width-_used> 
 				<cfset local.pused=int(100/arguments.usage.max*arguments.usage.used)>
        			<cfset local.pfree=100-pused>
-        		<div class="percentagebar tooltipMe" title="#pfree#% available (#round((usage.max-usage.used)/1024/1024)#mb), #pused#% in use (#round(usage.used/1024/1024)#mb)"><!---
-					---><div style="width:#pused#%"><span>#pused#%</span></div><!---
-				---></div>
+	
+					<div class="progress" title="#pfree#% available (#round((usage.max-usage.used)/1024/1024)#mb), #pused#% in use (#round(usage.used/1024/1024)#mb)">
+					  <div class="bar bar-danger" style="width: #pused#%; color:black;">#pused#%</div>
+					</div>
+	
+	
     		</cfloop>
         	<cfif StructKeyExists(pool,usage.type& "_desc")>
-				<div class="comment">#pool[usage.type& "_desc"]#</div>
+				<div class="muted"><small>#pool[usage.type& "_desc"]#</small></div>
 			</cfif>
 		</cfoutput></cfsavecontent>
 		<cfreturn ret />
@@ -112,9 +115,8 @@ Error Output --->
 	init:[0]
 )>
 <cfoutput>
-	<div class="pageintro">
-		#stText.Overview.introdesc[request.adminType]#
-	</div>
+	
+	<p>#stText.Overview.introdesc[request.adminType]#</p>
 
 	<cfadmin 
 		action="getInfo"
@@ -145,7 +147,7 @@ Error Output --->
 	<cfif request.adminType EQ "server">
 		<cfset names=StructKeyArray(info.servlets)>
 		<cfif !ArrayContainsNoCase(names,"Rest")>
-			<div class="warning nofocus">
+			<div class="warning nofocus alert alert-warn">
 				The REST Servlet is not configured in your enviroment.
 				Follow these <a href="https://github.com/getrailo/railo/wiki/Configuration:web.xml##wiki-REST" target="_blank">instructions</a> to enable REST.
 			</div>
@@ -177,29 +179,30 @@ Error Output --->
 		realpath=getRealPath2RailoInstJar("ne","");
 		</cfscript>
 		
-		<div class="warning nofocus">
+		<div class="warning nofocus  alert alert-error">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
 			There is no Java Agent defined in this enviroment. 
 			The Java Agent is needed to improve memory (PermGen Space) consumption for templates.
 			To enable the Java Agent follow this instructions:
 			<!---There are 2 ways to provide the Java Agent functionality:--->
-			<ol>
+			<ul>
 				<li>Add the "-javaagent" JVM argument and set it to point to the railo-inst.jar<br>
                     <cfif realpath == "ne"> (you can download it by clicking the Update JARs button on the <a href="server.cfm?action=services.update">Railo Server Administrator Update page</a>)
                     <cfelseif stringlen(realpath)>
                         in this environment that would be: <i>-javaagent:#realpath#</i>
                     </cfif>                
                 </li>
-			</ol>
+			</ul>
 			
 		</div>
 	</cfif>
 	
-	<table>
-		<tr>
-			<td valign="top" width="65%">
-				
+	
+	
+		<div class="row-fluid">
+			<div class="span8">
 				<h2>#stText.overview.langPerf#</h2>
-				<table class="maintbl">
+				<table class="maintbl table table-striped table-hover">
 					<tbody>
 							<tr>
 								<th scope="row">#stText.setting.inspectTemplate#</th>
@@ -243,9 +246,8 @@ Error Output --->
 							
 					</tbody>
 				</table>
-				
 				<h2>#stText.Overview.Info#</h2>
-				<table class="maintbl">
+				<table class="maintbl table table-striped table-hover">
 					<tbody>
 						<cfif request.adminType EQ "web">
 							<tr>
@@ -278,7 +280,7 @@ Error Output --->
 					</tbody>
 				</table>
 				<br />
-				<table class="maintbl">
+				<table class="maintbl table table-striped table-hover">
 					<tbody>
 						<tr>
 							<th scope="row">#stText.Overview.config#</th>
@@ -287,7 +289,7 @@ Error Output --->
 						<cfif request.adminType EQ "web">
 							<tr>
 								<th scope="row">#stText.Overview.webroot#</th>
-								<td>#info.root#</td>
+								<td><code>#info.root#</code></td>
 							</tr>
 		
 							<cfadmin 
@@ -391,9 +393,9 @@ Error Output --->
 						</tr>
 					</tbody>
 				</table>
-			</td>
-			<td width="2%"></td>
-			<td valign="top" width="33%">
+			</div>
+			
+			<div class="span4">
 				<script type="text/javascript">
 					function updateBindError()
 					{
@@ -401,7 +403,7 @@ Error Output --->
 						$('##updateinfo').after('<div class=""error"">Update info could not be retrieved</div>');
 					}
 				</script>
-				<h2 id="updateinfo">Update Info</h2>
+				<h3 id="updateinfo">Update Info</h3>
 				<!--- Update Infoupdate.cfm?#session.urltoken#&adminType=#request.admintype# --->
 				<cfdiv onBindError="updateBindError"
 				bind="url:update.cfm?adminType=#request.admintype#" bindonload="true" id="updateInfo"/>
@@ -409,7 +411,7 @@ Error Output --->
 				<!--- Memory Usage --->
 				<cftry>
 					<cfsavecontent variable="memoryInfo">
-						<h2>Memory Usage</h2>
+						<h4>Memory Usage</h4>
 						
 						#printMemory(getmemoryUsage("heap"))#
 
@@ -420,96 +422,105 @@ Error Output --->
 				</cftry>
 	
 				<!--- Support --->
-				<h2>#stText.Overview.Support#</h2>
+				<h3>#stText.Overview.Support#</h3>
 				<div class="txt">
 					<!--- Professional --->
-					<h3>
+					<h4>
 						<a href="http://www.getrailo.com/index.cfm/services/support/" target="_blank">#stText.Overview.Professional#</a>
-					</h3>
+					</h4>
 					<div class="comment">#stText.Overview.ProfessionalDesc#</div>
 					
 					<!--- Mailing list --->
-					<h3>
+					<h4>
 						<a href="http://groups.google.com/group/railo" target="_blank">#stText.Overview.Mailinglist#</a>
-					</h3>
+					</h4>
 					<div class="comment">#stText.Overview.MailinglistDesc#</div>
 					
 					<!--- Book --->
-					<h3>
+					<h4>
 						<a href="http://www.packtpub.com/railo-3-beginners-guide-to-develop-deploy-complex-applications-online/book" target="_blank">#stText.Overview.book#</a>
-					</h3>
+					</h4>
 					<div class="comment">#stText.Overview.bookDesc#</div>
 					
 					
 					<!--- <a href="http://www.linkedin.com/e/gis/71368/0CF7D323BBC1" target="_blank">Linked in</a>--->
 					
 					<!--- Jira --->
-					<h3>
+					<h4>
 						<a href="https://jira.jboss.org/jira/browse/RAILO" target="_blank">#stText.Overview.issueTracker#</a>
-					</h3>
+					</h4>
 					<div class="comment">#stText.Overview.bookDesc#</div>
 					
 					<!--- Blog --->
-					<h3>
+					<h4>
 						<a href="http://blog.getrailo.com/" target="_blank">#stText.Overview.blog#</a>
-					</h3>
+					</h4>
 					<div class="comment">#stText.Overview.bookDesc#</div>
 					
 					
 					
 					<!--- Twitter --->
-					<h3>
+					<h4>
 						<a href="https://twitter.com/##!/railo" target="_blank">#stText.Overview.twitter#</a>
-					</h3>
+					</h4>
 					<div class="comment">#stText.Overview.twitterDesc#</div>
 				</div>
-			</td>
-		</tr>
-	</table>
-	
-	<cfif request.admintype EQ "server">
-		<cfadmin 
-			action="getContexts"
-			type="#request.adminType#"
-			password="#session["password"&request.adminType]#"
-			returnVariable="rst">
-	
-		<h2>#stText.Overview.contexts.title#</h2>
-		<div class="itemintro">
-			You can label your web contexts here, so they are more clearly distinguishable for use with extensions etc.
+				
+			</div>
 		</div>
-		<cfform onerror="customError" action="#request.self#" method="post">
-			<table class="maintbl">
-				<thead>
-					<tr>
-						<th width="15%">#stText.Overview.contexts.label#</th>
-						<th width="25%">#stText.Overview.contexts.url#</th>
-						<th width="30%">#stText.Overview.contexts.webroot#</th>
-						<th width="30%">#stText.Overview.contexts.config_file#</th>
-					</tr>
-				</thead>
-				<tbody>
-					<cfloop query="rst">
-						<tr>
-							<td>
-								<input type="hidden" name="hash_#rst.currentrow#" value="#rst.hash#"/>
-								<input type="text" style="width:99%" name="label_#rst.currentrow#" value="#rst.label#"/>
-							</td>
-							<td><cfif len(rst.url)><a target="_blank" href="#rst.url#/railo-context/admin/web.cfm">#rst.url#</a></cfif></td>
-							<td><input type="text" class="xlarge" name="path_#rst.currentrow#" value="#rst.path#" readonly="readonly"/></td>
-							<td><input type="text" class="xlarge" style="width:99%" name="cf_#rst.currentrow#" value="#rst.config_file#" readonly="readonly"/></td>
-						</tr>
-					</cfloop>
-				</tbody>
-				<tfoot>
-					<tr>
-						<td colspan="4">
-							<input class="button submit" type="submit" name="mainAction" value="#stText.Buttons.Update#">
-							<input class="button reset" type="reset" name="cancel" value="#stText.Buttons.Cancel#">
-						</td>
-					</tr>
-				</tfoot>
-			</table>
-		</cfform>
-	</cfif>
+	
+	<div class="row-fluid">
+		<div class="span12">
+			<cfif request.admintype EQ "server">
+				<cfadmin 
+					action="getContexts"
+					type="#request.adminType#"
+					password="#session["password"&request.adminType]#"
+					returnVariable="rst">
+
+				<h2>#stText.Overview.contexts.title#</h2>
+				<div class="itemintro">
+					You can label your web contexts here, so they are more clearly distinguishable for use with extensions etc.
+				</div>
+				<cfform onerror="customError" action="#request.self#" method="post" class="form">
+					<table class="maintbl table table-striped table-bordered table-hover">
+						<thead>
+							<tr>
+								<th width="15%">#stText.Overview.contexts.label#</th>
+								<th width="25%">#stText.Overview.contexts.url#</th>
+								<th width="30%">#stText.Overview.contexts.webroot#</th>
+								<th width="30%">#stText.Overview.contexts.config_file#</th>
+							</tr>
+						</thead>
+						<tbody>
+							<cfloop query="rst">
+								<tr>
+									<td>
+										<input type="hidden" name="hash_#rst.currentrow#" value="#rst.hash#"/>
+										<input type="text" name="label_#rst.currentrow#" value="#rst.label#"/>
+									</td>
+									<td><cfif len(rst.url)><a target="_blank" href="#rst.url#/railo-context/admin/web.cfm">#rst.url#</a></cfif></td>
+									<td><input type="text" class="xlarge" name="path_#rst.currentrow#" value="#rst.path#" readonly="readonly"/></td>
+									<td><input type="text" class="xlarge"name="cf_#rst.currentrow#" value="#rst.config_file#" readonly="readonly"/></td>
+								</tr>
+							</cfloop>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="4">
+									<input class="button submit btn btn-primary" type="submit" name="mainAction" value="#stText.Buttons.Update#">
+									<input class="button reset btn" type="reset" name="cancel" value="#stText.Buttons.Cancel#">
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</cfform>
+			</cfif>
+			
+		</div>
+	</div>
+	
+	
+
+
 </cfoutput>

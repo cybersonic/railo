@@ -326,8 +326,10 @@
 		else {
 			idName = toIDField(stNavi.label);
 			isCollapsed = not hasActiveItem and application.adminfunctions.getdata('collapsed_' & idName) eq 1;
-			strNav = strNav & '<li id="#idName#"#isCollapsed ? ' class="collapsed"':''# class="elvis"><a href="##">' & stNavi.label & '</a><ul#isCollapsed ? ' style="display:none"':''# class="nav nav-list">'&subNav& "</ul></li>";
-			//strNav = strNav & '<div class="navtop">' & stNavi.label & '</div>'&subNav& "";
+			//strNav = strNav & '<li id="#idName#"#isCollapsed ? ' class="collapsed"':''# > <a href="##">' & stNavi.label & '</a><ul#isCollapsed ? ' style="display:none"':''# class="nav nav-list">'&subNav& "</ul></li>";
+			//removing the collapsed state
+			strNav = strNav & '<li id="#idName#">' & stNavi.label & '<ul class="nav nav-list">'&subNav& "</ul></li>";
+			//strNav = strNav & '<div class="navtop ">' & stNavi.label & '</div>'&subNav& "";
 		}
 		//strNav = strNav ;
 	}
@@ -378,7 +380,7 @@
 			<cfinclude template="#current.action#.cfm">
 		<cfelse>
 			<cfset current.label="Error">
-			invalid action definition
+			invalid action definitioncurrent.label
 		</cfif>
 	</cfsavecontent>
 	

@@ -28,6 +28,7 @@
 	<script src="resources/js/admin.js.cfm?id=#getTickCount()#" type="text/javascript"></script>
 	<script src="resources/bootstrap/js/bootstrap.js.cfm?id=#getTickCount()#" type="text/javascript"></script>
 	<link href="resources/bootstrap/css/bootstrap.css.cfm?id=#getTickCount()#"  rel="stylesheet" media="screen" />
+	<link href="resources/bootstrap/css/bootstrap-responsive.css.cfm?id=#getTickCount()#"  rel="stylesheet" media="screen" />
 	<link href="resources/bootstrap/css/railo.css.cfm?id=#getTickCount()#"  rel="stylesheet" media="screen" />
 </head>
 <body id="body" class="admin-#request.adminType# #request.adminType#<cfif application.adminfunctions.getdata('fullscreen') eq 1> full</cfif>" onload="#attributes.onload#">
@@ -43,12 +44,8 @@
 			
 			
 			
-			<li class="#webActiveclass# dropdown"><a href="web.cfm#homeQS#" role="button" data-toggle="dropdown">Web Administrators <b class="caret"></b></a>
+			<li class="#webActiveclass#"><a href="web.cfm#homeQS#">Web Administrator</a>
 				
-				<ul class="dropdown-menu" role="menu">
-					<li>Some Contenxt (http://mycontext.com)</li>
-					
-				</ul>
 			</li>
 	    </ul>
 		<cfif hasNavigation>
@@ -116,39 +113,49 @@
 	  </div>
 </div> <!-- end .navbar -->
 
-<div class="container">
-	<div class="row">
-		<div class="span3">
-			#attributes.navigation#
-		</div> <!--- end .span3 --->
-		<div class="span9"> <!--- content starts here --->
-			<!--- breadcrumbs above title --->
-			<ul class="breadcrumb">
-				 <li><a href="#home#">Home</a> <span class="divider">/</span></li>
-				
-				<cfif structKeyExists(request,'subTitle')>
-					<li>#attributes.title# <span class="divider">/</span></li>
-					<li>#request.subTitle# </li>
-				<cfelse>
-					 <li>#attributes.title#</li>
-				</cfif>
-					
-			
-			</ul>
-			
-			
-			<h1>#attributes.title#<cfif structKeyExists(request,'subTitle')> - #request.subTitle#</cfif></h1>
-				#thistag.generatedContent#
-		</div> <!--- end .span9 --->
-</div>  <!--- end .row --->
-</div> <!--- end .container --->	
+
+<div class="container-fluid">
+	<cfif hasNavigation>
 	
+			<div class="row-fluid">
+				<div class="span3">
+					#attributes.navigation#
+				</div> <!--- end .span3 --->
+				<div class="span9"> <!--- content starts here --->
+					<ul class="breadcrumb">
+						 <li><a href="#home#">Home</a> <span class="divider">/</span></li>
+						<cfif structKeyExists(request,'subTitle')>
+							<li>#attributes.title# <span class="divider">/</span></li>
+							<li>#request.subTitle# </li>
+						<cfelse>
+							 <li>#attributes.title#</li>
+						</cfif>
+					</ul>
+					<h1>#attributes.title#<cfif structKeyExists(request,'subTitle')> - #request.subTitle#</cfif></h1>
+						#thistag.generatedContent#
+				</div> <!--- end .span9 --->
+		</div>  <!--- end .row --->
+
+	
+	<cfelse><!--- we are in the login page --->	
+		<cfsavecontent variable="newStyle">
+			<style>
+			body {
+		        background-color: ##f5f5f5;
+		      }
+		</style>
+		</cfsavecontent>
+		<cfhtmlhead text="#newStyle#">
+		#thistag.generatedContent#
+	</cfif>
+</div> <!--- end .container --->	
+
 <footer class="footer">
-	<div class="container">
+	<div class="container-fluid">
 			&copy; #year(Now())#
 			<a href="http://www.getrailo.com" target="_blank">The Railo Company Limited, London, England</a>.
-			All Rights Reserved. |
-			Designed by <a href="http://www.blueriver.com/from/railo/" target="_blank">Blue River Interactive Group, Inc.</a>
+			All Rights Reserved. <br>
+
 		
 	</div>
 </footer>	
