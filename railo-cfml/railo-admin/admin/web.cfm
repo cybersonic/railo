@@ -326,12 +326,12 @@
 		else {
 			idName = toIDField(stNavi.label);
 			isCollapsed = not hasActiveItem and application.adminfunctions.getdata('collapsed_' & idName) eq 1;
-			strNav = strNav & '<li id="#idName#"#isCollapsed ? ' class="collapsed"':''#><a href="##">' & stNavi.label & '</a><ul#isCollapsed ? ' style="display:none"':''#>'&subNav& "</ul></li>";
+			strNav = strNav & '<li id="#idName#"#isCollapsed ? ' class="collapsed"':''# class="elvis"><a href="##">' & stNavi.label & '</a><ul#isCollapsed ? ' style="display:none"':''# class="nav nav-list">'&subNav& "</ul></li>";
 			//strNav = strNav & '<div class="navtop">' & stNavi.label & '</div>'&subNav& "";
 		}
 		//strNav = strNav ;
 	}
-	strNav ='<ul id="menu">'& strNav&'</ul>' ;
+	strNav ='<ul id="menu" class="nav nav-list well">'& strNav&'</ul>' ;
 
 /* moved to title in content area
    if (favoriteLis neq "")
@@ -354,6 +354,7 @@
 	}
 	request.getRemoteClients=getRemoteClients;
 </cfscript>
+
 
 <cfif not StructKeyExists(session,"password"&request.adminType)>
 		<cfadmin 
@@ -397,6 +398,8 @@
 			<cfoutput>#strNav#</cfoutput>
 		</cfsavecontent>
 		
+		
+
     	<cfmodule template="admin_layout.cfm" width="960" navigation="#strNav#" right="#context#" title="#current.label#" favorites="#favoriteLis#">
 			<cfoutput>#content#</cfoutput>
         </cfmodule>

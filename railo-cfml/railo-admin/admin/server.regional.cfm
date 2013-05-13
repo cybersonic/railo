@@ -110,123 +110,96 @@ Create Datasource --->
 		<cfset noAccess(stText.setting.noAccess)>
 	</cfif>
 
-	<div class="pageintro">
+
+		<p>
 		<cfif request.adminType EQ "server">
 			#stText.Regional.Server#
 		<cfelse>
 			#stText.Regional.Web#
 		</cfif>
-	</div>
+		</p>
 	
-	<cfform onerror="customError" action="#request.self#?action=#url.action#" method="post">
-		<!---
-		replaced with encoding output
-		<tr>
-			<th scope="row">#stText.Regional.DefaultEncoding#</th>
-			<td>
-				<span class="comment">#stText.Regional.DefaultEncodingDescription#</span>
-				<cfif hasAccess>
-				<cfinput type="text" name="defaultencoding" value="#regional.defaultEncoding#" 
-					style="width:200px" required="yes" message="#stText.regional.missingEncoding#">
-				
+	<cfform onerror="customError" action="#request.self#?action=#url.action#" method="post" class="form-horizontal">
+	
+		<div class="control-group">
+		    <label class="control-label" for="locale">#stText.Regional.Locale#</label>
+		    <div class="controls">
+		      		<cfif hasAccess>
+						<cfset hasFound=false>
+						<cfset keys=structSort(locales,'textnocase')>
+						<select name="locale" class="large">
+							<option selected value=""> --- #stText.Regional.ServerProp[request.adminType]# --- </option>
+							 ---><cfloop collection="#keys#" item="i"><cfset key=keys[i]><option value="#key#" <cfif key EQ regional.locale>selected<cfset hasFound=true></cfif>>#locales[key]#</option><!--- 
+							 ---></cfloop>
+						</select>
+					<cfelse>
+						<b>#regional.locale#</b>
+					</cfif>
+					<p class="muted">#stText.Regional.LocaleDescription#</p>
+		    </div>
+		  </div>
+	
+		
+		<div class="control-group">
+		    <label class="control-label" for="timezone">#stText.Regional.TimeZone#</label>
+		    <div class="controls">
+		      		<cfif hasAccess>
+						<select name="timezone" class="large">
+							<option selected value=""> --- #stText.Regional.ServerProp[request.adminType]# --- </option>
+							<cfoutput query="timezones">
+								<option value="#timezones.id#"
+								<cfif timezones.id EQ regional.timezone>selected</cfif>>
+								#timezones.id# - #timezones.display#</option>
+							</cfoutput>
+						</select>
+					<cfelse>
+						<b>#regional.timezone#</b>
+					</cfif>
+					
+					<p class="muted">#stText.Regional.TimeZoneDescription#</p>
+		    </div>
+		  </div>
+		
+		<div class="control-group">
+		    <label class="control-label" for="TimeServer">#stText.Regional.TimeServer#</label>
+		    <div class="controls">
+		      	<cfif hasAccess>
+					<input type="text" name="timeserver" value="#regional.timeserver#" class="large">
+					<br /><input type="checkbox" class="checkbox" name="usetimeserver" <cfif regional.usetimeserver>checked="checked"</cfif> value="true" /> #stText.Regional.useTimeServer#
 				<cfelse>
-					<input type="hidden" name="defaultencoding" value="#regional.defaultEncoding#">
-				
-					<b>#regional.defaultEncoding#</b>
+					<b>#regional.timeserver#</b>
+					<input type="hidden" name="usetimeserver" value="#regional.usetimeserver#" />
 				</cfif>
-			</td>
-		</tr>
-		--->
-		<table class="maintbl">
-			<tbody>
-				<tr>
-					<th scope="row">#stText.Regional.Locale#</th>
-					<td>
-						<cfif hasAccess>
-							<cfset hasFound=false>
-							<cfset keys=structSort(locales,'textnocase')>
-							<select name="locale" class="large">
-								<option selected value=""> --- #stText.Regional.ServerProp[request.adminType]# --- </option>
-								 ---><cfloop collection="#keys#" item="i"><cfset key=keys[i]><option value="#key#" <cfif key EQ regional.locale>selected<cfset hasFound=true></cfif>>#locales[key]#</option><!--- 
-								 ---></cfloop>
-							</select>
-							<!--- <input type="text" name="locale_other" value="<cfif not hasFound>#regional.locale#</cfif>" style="width:200px"> --->
-						<cfelse>
-							<b>#regional.locale#</b>
-						</cfif>
-						<div class="comment">#stText.Regional.LocaleDescription#</div>
-					</td>
-				</tr>
-				<tr>
-					<th scope="row">#stText.Regional.TimeZone#</th>
-					<td>
-						<cfif hasAccess>
-							<select name="timezone" class="large">
-								<option selected value=""> --- #stText.Regional.ServerProp[request.adminType]# --- </option>
-								<cfoutput query="timezones">
-									<option value="#timezones.id#"
-									<cfif timezones.id EQ regional.timezone>selected</cfif>>
-									#timezones.id# - #timezones.display#</option>
-								</cfoutput>
-							</select>
-						<cfelse>
-							<b>#regional.timezone#</b>
-						</cfif>
-						<!--- <cfinput type="text" name="timezone" value="#config.timezone.getId()#" style="width:200px" required="yes" message="Missing value for timezone"> --->
-						<div class="comment">#stText.Regional.TimeZoneDescription#</div>
-					</td>
-				</tr>
-				<tr>
-					<th scope="row">#stText.Regional.TimeServer#</th>
-					<td>
-						<cfif hasAccess>
-							<input type="text" name="timeserver" value="#regional.timeserver#" class="large">
-							<br /><input type="checkbox" class="checkbox" name="usetimeserver" <cfif regional.usetimeserver>checked="checked"</cfif> value="true" /> #stText.Regional.useTimeServer#
-						<cfelse>
-							<b>#regional.timeserver#</b>
-							<input type="hidden" name="usetimeserver" value="#regional.usetimeserver#" />
-						</cfif>
-						<div class="comment">#stText.Regional.TimeServerDescription#</div>
-					</td>
-				</tr>
-				<cfif hasAccess>
-					<cfmodule template="remoteclients.cfm" colspan="2">
-				</cfif>
-			</tbody>
-			<cfif hasAccess>
-				<tfoot>
-					<tr>
-						<td colspan="2">
-							<input class="button submit" type="submit" name="mainAction" value="#stText.Buttons.Update#">
-							<input class="button reset" type="reset" name="cancel" value="#stText.Buttons.Cancel#">
-							<cfif request.adminType EQ "web">
-								<input class="button submit" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#">
-							</cfif>
-						</td>
-					</tr>
-				</tfoot>
-			</cfif>
-		</table>
+				<p class="muted">#stText.Regional.TimeServerDescription#</p>
 
-		<h3>
-			Current time settings
-		</h3>
-		<table class="tbl">
-			<tbody>
-				<tr>
-					<th scope="row" nowrap="nowrap">#stText.Overview.ServerTime#</th>
-					<td>#lsdateFormat(date:now(),timezone:"jvm")#
-						#lstimeFormat(time:now(),timezone:"jvm")#
-					</td>
-				</tr>
-				<tr>
-					<th scope="row">#stText.Overview.DateTime#</th>
-					<td>#lsdateFormat(now())#
-						#lstimeFormat(now())#
-					</td>
-				</tr>
-			</tbody>
-		</table>
+		    </div>
+		  </div>
+		<cfif hasAccess>
+			<cfmodule template="remoteclients.cfm" colspan="2">
+		</cfif>
+		
+		<cfif hasAccess>
+			<div class="form-actions">
+			 	<input class="button submit btn btn-primary" type="submit" name="mainAction" value="#stText.Buttons.Update#">
+				<input class="button reset btn" type="reset" name="cancel" value="#stText.Buttons.Cancel#">
+				<cfif request.adminType EQ "web">
+					<input class="button submit btn" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#">
+				</cfif>
+			</div>
+		</cfif>
+	
+		<br>
+		<div class="alert alert-info">
+			<h4>Current time settings</h4>
+			<p>
+				#stText.Overview.ServerTime# #lsdateFormat(date:now(),timezone:"jvm")# #lstimeFormat(time:now(),timezone:"jvm")#
+				<br>
+				#stText.Overview.DateTime# #lsdateFormat(now())# #lstimeFormat(now())#
+					
+			</p>
+		</div>
+
+		
 	</cfform>
 
 </cfoutput>
