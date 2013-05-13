@@ -34,66 +34,61 @@
 		}
 	</script>
 
-	<cfform name="login" action="#request.self#" method="post"><!--- onerror="customError"--->
-		<table class="maintbl autowidth">
-			<tbody>
-				<tr>
-					<th scope="row" class="right">#stText.Login.Password#</th>
-					<td><cfinput type="password" name="login_password#request.adminType#" value="" passthrough='autocomplete="off"'
-						class="medium" required="yes" message="#stText.Login.PasswordMissing#">
-					</td>
-				</tr>
+	<cfform name="login" action="#request.self#" method="post" class="form-signin"><!--- onerror="customError"--->
+			<h2 class="form-signin-heading">Login</h2>
+			
+			
+				<cfinput placeholder="#stText.Login.Password#" type="password" name="login_password#request.adminType#" value="" passthrough='autocomplete="off"'
+					class="medium nput-block-level" required="yes" message="#stText.Login.PasswordMissing#">
+
 				<cfset f="">
 				<cfloop collection="#languages#" item="key">
 					<cfif f EQ "" or key EQ session.railo_admin_lang>
 						<cfset f=key>
 					</cfif>
 				</cfloop>
-				<tr>
-					<th scope="row" class="right">#stText.Login.language#</th>
+
+				<div>
+				 <label>#stText.Login.language# </label>
 					<cfset aLangKeys = structKeyArray(languages)>
 					<cfset arraySort(aLangKeys, "text")>
-					<td>
-						<select name="lang" class="medium">
-							<cfloop from="1" to="#arrayLen(aLangKeys)#" index="iKey">
-								<cfset key = aLangKeys[iKey]>
-								<option value="#key#" <cfif key EQ session.railo_admin_lang>selected</cfif>>#languages[key]#</option>
-							</cfloop>
-						</select>
-					</td>
-				</tr>
-				<cfif loginSettings.captcha>
-					<cfset cap=createRandomText(6)>
-					<cfset session.cap=cap>
-					<tr>
-						<th scope="row" class="right">#stText.login.captchaHelp#</th>
-						<td>
-							<cfimage action="captcha" width="160" height="30" text="#cap#" difficulty="medium">
-							<a style="font-size : 10px" href="#request.self#<cfif structKeyExists(url,"action")>?action=#url.action#</cfif>">Reload</a><br />
-							<cfinput type="text" name="captcha" value="" passthrough='autocomplete="off"'
-								class="medium" required="yes" message="#stText.login.captchaHelpMiss#">
-							<div class="comment">#stText.login.captchaHelpDesc#</div>
-						</td>
-					</tr>
-				<cfelse>
-					<cfset StructDelete(session,"cap",false)>
-				</cfif>
-				<tr>
-					<th scope="row" class="right" nowrap="nowrap">#stText.Login.rememberMe#</th>
-					<td>
-						<select name="rememberMe" class="medium">
-							<cfloop list="s,d,ww,m,yyyy" index="i">
-								<option value="#i#"<cfif i eq form.rememberMe> selected</cfif>>#stText.Login[i]#</option>
-							</cfloop>
-						</select>
-					</td>
-				</tr>
-			</tbody>
-			<tfoot>
-				<tr>
-					<td colspan="2" class="right"><input class="button submit" type="submit" name="submit" value="#stText.Buttons.Submit#"></td>
-				</tr>
-			</tfoot>
-		</table>
+
+					<select name="lang" class="medium">
+						<cfloop from="1" to="#arrayLen(aLangKeys)#" index="iKey">
+							<cfset key = aLangKeys[iKey]>
+							<option value="#key#" <cfif key EQ session.railo_admin_lang>selected</cfif>>#languages[key]#</option>
+						</cfloop>
+					</select>
+				</div>
+					
+
+		     
+			<cfif loginSettings.captcha>
+						<cfset cap=createRandomText(6)>
+						<cfset session.cap=cap>
+							
+						 <label>#stText.login.captchaHelp#</label>
+						<cfimage action="captcha" width="160" height="30" text="#cap#" difficulty="medium">
+								<a style="font-size : 10px" href="#request.self#<cfif structKeyExists(url,"action")>?action=#url.action#</cfif>">Reload</a><br />
+								<cfinput type="text" name="captcha" value="" passthrough='autocomplete="off"'
+									class="medium" required="yes" message="#stText.login.captchaHelpMiss#">
+							<p  class="muted">#stText.login.captchaHelpDesc#</p>
+							
+					<cfelse>
+						<cfset StructDelete(session,"cap",false)>
+					</cfif>
+
+
+			
+		        <label>	           #stText.Login.rememberMe#</label>
+	
+					<select name="rememberMe" class="medium">
+						<cfloop list="s,d,ww,m,yyyy" index="i">
+							<option value="#i#"<cfif i eq form.rememberMe> selected</cfif>>#stText.Login[i]#</option>
+						</cfloop>
+					</select>
+		        </label>
+		
+		<input class="button submit btn btn-large btn-primary" type="submit" name="submit" value="#stText.Buttons.Submit#">
 	</cfform>
 </cfoutput>
