@@ -161,3 +161,64 @@ Sign in form
 	border-top: 1px solid #e5e5e5;
 	background-color: #f5f5f5;
 }
+
+/* 
+	TABLES
+*/
+
+
+/* tables */
+table {empty-cells:show;}
+td, th {
+	padding:3px;
+	vertical-align:top;
+}
+th {/* like .tblHead */
+	background-color:#f2f2f2;
+	color:#3c3e40;
+	font-weight:normal;
+	text-align:left;
+}
+table.nospacing {
+	border-collapse:collapse;
+}
+/*.tblHead{padding-left:5px;padding-right:5px;border:1px solid #e0e0e0;background-color:#f2f2f2;color:#3c3e40}
+.tblContent			{padding-left:5px;padding-right:5px;border:1px solid #e0e0e0;}
+*/
+tr.OK td {background-color:#e0f3e6;}
+tr.notOK td {background-color:#f9e0e0;}
+.tblContentRed		{padding-left:5px;padding-right:5px;border:1px solid #cc0000;color:red}
+.tblContentGreen	{padding-left:5px;padding-right:5px;border:1px solid #009933;}
+.tblContentYellow	{padding-left:5px;padding-right:5px;border:1px solid #ccad00;background-color:#fff9da;}
+/* tables */
+.maintbl {
+	width:100%;
+}
+.maintbl + .maintbl {
+	margin-top: 15px;
+}
+.autowidth {
+	width: auto;
+}
+.maintbl td, .maintbl th {
+	padding: 3px 5px;
+	font-weight:normal;
+	empty-cells:show;
+	border:1px solid #e0e0e0;
+}
+.longwords {
+	word-break:break-all;
+}
+.maintbl th {
+	text-align:left;
+}
+.maintbl > tbody > tr > th {/* like .tblHead */
+	width: 30%;
+}
+.maintbl tfoot td {
+	border:none;
+}
+td.fieldPadded {
+	padding-top:10px;
+	padding-bottom:10px;
+}
