@@ -214,7 +214,7 @@ Create Datasource --->
 		<table class="tbl table table-bordered">
 			<tbody>
 				<tr>
-					<th scope="row" nowrap="nowrap">#stText.Overview.ServerTime#</th>
+					<th scope="row" nowrap="nowrap" width="30%">#stText.Overview.ServerTime#</th>
 					<td>#lsdateFormat(date:now(),timezone:"jvm")#
 						#lstimeFormat(time:now(),timezone:"jvm")#
 					</td>

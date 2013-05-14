@@ -107,8 +107,13 @@ Redirtect to entry --->
 						
 						<cfif hasAccess>
 							<cfloop list="regular,white-space,white-space-pref" index="k">
-								<input type="radio" class="checkbox" name="cfmlWriter" value="#k#" <cfif setting.cfmlWriter EQ k>checked="checked"</cfif>>
-								<div class="muted">#desc[k]#</div><br> 
+								<label class="radio muted">
+								  <input type="radio" class="checkbox" name="cfmlWriter" value="#k#" <cfif setting.cfmlWriter EQ k>checked="checked"</cfif>>
+								  #desc[k]#
+								</label>
+
+								
+								
 							</cfloop>
 						<cfelse>
 							<b>#desc[setting.cfmlWriter]#
@@ -120,13 +125,14 @@ Redirtect to entry --->
 				<tr>
 					<th scope="row">#stText.setting.AllowCompression#</th>
 					<td>
+						<label class="checkbox muted">
 						<cfif hasAccess>
 							<input type="checkbox" name="AllowCompression" class="checkbox" value="true" <cfif setting.AllowCompression>checked="checked"</cfif>>
 						<cfelse>
 							<b>#iif(setting.AllowCompression,de('Yes'),de('No'))#</b>
 							<!---<input type="hidden" name="AllowCompression" value="#setting.AllowCompression#">--->
 						</cfif>
-						<div class="muted">#stText.setting.AllowCompressionDescription#</div>
+						#stText.setting.AllowCompressionDescription#
 					</td>
 				</tr>
 
@@ -134,13 +140,15 @@ Redirtect to entry --->
 				<tr>
 					<th scope="row">#stText.setting.suppressContent#</th>
 					<td>
+						<label class="checkbox muted">
 						<cfif hasAccess>
 							<input type="checkbox" name="suppressContent" class="checkbox" value="true" <cfif setting.suppressContent>checked="checked"</cfif>>
 						<cfelse>
 							<b>#iif(setting.suppressContent,de('Yes'),de('No'))#</b>
 							<!---<input type="hidden" name="suppressContent" value="#setting.suppressContent#">--->
 						</cfif>
-						<div class="muted">#stText.setting.suppressContentDescription#</div>
+						#stText.setting.suppressContentDescription#
+						</label>
 					</td>
 				</tr>
 
@@ -148,13 +156,15 @@ Redirtect to entry --->
 				<tr>
 					<th scope="row">#stText.setting.bufferOutput#</th>
 					<td>
+						<label class="checkbox muted">
 						<cfif hasAccess>
 							<input type="checkbox" name="bufferOutput" class="checkbox" value="true" <cfif setting.bufferOutput>checked="checked"</cfif>>
 						<cfelse>
 							<b>#iif(setting.bufferOutput,de('Yes'),de('No'))#</b>
 							<!---<input type="hidden" name="suppressContent" value="#setting.suppressContent#">--->
 						</cfif>
-						<div class="muted">#stText.setting.bufferOutputDescription#</div>
+						#stText.setting.bufferOutputDescription#
+						</div>
 					</td>
 				</tr>
 				<cfif hasAccess>
@@ -167,7 +177,7 @@ Redirtect to entry --->
 						<td colspan="2">
 							<input class="button submit btn btn-primary" type="submit" name="mainAction" value="#stText.Buttons.Update#">
 							<input class="button reset btn" type="reset" name="cancel" value="#stText.Buttons.Cancel#">
-							<cfif request.adminType EQ "web"><input class="button submit btn btn-primary" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#"></cfif>
+							<cfif request.adminType EQ "web"><input class="button submit btn" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#"></cfif>
 						</td>
 					</tr>
 				</tfoot>
