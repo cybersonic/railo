@@ -96,7 +96,7 @@
 					<tr>
 						<td>
 							<input type="text" name="path" class="xlarge" value="#session.debugFilter.path#" />
-							<div class="comment">#stText.Debug.filterPath#</div>
+							<div class="muted">#stText.Debug.filterPath#</div>
 						</td>
 					    <td nowrap><input type="text" name="starttime" class="xlarge" value="#LSDateFormat(session.debugFilter.starttime)# #LSTimeFormat(session.debugFilter.starttime)#" /></td>
 					    <td nowrap><input type="text" name="query" class="number" value="#session.debugFilter.query#" /></td>

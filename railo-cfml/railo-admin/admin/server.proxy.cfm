@@ -155,7 +155,7 @@ function doEnableProxy(enableProxy) {
 <tr>
 	<th scope="row">#stText.proxy.server#</th>
 	<td>
-		<div class="comment">#stText.proxy.serverDescription#</div><br />
+		<div class="muted">#stText.proxy.serverDescription#</div><br />
 		<cfif hasAccess>
 		<cfinput type="text" name="server" value="#proxy.server#" 
 			style="width:200px" required="no">
@@ -172,7 +172,7 @@ function doEnableProxy(enableProxy) {
 <tr>
 	<th scope="row">#stText.proxy.port#</th>
 	<td>
-		<div class="comment">#stText.proxy.portDescription#</div><br />
+		<div class="muted">#stText.proxy.portDescription#</div><br />
 		<cfif hasAccess>
 		<cfinput type="text" name="port" value="#proxy.port#" 
 			style="width:50px" required="yes" message="#stText.proxy.missingPort#">
@@ -189,7 +189,7 @@ function doEnableProxy(enableProxy) {
 <tr>
 	<th scope="row">#stText.proxy.username#</th>
 	<td>
-		<div class="comment">#stText.proxy.usernameDescription#</div><br />
+		<div class="muted">#stText.proxy.usernameDescription#</div><br />
 		<cfif hasAccess>
 		<cfinput type="text" name="username" value="#proxy.username#" 
 			style="width:200px" required="no">
@@ -206,7 +206,7 @@ function doEnableProxy(enableProxy) {
 <tr>
 	<th scope="row">#stText.proxy.password#</th>
 	<td>
-		<div class="comment">#stText.proxy.passwordDescription#</div><br />
+		<div class="muted">#stText.proxy.passwordDescription#</div><br />
 		<cfif hasAccess>
 		<cfinput type="password" name="password" value="#proxy.password#" 
 			style="width:200px" required="no" passthrough='autocomplete="off"'>

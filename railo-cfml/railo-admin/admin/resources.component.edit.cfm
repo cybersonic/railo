@@ -29,7 +29,7 @@
 						<cfelse>
 							#name#
 						</cfif>
-						<div class="comment">#stText.Components.nameDesc#</div>
+						<div class="muted">#stText.Components.nameDesc#</div>
 					</td>
 				</tr></cfif>
 				<tr>
@@ -43,7 +43,7 @@
 								name="physical_#mapping.id#" value="#mapping.strPhysical#" required="no"  
 								style="width:100%" message="#stText.Mappings.PhysicalMissing##mapping.id#)">
 						</cfif>
-						<div class="comment">#stText.Components.physicalDesc#</div>
+						<div class="muted">#stText.Components.physicalDesc#</div>
 					</td>
 				</tr>
 				<tr>
@@ -57,7 +57,7 @@
 								name="archive_#mapping.id#" value="#mapping.strArchive#" required="no"  
 								class="xlarge" message="#stText.Mappings.ArchiveMissing##mapping.id#)">
 						</cfif>
-						<div class="comment">#stText.Components.archiveDesc#</div>
+						<div class="muted">#stText.Components.archiveDesc#</div>
 					</td>
 				</tr>
 				<tr>
@@ -75,7 +75,7 @@
 								<option value="archive" <cfif not mapping.PhysicalFirst>selected</cfif>>#stText.Mappings.Archive#</option>
 							</select>
 						</cfif>
-						<div class="comment">#stText.Components.primaryDesc#</div>
+						<div class="muted">#stText.Components.primaryDesc#</div>
 					</td>
 				</tr>
 				<tr>
@@ -84,20 +84,20 @@
 						<cfif mapping.readOnly>
 							<cfif mapping.Trusted>
 								#stText.setting.inspecttemplatenever#
-								<div class="comment">#stText.setting.inspecttemplateneverdesc#</div>
+								<div class="muted">#stText.setting.inspecttemplateneverdesc#</div>
 							<cfelse>
 								#stText.setting.inspecttemplatealways#
-								<div class="comment">#stText.setting.inspecttemplatealwaysdesc#</div>
+								<div class="muted">#stText.setting.inspecttemplatealwaysdesc#</div>
 							</cfif>
 						<cfelse>
-							<ul class="radiolist">
+							<ul class="radiolist unstyled">
 								<li>
 									<label>
 										<!--- never --->
 										<input class="radio" type="radio" name="trusted_#mapping.id#" value="true"<cfif mapping.Trusted> checked="checked"</cfif>>
 										<b>#stText.setting.inspectTemplateNever#</b>
 									</label>
-									<div class="comment">#stText.setting.inspectTemplateNeverDesc#</div>
+									<div class="muted">#stText.setting.inspectTemplateNeverDesc#</div>
 								</li>
 								<li>
 									<label>
@@ -105,7 +105,7 @@
 										<input class="radio" type="radio" name="trusted_#mapping.id#" value="false"<cfif not mapping.Trusted> checked="checked"</cfif>>
 										<b>#stText.setting.inspectTemplateAlways#</b>
 									</label>
-									<div class="comment">#stText.setting.inspectTemplateAlwaysDesc#</div>
+									<div class="muted">#stText.setting.inspectTemplateAlwaysDesc#</div>
 								</li>
 							</ul>
 						</cfif>
@@ -136,7 +136,7 @@
 					<th scope="row">#stText.Mappings.compileStopOnError#</th>
 					<td>
 						<input type="checkbox" class="checkbox" name="stopOnError_#mapping.id#" value="yes" checked="checked">
-						<div class="comment">#stText.Mappings.compileStopOnErrorDesc#</div>
+						<div class="muted">#stText.Mappings.compileStopOnErrorDesc#</div>
 					</td>
 				</tr>
 				<cfif hasAccess>
@@ -164,14 +164,14 @@
 					<th scope="row">#stText.Mappings.addCFCFiles#</th>
 					<td>
 						<input type="checkbox" class="checkbox" name="addCFMLFiles_#mapping.id#" value="yes" checked>
-						<div class="comment">#stText.Mappings.addCFCFilesDesc#</div>
+						<div class="muted">#stText.Mappings.addCFCFilesDesc#</div>
 					</td>
 				</tr>
 				<tr>
 					<th scope="row">#stText.Mappings.addNoneCFMLFiles#</th>
 					<td>
 						<input type="checkbox" class="checkbox" name="addNoneCFMLFiles_#mapping.id#" value="yes" checked>
-						<div class="comment">#stText.Mappings.addNoneCFMLFilesDesc#</div>
+						<div class="muted">#stText.Mappings.addNoneCFMLFilesDesc#</div>
 					</td>
 				</tr>
 				<cfif hasAccess>

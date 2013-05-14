@@ -23,7 +23,7 @@
 						<cfelse>
 							<b>#component.strbaseComponentTemplate#</b>
 						</cfif>
-						<div class="comment">#stText.Components.BaseComponentDescription#</div>
+						<div class="muted">#stText.Components.BaseComponentDescription#</div>
 					</td>
 				</tr>
 				<!--- Auto Import ---->
@@ -37,7 +37,7 @@
 						<cfelse>
 							<b>#component.componentDefaultImport#</b>
 						</cfif>
-						<div class="comment">#stText.Components.AutoImportDescription#</div>
+						<div class="muted">#stText.Components.AutoImportDescription#</div>
 					</td>
 				</tr>
 				<!--- Search Local ---->
@@ -49,7 +49,7 @@
 						<cfelse>
 							<b>#YesNoFormat(component.componentLocalSearch)#</b>
 						</cfif>
-						<div class="comment">#stText.Components.componentLocalSearchDesc#</div>
+						<div class="muted">#stText.Components.componentLocalSearchDesc#</div>
 					</td>
 				</tr>
 				<!--- Search Mappings ---->
@@ -57,7 +57,7 @@
 					<th scope="row">#stText.Components.componentMappingSearch#</th>
 					<td>
 						<b>Yes (coming soon)</b>
-						<div class="comment">#stText.Components.componentMappingSearchDesc#</div>
+						<div class="muted">#stText.Components.componentMappingSearchDesc#</div>
 					</td>
 				</tr>
 				<!--- Deep Search ---->
@@ -69,7 +69,7 @@
 						<cfelse>
 							<b>#yesNoFormat(setting.deepsearch)#</b>
 						</cfif>
-						<div class="comment">#stText.Components.componentDeepSearchDesc#</div>
+						<div class="muted">#stText.Components.componentDeepSearchDesc#</div>
 					</td>
 				</tr>
 				<!--- component path cache ---->
@@ -78,13 +78,13 @@
 					<td>
 						<cfif hasAccess>
 							<input type="checkbox" class="checkbox" name="componentPathCache" value="yes" <cfif component.componentPathCache>checked</cfif>>
-							<div class="comment">#stText.Components.componentPathCacheDesc#</div>
+							<div class="muted">#stText.Components.componentPathCacheDesc#</div>
 							<cfif component.componentPathCache>
 								<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#flushName#">
 							</cfif>
 						<cfelse>
 							<b>#YesNoFormat(component.componentPathCache)#</b>
-							<div class="comment">#stText.Components.componentPathCacheDesc#</div>
+							<div class="muted">#stText.Components.componentPathCacheDesc#</div>
 						</cfif>
 					</td>
 				</tr>
@@ -101,7 +101,7 @@
 						<cfelse>
 							<b>#component.strcomponentDumpTemplate#</b>
 						</cfif>
-						<div class="comment">#stText.Components.ComponentDumpTemplateDescription#</div>
+						<div class="muted">#stText.Components.ComponentDumpTemplateDescription#</div>
 					</td>
 				</tr>
 				<tr>
@@ -118,7 +118,7 @@
 						<cfelse>
 							<b>#access#</b>
 						</cfif>
-						<div class="comment">#stText.Components.DataMemberAccessTypeDescription#</div>
+						<div class="muted">#stText.Components.DataMemberAccessTypeDescription#</div>
 					</td>
 				</tr>
 				<!---
@@ -132,7 +132,7 @@
 						<cfelse>
 							<b>#iif(component.triggerDataMember,de('Yes'),de('No'))#</b>
 						</cfif>
-						<div class="comment">#stText.Components.triggerDataMemberDescription#</div>
+						<div class="muted">#stText.Components.triggerDataMemberDescription#</div>
 					</td>
 				</tr>
 				<!---
@@ -146,7 +146,7 @@
 						<cfelse>
 							<b>#iif(component.useShadow,de('Yes'),de('No'))#</b>
 						</cfif>
-						<div class="comment">#stText.Components.useShadowDescription#</div>
+						<div class="muted">#stText.Components.useShadowDescription#</div>
 					</td>
 				</tr>
 				<cfif hasAccess>
@@ -292,21 +292,21 @@
 						<th scope="row">#stText.Components.name#</th>
 						<td>
 							<cfinput type="text" name="name_1" value="" required="yes" class="large" message="#stText.Components.nameMissing#">
-							<div class="comment">#stText.Components.nameDesc#</div>
+							<div class="muted">#stText.Components.nameDesc#</div>
 						</td>
 					</tr>
 					<tr>
 						<th scope="row">#stText.Components.Physical#</th>
 						<td>
 							<cfinput type="text" name="physical_1" value="" required="no" class="large">
-							<div class="comment">#stText.Components.PhysicalDesc#</div>
+							<div class="muted">#stText.Components.PhysicalDesc#</div>
 						</td>
 					</tr>
 					<tr>
 						<th scope="row">#stText.Components.Archive#</th>
 						<td>
 							<cfinput type="text" name="archive_1" value="" required="no" class="large">
-							<div class="comment">#stText.Components.archiveDesc#</div>
+							<div class="muted">#stText.Components.archiveDesc#</div>
 						</td>
 					</tr>
 					<tr>
@@ -316,7 +316,7 @@
 								<option value="physical" selected>#stText.Components.physical#</option>
 								<option value="archive">#stText.Components.archive#</option>
 							</select>
-							<div class="comment">#stText.Components.primaryDesc#</div>
+							<div class="muted">#stText.Components.primaryDesc#</div>
 						</td>
 					</tr>
 					<tr>
@@ -326,7 +326,7 @@
 								<option value="true">#stText.setting.inspecttemplateneverShort#</option>
 								<option value="false" selected>#stText.setting.inspecttemplatealwaysShort#</option>
 							</select>
-							<div class="comment">#stText.Components.trustedDesc#</div>
+							<div class="muted">#stText.Components.trustedDesc#</div>
 						</td>
 					</tr>
 				</tbody>

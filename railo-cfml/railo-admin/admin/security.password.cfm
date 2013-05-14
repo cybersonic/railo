@@ -114,7 +114,7 @@ Error Output --->
 						<th scope="row">#stText.Login.useCaptcha#</th>
 						<td>
 							<cfinput type="checkbox" class="checkbox" name="captcha" checked="#settings.captcha#" value="true">
-							<div class="comment">#stText.Login.useCaptchaDesc#</div>
+							<div class="muted">#stText.Login.useCaptchaDesc#</div>
 						</td>
 					</tr>
 					<tr>
@@ -124,7 +124,7 @@ Error Output --->
 								<cfloop list="0,1,5,10,30,60" index="i"><option <cfif settings.delay EQ i><cfset hasDelay=true>selected="selected"</cfif>>#i#</option></cfloop>
 								<cfif not hasDelay><option selected="selected">#settings.delay#</option></cfif>
 							</select> #stText.Login.seconds#
-							<div class="comment">#stText.Login.delayDesc#</div>
+							<div class="muted">#stText.Login.delayDesc#</div>
 						</td>
 					</tr>
 				</tbody>
@@ -153,7 +153,7 @@ Error Output --->
 					<td>
 						<cfinput type="password" name="_old_password" value="" passthrough='autocomplete="off"'
 						class="medium" required="yes" message="#stText.Login.OldPasswordMissing#">
-						<div class="comment">#stText.Login.OldPasswordDescription#</div>
+						<div class="muted">#stText.Login.OldPasswordDescription#</div>
 					</td>
 				</tr>
 				<tr>
@@ -161,7 +161,7 @@ Error Output --->
 					<td>
 						<cfinput type="password" name="_new_password" value="" passthrough='autocomplete="off"'
 						class="medium" required="yes" message="#stText.Login.NewPasswordMissing#">
-						<div class="comment">#stText.Login.NewPasswordDescription#</div>
+						<div class="muted">#stText.Login.NewPasswordDescription#</div>
 					</td>
 				</tr>
 				<tr>
@@ -169,7 +169,7 @@ Error Output --->
 					<td>
 						<cfinput type="password" name="_new_password_re" value="" passthrough='autocomplete="off"' 
 						class="medium" required="yes" message="#stText.Login.RetypeNewPasswordMissing#">
-						<div class="comment">#stText.Login.RetypeNewPassword#</div>
+						<div class="muted">#stText.Login.RetypeNewPassword#</div>
 					</td>
 				</tr>
 			</tbody>
@@ -210,7 +210,7 @@ Error Output --->
 							<td>
 								<cfinput type="password" name="_new_password" value="#defaultPassword#" 
 								class="medium" required="no" message="#stText.Login.NewPasswordMissing#">
-								<div class="comment">#stText.Login.NewPasswordDescription#</div>
+								<div class="muted">#stText.Login.NewPasswordDescription#</div>
 							</td>
 						</tr>
 					</tbody>

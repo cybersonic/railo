@@ -119,7 +119,7 @@ Error Output --->
 						<cfelse>
 							<b>#ucFirst(type)#</b>
 						</cfif>
-						<div class="comment">#stText.Scopes.CascadingDescription#</div>
+						<div class="muted">#stText.Scopes.CascadingDescription#</div>
 					</td>
 				</tr>
 				<tr>
@@ -130,7 +130,7 @@ Error Output --->
 						<cfelse>
 							<b>#iif(scope.allowImplicidQueryCall,de('Yes'),de('No'))#</b>
 						</cfif>
-						<div class="comment">#stText.Scopes.CascadeToResultSetDescription#</div>
+						<div class="muted">#stText.Scopes.CascadeToResultSetDescription#</div>
 					</td>
 				</tr>
 				
@@ -145,7 +145,7 @@ Error Output --->
 						<cfelse>
 							<b>#scope.sessionType#</b>
 						</cfif>
-						<div class="comment">#stText.Scopes.SessionTypeDescription#</div>
+						<div class="muted">#stText.Scopes.SessionTypeDescription#</div>
 					</td>
 				</tr>
 				
@@ -161,7 +161,7 @@ Error Output --->
 						<cfelse>
 							<b>#iif(scope.mergeFormAndUrl,de('Yes'),de('No'))#</b>
 						</cfif>
-						<div class="comment">#stText.Scopes.mergeUrlFormDescription#</div>
+						<div class="muted">#stText.Scopes.mergeUrlFormDescription#</div>
 					</td>
 				</tr>
 				<tr>
@@ -173,7 +173,7 @@ Error Output --->
 						<cfelse>
 							<b>#iif(scope.sessionManagement,de('Yes'),de('No'))#</b>
 						</cfif>
-						<div class="comment">#stText.Scopes.SessionManagementDescription#</div>
+						<div class="muted">#stText.Scopes.SessionManagementDescription#</div>
 					</td>
 				</tr>
 				<tr>
@@ -185,7 +185,7 @@ Error Output --->
 						<cfelse>
 							<b>#iif(scope.clientManagement,de('Yes'),de('No'))#</b>
 						</cfif>
-						<div class="comment">#stText.Scopes.ClientManagementDescription#</div>
+						<div class="muted">#stText.Scopes.ClientManagementDescription#</div>
 					</td>
 				</tr>
 				<tr>
@@ -197,7 +197,7 @@ Error Output --->
 						<cfelse>
 							<b>#iif(scope.domainCookies,de('Yes'),de('No'))#</b>
 						</cfif>
-						<div class="comment">#stText.Scopes.DomainCookiesDescription#</div>
+						<div class="muted">#stText.Scopes.DomainCookiesDescription#</div>
 					</td>
 				</tr>
 				<tr>
@@ -209,7 +209,7 @@ Error Output --->
 						<cfelse>
 							<b>#iif(scope.clientCookies,de('Yes'),de('No'))#</b>
 						</cfif>
-						<div class="comment">#stText.Scopes.ClientCookiesDescription#</div>
+						<div class="muted">#stText.Scopes.ClientCookiesDescription#</div>
 					</td>
 				</tr>
 				
@@ -219,16 +219,16 @@ Error Output --->
 				<tr>
 					<th scope="row">#stText.Scopes.LocalMode#</th>
 					<td>
-						<div class="comment">#stText.scopes.localmodeDesc#</div>
+						<div class="muted">#stText.scopes.localmodeDesc#</div>
 						<cfif hasAccess>
-							<ul class="radiolist">
+							<ul class="radiolist unstyled">
 								<li>
 									<!--- modern --->
 									<label>
 										<input class="radio" type="radio" name="LocalMode" value="modern"<cfif scope.LocalMode EQ "modern"> checked="checked"</cfif>>
 										<b>#stText.Scopes.LocalModeModern#</b>
 									</label>
-									<div class="comment">#stText.scopes.localmodeModernDesc#</div>
+									<div class="muted">#stText.scopes.localmodeModernDesc#</div>
 								</li>
 								<li>
 									<!--- classic --->
@@ -236,13 +236,13 @@ Error Output --->
 										<input class="radio" type="radio" name="LocalMode" value="classic"<cfif scope.LocalMode EQ "classic"> checked="checked"</cfif>>
 										<b>#stText.Scopes.LocalModeClassic#</b>
 									</label>
-									<div class="comment">#stText.scopes.localmodeClassicDesc#</div>
+									<div class="muted">#stText.scopes.localmodeClassicDesc#</div>
 								</li>
 							</ul>
 						<cfelse>
 							<input type="hidden" name="localMode" value="#scope.LocalMode#">
 							<b>#stText.Scopes["LocalMode"& scope.LocalMode]#</b><br />
-							<div class="comment">#stText.Scopes["LocalMode"& scope.LocalMode&"desc"]#</div>
+							<div class="muted">#stText.Scopes["LocalMode"& scope.LocalMode&"desc"]#</div>
 						</cfif>
 					</td>
 				</tr>
@@ -281,7 +281,7 @@ Error Output --->
 								</cfif>
 							</tbody>
 						</table>
-						<div class="comment">#stText.Scopes.SessionTimeoutDescription#</div>
+						<div class="muted">#stText.Scopes.SessionTimeoutDescription#</div>
 					</td>
 				</tr>
 				<tr>
@@ -315,7 +315,7 @@ Error Output --->
 								</cfif>
 							</tbody>
 						</table>
-						<div class="comment">#stText.Scopes.ApplicationTimeoutDescription#</div>
+						<div class="muted">#stText.Scopes.ApplicationTimeoutDescription#</div>
 					</td>
 				</tr>
 				<tr>
@@ -349,7 +349,7 @@ Error Output --->
 								</cfif>
 							</tbody>
 						</table>
-						<div class="comment">#stText.Scopes.ClientTimeoutDescription#</div>
+						<div class="muted">#stText.Scopes.ClientTimeoutDescription#</div>
 					</td>
 				</tr>
 				<cfif hasAccess>

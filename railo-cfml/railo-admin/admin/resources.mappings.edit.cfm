@@ -50,20 +50,20 @@
 						<cfif mapping.readOnly>
 							<cfif mapping.Trusted>
 								#stText.setting.inspecttemplatenever#
-								<div class="comment">#stText.setting.inspecttemplateneverdesc#</div>
+								<div class="muted">#stText.setting.inspecttemplateneverdesc#</div>
 							<cfelse>
 								#stText.setting.inspecttemplatealways#
-								<div class="comment">#stText.setting.inspecttemplatealwaysdesc#</div>
+								<div class="muted">#stText.setting.inspecttemplatealwaysdesc#</div>
 							</cfif>
 						<cfelse>
-							<ul class="radiolist">
+							<ul class="radiolist unstyled">
 								<li>
 									<label>
 										<!--- never --->
 										<input class="radio" type="radio" name="trusted_#mapping.id#" value="true"<cfif mapping.Trusted> checked="checked"</cfif>>
 										<b>#stText.setting.inspectTemplateNever#</b>
 									</label>
-									<div class="comment">#stText.setting.inspectTemplateNeverDesc#</div>
+									<div class="muted">#stText.setting.inspectTemplateNeverDesc#</div>
 								</li>
 								<li>
 									<label>
@@ -71,7 +71,7 @@
 										<input class="radio" type="radio" name="trusted_#mapping.id#" value="false"<cfif not mapping.Trusted> checked="checked"</cfif>>
 										<b>#stText.setting.inspectTemplateAlways#</b>
 									</label>
-									<div class="comment">#stText.setting.inspectTemplateAlwaysDesc#</div>
+									<div class="muted">#stText.setting.inspectTemplateAlwaysDesc#</div>
 								</li>
 							</ul>
 						</cfif>
@@ -86,7 +86,7 @@
 							<input type="checkbox" class="checkbox" name="toplevel_#mapping.id#" 
 							value="yes" <cfif mapping.toplevel>checked</cfif>>
 						</cfif>
-						<div class="comment">#stText.Mappings.ToplevelDesc#</div>
+						<div class="muted">#stText.Mappings.ToplevelDesc#</div>
 					</td>
 				</tr>
 				<cfif hasAccess>
@@ -112,7 +112,7 @@
 				<tr>
 					<th scope="row">#stText.Mappings.compileStopOnError#</th>
 					<td nowrap><input 
-					type="checkbox" class="checkbox" name="stopOnError_#mapping.id#" value="yes" checked="checked"> <div class="comment">#stText.Mappings.compileStopOnErrorDesc#</div></td>
+					type="checkbox" class="checkbox" name="stopOnError_#mapping.id#" value="yes" checked="checked"> <div class="muted">#stText.Mappings.compileStopOnErrorDesc#</div></td>
 				</tr>
 				<cfif hasAccess>
 					<cfmodule template="remoteclients.cfm" colspan="2">
@@ -139,14 +139,14 @@
 					<th scope="row">#stText.mappings.addCFMLFiles#</th>
 					<td nowrap>
 						<input type="checkbox" class="checkbox" name="addCFMLFiles_#mapping.id#" value="yes" checked>
-						<div class="comment">#stText.mappings.addCFMLFilesDesc#</div>
+						<div class="muted">#stText.mappings.addCFMLFilesDesc#</div>
 					</td>
 				</tr>
 				<tr>
 					<th scope="row">#stText.mappings.addNoneCFMLFiles#</th>
 					<td nowrap>
 						<input type="checkbox" class="checkbox" name="addNoneCFMLFiles_#mapping.id#" value="yes" checked> 
-						<div class="comment">#stText.mappings.addNoneCFMLFilesDesc#</div>
+						<div class="muted">#stText.mappings.addNoneCFMLFilesDesc#</div>
 					</td>
 				</tr>
 				<cfif hasAccess>

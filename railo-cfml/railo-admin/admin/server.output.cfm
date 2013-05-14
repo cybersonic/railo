@@ -108,7 +108,7 @@ Redirtect to entry --->
 						<cfif hasAccess>
 							<cfloop list="regular,white-space,white-space-pref" index="k">
 								<input type="radio" class="checkbox" name="cfmlWriter" value="#k#" <cfif setting.cfmlWriter EQ k>checked="checked"</cfif>>
-								<div class="comment">#desc[k]#</div><br> 
+								<div class="muted">#desc[k]#</div><br> 
 							</cfloop>
 						<cfelse>
 							<b>#desc[setting.cfmlWriter]#
@@ -126,7 +126,7 @@ Redirtect to entry --->
 							<b>#iif(setting.AllowCompression,de('Yes'),de('No'))#</b>
 							<!---<input type="hidden" name="AllowCompression" value="#setting.AllowCompression#">--->
 						</cfif>
-						<div class="comment">#stText.setting.AllowCompressionDescription#</div>
+						<div class="muted">#stText.setting.AllowCompressionDescription#</div>
 					</td>
 				</tr>
 
@@ -140,7 +140,7 @@ Redirtect to entry --->
 							<b>#iif(setting.suppressContent,de('Yes'),de('No'))#</b>
 							<!---<input type="hidden" name="suppressContent" value="#setting.suppressContent#">--->
 						</cfif>
-						<div class="comment">#stText.setting.suppressContentDescription#</div>
+						<div class="muted">#stText.setting.suppressContentDescription#</div>
 					</td>
 				</tr>
 
@@ -154,7 +154,7 @@ Redirtect to entry --->
 							<b>#iif(setting.bufferOutput,de('Yes'),de('No'))#</b>
 							<!---<input type="hidden" name="suppressContent" value="#setting.suppressContent#">--->
 						</cfif>
-						<div class="comment">#stText.setting.bufferOutputDescription#</div>
+						<div class="muted">#stText.setting.bufferOutputDescription#</div>
 					</td>
 				</tr>
 				<cfif hasAccess>

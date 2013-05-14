@@ -154,7 +154,7 @@ Error Output --->
 				<tr>
 					<th scope="row">
 						#stText.application.scriptProtect#
-						<div class="comment">#stText.application.scriptProtectDescription#</div>
+						<div class="muted">#stText.application.scriptProtectDescription#</div>
 					</th>
 					<td>
 						<cfif hasAccess>
@@ -167,14 +167,14 @@ Error Output --->
 										<input type="radio" class="radio" name="scriptProtect" value="none" <cfif isNone>checked="checked"</cfif>>
 										<b>none</b>
 									</label>
-									<div class="comment">#stText.application.scriptProtectNone#</div>
+									<div class="muted">#stText.application.scriptProtectNone#</div>
 								</li>
 								<li>
 									<label>
 										<input type="radio" class="radio" name="scriptProtect" id="sp_radio_custom" value="custom" <cfif isCustom>checked="checked"</cfif>>
 										<b>custom:</b>
 									</label>
-									<div class="comment">#stText.application.scriptProtectCustom#</div>
+									<div class="muted">#stText.application.scriptProtectCustom#</div>
 									<table class="maintbl autowidth" id="customoptionstbl">
 										<thead>
 											<tr>
@@ -203,7 +203,7 @@ Error Output --->
 										<input type="radio" class="radio" name="scriptProtect" value="all" <cfif isAll>checked="checked"</cfif>>
 										<b>all</b>
 									</label>
-									<div class="comment">#stText.application.scriptProtectAll#</div>
+									<div class="muted">#stText.application.scriptProtectAll#</div>
 								</li>
 							</ul>
 						<cfelse>
@@ -258,7 +258,7 @@ Error Output --->
 								</cfif>
 							</tbody>
 						</table>
-						<div class="comment">#stText.application.RequestTimeoutDescription#</div>
+						<div class="muted">#stText.application.RequestTimeoutDescription#</div>
 					</td>
 				</tr>
 				<!--- request timeout url --->
@@ -272,7 +272,7 @@ Error Output --->
 							<!---<input type="hidden" name="AllowURLRequestTimeout" value="#appSettings.AllowURLRequestTimeout#">--->
 							<b>#yesNoFormat(appSettings.AllowURLRequestTimeout)#</b>
 						</cfif>
-						<div class="comment">#stText.application.AllowURLRequestTimeoutDesc#</div>
+						<div class="muted">#stText.application.AllowURLRequestTimeoutDesc#</div>
 					</td>
 				</tr>
 				<cfif hasAccess>
@@ -305,27 +305,27 @@ Error Output --->
 						#stText.application.listenerType#
 						<cfif hasAccess>
 							<!--- PK: disabled, because it only said "please select an option"
-							<div class="comment">#stText.application.listenerTypeDescription#</div>
+							<div class="muted">#stText.application.listenerTypeDescription#</div>
 							--->
 						</cfif>
 					</th>
 					<td>
 						<cfif hasAccess>
-							<ul class="radiolist">
+							<ul class="radiolist unstyled">
 								<cfloop index="key" list="none,classic,modern,mixed">
 									<li>
 										<label>
 											<input type="radio" class="radio" name="type" value="#key#" <cfif listener.type EQ key>checked="checked"</cfif>>
 											<b>#stText.application['listenerType_' & key]#</b>
 										</label>
-										<div class="comment">#stText.application['listenerTypeDescription_' & key]#</div>
+										<div class="muted">#stText.application['listenerTypeDescription_' & key]#</div>
 									</li>
 								</cfloop>
 							</ul>
 						<cfelse>
 							<!---<input type="hidden" name="type" value="#listener.type#">--->
 							<b>#listener.type#</b>
-							<div class="comment">#stText.application['listenerTypeDescription_' & listener.type]#</div>
+							<div class="muted">#stText.application['listenerTypeDescription_' & listener.type]#</div>
 						</cfif>
 					</td>
 				</tr>
@@ -334,26 +334,26 @@ Error Output --->
 				<tr>
 					<th>#stText.application.listenerMode#
 						<cfif hasAccess>
-							<div class="comment">#stText.application.listenerModeDescription#</div>
+							<div class="muted">#stText.application.listenerModeDescription#</div>
 						</cfif>
 					</th>
 					<td>
 						<cfif hasAccess>
-							<ul class="radiolist">
+							<ul class="radiolist unstyled">
 								<cfloop index="key" list="curr,root,curr2root">
 									<li>
 										<label>
 											<input type="radio" class="radio" name="mode" value="#key#" <cfif listener.mode EQ key>checked="checked"</cfif>>
 											<b>#stText.application['listenerMode_' & key]#</b>
 										</label>
-										<div class="comment">#stText.application['listenerModeDescription_' & key]#</div>
+										<div class="muted">#stText.application['listenerModeDescription_' & key]#</div>
 									</li>
 								</cfloop>
 							</ul>
 						<cfelse>
 							<!---<input type="hidden" name="type" value="#listener.mode#">--->
 							<b>#listener.mode#</b>
-							<div class="comment">#stText.application['listenerModeDescription_' & listener.mode]#</div>
+							<div class="muted">#stText.application['listenerModeDescription_' & listener.mode]#</div>
 						</cfif>
 					</td>
 				</tr>

@@ -113,7 +113,7 @@ Redirtect to entry --->
 							value="#entry.iprange#" class="large" required="yes"
 							message="#stText.debug.iprangeMissing#">
 						<input type="button" name="addmyip" value="#stText.debug.addMyIp#" onclick="add(this)" class="button" />
-						<div class="comment">#rereplace(stText.debug.iprangeDesc, '[\r\n]+',"<br />","all")#</div>
+						<div class="muted">#rereplace(stText.debug.iprangeDesc, '[\r\n]+',"<br />","all")#</div>
 					</td>
 				</tr>
 			</tbody>
@@ -232,9 +232,9 @@ Redirtect to entry --->
 			<cfelseif type EQ "radio" or type EQ "checkbox">
 				<cfset desc=field.getDescription()>
 				<cfif isStruct(desc) and StructKeyExists(desc,'_top')>
-					<div class="comment">#desc._top#</div>
+					<div class="muted">#desc._top#</div>
 				</cfif>
-				<ul class="radiolist">
+				<ul class="radiolist unstyled">
 					<cfloop index="item" list="#field.getValues()#">
 						<li>
 							<label>
@@ -242,13 +242,13 @@ Redirtect to entry --->
 								<b>#item#</b>
 							</label>
 							<cfif isStruct(desc) and StructKeyExists(desc,item)>
-								<div class="comment">#desc[item]#</div>
+								<div class="muted">#desc[item]#</div>
 							</cfif>
 						</li>
 					</cfloop>
 				</ul>
 				<cfif isStruct(desc) and StructKeyExists(desc,'_bottom')>
-					<div class="comment">#desc._bottom#</div>
+					<div class="muted">#desc._bottom#</div>
 				</cfif>
 			</cfif>
 			<cfif type NEQ "hidden">
@@ -265,7 +265,7 @@ Redirtect to entry --->
 					</cfif>
 				</cfif>
 				<cfif len(trim(_comment))>
-					<div class="comment">#trim(_comment)#</div>
+					<div class="muted">#trim(_comment)#</div>
 				</cfif>
 					</td>
 				</tr>

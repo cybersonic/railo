@@ -275,17 +275,17 @@ Create Datasource --->
         <tr>
         	<td style="border-color:#colorCompatibility#;" width="10"><cfinput type="radio" class="radio" name="mode" value="compatibility"></td>
             <td style="border-color:#colorCompatibility#;#style#"><b>#stText.setting.general.compatibility#</b><br />
-            <div class="comment">#stText.setting.general.compatibilityDesc#</div></td>
+            <div class="muted">#stText.setting.general.compatibilityDesc#</div></td>
         </tr>
         <tr>
         	<td style="border-color:#colorStrict#;" width="10"><cfinput type="radio" class="radio" name="mode" value="strict"></td>
             <td style="border-color:#colorStrict#;#style#"><b>#stText.setting.general.strict#</b><br />
-            <div class="comment">#stText.setting.general.strictDesc#</div></td>
+            <div class="muted">#stText.setting.general.strictDesc#</div></td>
         </tr>
         <tr>
         	<td style="border-color:#colorSpeed#;" width="10"><cfinput type="radio" class="radio" name="mode" value="speed"></td>
             <td style="border-color:#colorSpeed#;#style#"><b>#stText.setting.general.speed#</b>
-            <br /><div class="comment">#stText.setting.general.speedDesc#</div></td>
+            <br /><div class="muted">#stText.setting.general.speedDesc#</div></td>
         </tr>
         
         
@@ -315,7 +315,7 @@ Create Datasource --->
 	<th scope="row">#stText.Components.DataMemberAccessType#</th>
 	<td style="#doStyle(access,'component','componentDataMemberDefaultAccess')#">
     	<b>#stText.Components['DMAT'& access]#</b>
-        <br /><div class="comment">#stText.Components.DataMemberAccessTypeDescription#</div>
+        <br /><div class="muted">#stText.Components.DataMemberAccessTypeDescription#</div>
 	</td>
 </tr>
 <!--- Trigger Data Member --->
@@ -323,7 +323,7 @@ Create Datasource --->
 	<th scope="row">#stText.Components.triggerDataMember#</th>
 	<td  style="#doStyle(component.triggerDataMember,'component','triggerDataMember')#">
     	<b>#yesNoFormat(component.triggerDataMember)#</b>
-        <br /><div class="comment">#stText.Components.triggerDataMemberDescription#</div>
+        <br /><div class="muted">#stText.Components.triggerDataMemberDescription#</div>
 	</td>
 </tr>
 <!--- Use Shadow --->
@@ -331,7 +331,7 @@ Create Datasource --->
 	<th scope="row">#stText.Components.useShadow#</th>
 	<td  style="#doStyle(component.useShadow,'component','useShadow')#">
 		<b>#yesNoFormat(component.useShadow)#</b>
-		<br /><div class="comment">#stText.Components.useShadowDescription#</div><br>
+		<br /><div class="muted">#stText.Components.useShadowDescription#</div><br>
       	
 	</td>
 </tr>
@@ -353,7 +353,7 @@ Create Datasource --->
 	<th scope="row">#stText.charset.templateCharset#</th>
 	<td style="#doStyle(charset.templateCharset,'charset','templateCharset')#">
     	<b>#charset.templateCharset#</b><br />
-		<div class="comment">#stText.charset.templateCharsetDescription#</div><br />
+		<div class="muted">#stText.charset.templateCharsetDescription#</div><br />
 	</td>
 </tr>
 
@@ -362,7 +362,7 @@ Create Datasource --->
 	<th scope="row">#stText.charset.webCharset#</th>
 	<td style="#doStyle(charset.webCharset,'charset','webCharset')#">
 		<b>#charset.webCharset#</b><br />
-		<div class="comment">#stText.charset.webCharsetDescription#</div><br />
+		<div class="muted">#stText.charset.webCharsetDescription#</div><br />
 	</td>
 </tr>
 
@@ -371,7 +371,7 @@ Create Datasource --->
 	<th scope="row">#stText.charset.resourceCharset#</th>
 	<td style="#doStyle(charset.resourceCharset,'charset','resourceCharset')#">
 		<b>#charset.resourceCharset#</b><br />
-		<div class="comment">#stText.charset.resourceCharsetDescription#</div><br />
+		<div class="muted">#stText.charset.resourceCharsetDescription#</div><br />
 	</td>
 </tr>
 </table>
@@ -391,7 +391,7 @@ Create Datasource --->
 	<th scope="row">#stText.Scopes.Cascading#</th>
 	<td style="#doStyle(scope.scopeCascadingType,'scope','scopeCascadingType')#">
 		<b>#ucFirst(stText.Scopes[scope.scopeCascadingType])#</b>
-        <br /><div class="comment">#stText.Scopes.CascadingDescription#</div>
+        <br /><div class="muted">#stText.Scopes.CascadingDescription#</div>
 	</td>
 </tr>
 <!--- cascade to result --->
@@ -399,7 +399,7 @@ Create Datasource --->
 	<th scope="row">#stText.Scopes.CascadeToResultSet#</th>
 	<td style="#doStyle(scope.allowImplicidQueryCall,'scope','allowImplicidQueryCall')#">
 		<b>#yesNoFormat(scope.allowImplicidQueryCall)#</b>
-		<br /><div class="comment">#stText.Scopes.CascadeToResultSetDescription#</div>
+		<br /><div class="muted">#stText.Scopes.CascadeToResultSetDescription#</div>
 	</td>
 </tr>
 <!--- Merge URL and Form --->
@@ -407,7 +407,7 @@ Create Datasource --->
 	<th scope="row">#stText.Scopes.mergeUrlForm#</th>
 	<td style="#doStyle(scope.mergeFormAndUrl,'scope','mergeFormAndUrl')#">
 		<b>#yesNoFormat(scope.mergeFormAndUrl)#</b>
-		<br /><div class="comment">#stText.Scopes.mergeUrlFormDescription#</div>
+		<br /><div class="muted">#stText.Scopes.mergeUrlFormDescription#</div>
 	</td>
 </tr>
 <!--- Local Mode --->
@@ -415,7 +415,7 @@ Create Datasource --->
 	<th scope="row">#stText.Scopes.LocalMode#</th>
 	<td style="#doStyle(scope.localMode,'scope','localMode')#">
 		<b>#scope.localMode#</b>
-        <br /><div class="comment">#stText.Scopes.LocalModeDesc#</div>
+        <br /><div class="muted">#stText.Scopes.LocalModeDesc#</div>
 	</td>
 </tr>
 </table>
@@ -434,7 +434,7 @@ Create Datasource --->
 	<th scope="row">#stText.Settings.PreserveSingleQuotes#</th>
 	<td style="#doStyle(dbSetting.psq,'datasource','psq')#">
 	<b>#yesNoFormat(dbSetting.psq)#</b>
-	<br /><div class="comment">#stText.Settings.PreserveSingleQuotesDescription#</div></td>
+	<br /><div class="muted">#stText.Settings.PreserveSingleQuotesDescription#</div></td>
 	
 </tr>
 
@@ -454,14 +454,14 @@ Create Datasource --->
 	<th scope="row">#stText.CustomTags.customTagDeepSearch#</th>
 	<td style="#doStyle(customtag.deepsearch,'customtag','deepsearch')#">
     <b>#yesNoFormat(customtag.deepsearch)#</b><br />
-	<div class="comment">#stText.CustomTags.customTagDeepSearchDesc#</div></td>
+	<div class="muted">#stText.CustomTags.customTagDeepSearchDesc#</div></td>
 </tr>
 <!--- Local Search --->
 <tr>
 	<th scope="row">#stText.CustomTags.customTagLocalSearch#</th>
 	<td style="#doStyle(customtag.localsearch,'customtag','localsearch')#">
 	<b>#yesNoFormat(customtag.localsearch)#</b><br />
-	<div class="comment">#stText.CustomTags.customTagLocalSearchDesc#</div></td>
+	<div class="muted">#stText.CustomTags.customTagLocalSearchDesc#</div></td>
 	
 </tr>
 <!--- Extension --->
@@ -470,7 +470,7 @@ Create Datasource --->
 	<th scope="row">#stText.CustomTags.extensions#</th>
 	<td style="#doStyle(value,'customtag','extensions')#">
     	<b>#value#</b><br />
-        <div class="comment">#stText.CustomTags.extensionsDesc#</div>
+        <div class="muted">#stText.CustomTags.extensionsDesc#</div>
     
     
     </td>

@@ -66,14 +66,14 @@ Error Output --->
 					<th scope="row">#stText.services.certificate.host#</th>
 					<td>
 						<cfinput type="text" name="host" value="#_host#" class="large" required="yes">
-						<div class="comment">#stText.services.certificate.hostDesc#</div>
+						<div class="muted">#stText.services.certificate.hostDesc#</div>
 					</td>
 				</tr>
 				<tr>
 					<th scope="row">#stText.services.certificate.port#</th>
 					<td>
 						<cfinput type="text" name="port" value="#_port#" class="number" required="yes" validate="integer"><br />
-						<div class="comment">#stText.services.certificate.portDesc#</div>
+						<div class="muted">#stText.services.certificate.portDesc#</div>
 					</td>
 				</tr>
 			</tbody>

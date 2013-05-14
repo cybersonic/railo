@@ -189,7 +189,7 @@ Defaults --->
 							<input type="hidden" name="defaultencoding" value="#mail.defaultEncoding#">
 							<b>#mail.defaultEncoding#</b>
 						</cfif>
-						<div class="comment">#stText.mail.DefaultEncodingDescription#</div>
+						<div class="muted">#stText.mail.DefaultEncodingDescription#</div>
 					</td>
 				</tr>
 

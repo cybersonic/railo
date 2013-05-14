@@ -72,7 +72,7 @@ Redirtect to entry  --->
 							<cfelse>
 							<input type="checkbox" class="checkbox" name="autogenmap" value="true"<cfif settings.autogenmap>  checked="checked"</cfif>>
 						</cfif>
-						<div class="comment">#stText.Settings.orm.autogenmapDesc#</div></td>
+						<div class="muted">#stText.Settings.orm.autogenmapDesc#</div></td>
 				</tr>
 				
 				<!--- catalog --->
@@ -83,7 +83,7 @@ Redirtect to entry  --->
 							<cfelse>
 							<input type="text" class="large" name="catalog" size="80" value="#settings.catalog#" />
 						</cfif>
-						<div class="comment">#stText.Settings.orm.catalogDesc#</div></td>
+						<div class="muted">#stText.Settings.orm.catalogDesc#</div></td>
 				</tr>
 				
 				<!--- schema --->
@@ -94,7 +94,7 @@ Redirtect to entry  --->
 						<cfelse>
 							<input type="text" class="large" name="schema" size="80" value="#settings.schema#" />
 						</cfif>
-						<div class="comment">#stText.Settings.orm.schemaDesc#</div></td>
+						<div class="muted">#stText.Settings.orm.schemaDesc#</div></td>
 				</tr>
 				
 				<!--- cfc location --->
@@ -105,7 +105,7 @@ Redirtect to entry  --->
 						<cfelse>
 							<input type="text" class="large" name="cfclocation" size="80" value="#settings.isDefaultCfclocation?"":arraytolist(settings.cfclocation)#" />
 						</cfif>
-						<div class="comment">#stText.Settings.orm.cfclocationDesc#</div></td>
+						<div class="muted">#stText.Settings.orm.cfclocationDesc#</div></td>
 				</tr>
 				
 				<!--- dbcreate --->
@@ -114,16 +114,16 @@ Redirtect to entry  --->
 					<td><cfif not hasAccess>
 							<b>#settings.dbcreate#</b>
 						</cfif>
-						<div class="comment">#stText.Settings.orm.autogenmapDesc#</div>
+						<div class="muted">#stText.Settings.orm.autogenmapDesc#</div>
 						<cfif hasAccess>
-							<ul class="radiolist">
+							<ul class="radiolist unstyled">
 								<cfloop index="item" list="none,update,dropcreate">
 									<li>
 										<label>
 											<input type="radio" class="radio" name="dbcreate" value="#item#" <cfif settings.dbcreate EQ item>checked="checked"</cfif>>
 											<b>#item#</b>
 										</label>
-										<div class="comment">#stText.Settings.orm['dbcreate'& item]#</div>
+										<div class="muted">#stText.Settings.orm['dbcreate'& item]#</div>
 									</li>
 								</cfloop>
 							</ul>
@@ -153,7 +153,7 @@ Redirtect to entry  --->
 						<cfelse>
 							<input type="checkbox" class="checkbox" name="eventHandling" value="true"<cfif settings.eventHandling>  checked="checked"</cfif>>
 						</cfif>
-						<div class="comment">#stText.Settings.orm.eventHandlingDesc#</div></td>
+						<div class="muted">#stText.Settings.orm.eventHandlingDesc#</div></td>
 				</tr>
 				
 				<!--- flushatrequestend --->
@@ -164,7 +164,7 @@ Redirtect to entry  --->
 						<cfelse>
 							<input type="checkbox" class="checkbox" name="flushatrequestend" value="true"<cfif settings.flushatrequestend>  checked="checked"</cfif>>
 						</cfif>
-						<div class="comment">#stText.Settings.orm.flushatrequestendDesc#</div></td>
+						<div class="muted">#stText.Settings.orm.flushatrequestendDesc#</div></td>
 				</tr>
 				
 				<!--- logSQL --->
@@ -175,7 +175,7 @@ Redirtect to entry  --->
 						<cfelse>
 							<input type="checkbox" class="checkbox" name="logSQL" value="true"<cfif settings.logSQL>  checked="checked"</cfif>>
 						</cfif>
-						<div class="comment">#stText.Settings.orm.logSQLDesc#</div></td>
+						<div class="muted">#stText.Settings.orm.logSQLDesc#</div></td>
 				</tr>
 				
 				<!--- savemapping --->
@@ -186,7 +186,7 @@ Redirtect to entry  --->
 						<cfelse>
 							<input type="checkbox" class="checkbox" name="savemapping" value="true"<cfif settings.savemapping>  checked="checked"</cfif>>
 						</cfif>
-						<div class="comment">#stText.Settings.orm.savemappingDesc#</div></td>
+						<div class="muted">#stText.Settings.orm.savemappingDesc#</div></td>
 				</tr>
 				
 				<!--- useDBForMapping --->
@@ -197,7 +197,7 @@ Redirtect to entry  --->
 						<cfelse>
 							<input type="checkbox" class="checkbox" name="useDBForMapping" value="true"<cfif settings.useDBForMapping>  checked="checked"</cfif>>
 						</cfif>
-						<div class="comment">#stText.Settings.orm.useDBForMappingDesc#</div></td>
+						<div class="muted">#stText.Settings.orm.useDBForMappingDesc#</div></td>
 				</tr>
 				
 				<!--- sqlscript
@@ -205,7 +205,7 @@ Redirtect to entry  --->
 					<th scope="row">#stText.Settings.orm.sqlscript#</th>
 					<td>
 							<input type="text" class="large" name="sqlscript" size="80" value="#settings.sqlscript#" /><br />
-							<div class="comment">#stText.Settings.orm.sqlscriptDesc#</div>
+							<div class="muted">#stText.Settings.orm.sqlscriptDesc#</div>
 						
 						
 					</td>

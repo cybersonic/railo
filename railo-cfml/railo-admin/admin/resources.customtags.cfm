@@ -179,7 +179,7 @@ Redirtect to entry --->
 							<b>#yesNoFormat(setting.deepsearch)#</b>
 						</cfif>
 						
-						<div class="comment">#stText.CustomTags.customTagDeepSearchDesc#</div>
+						<div class="muted">#stText.CustomTags.customTagDeepSearchDesc#</div>
 					</td>
 				</tr>
 				<tr>
@@ -190,7 +190,7 @@ Redirtect to entry --->
 						<cfelse>
 							<b>#yesNoFormat(setting.localsearch)#</b>
 						</cfif>
-						<div class="comment">#stText.CustomTags.customTagLocalSearchDesc#</div>
+						<div class="muted">#stText.CustomTags.customTagLocalSearchDesc#</div>
 					</td>
 				</tr>
 				<!--- component path cache ---->
@@ -202,7 +202,7 @@ Redirtect to entry --->
 						<cfelse>
 							<b>#yesNoFormat(setting.customTagPathCache)#</b>
 						</cfif>
-						<div class="comment">#stText.CustomTags.customTagPathCacheDesc#</div>
+						<div class="muted">#stText.CustomTags.customTagPathCacheDesc#</div>
 						<cfif setting.customTagPathCache><input type="submit" class="button submit btn btn-primary" name="mainAction" value="#flushName#"></cfif>
 					</td>
 				</tr>
@@ -222,7 +222,7 @@ Redirtect to entry --->
 						)>
 						<cfif hasAccess>
 							<cfset has=false>
-							<ul class="radiolist">
+							<ul class="radiolist unstyled">
 								<cfloop array="#modes#" index="mode">
 									<li>
 										<label>
@@ -243,7 +243,7 @@ Redirtect to entry --->
 						<cfelse>
 							<b>#lstSetExt#</b><br />
 						</cfif>
-						<div class="comment">#stText.CustomTags.extensionsDesc#</div>
+						<div class="muted">#stText.CustomTags.extensionsDesc#</div>
 					</td>
 				</tr>
 				<cfif hasAccess>

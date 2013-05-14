@@ -115,14 +115,14 @@ Create Datasource --->
 					<th scope="row">#stText.setting.inspectTemplate#</th>
 					<td>
 						<cfif hasAccess>
-							<ul class="radiolist">
+							<ul class="radiolist unstyled">
 								<li>
 									<!--- never --->
 									<label>
 										<input class="radio" type="radio" name="inspectTemplate" value="never"<cfif settings.inspectTemplate EQ "never"> checked="checked"</cfif>>
 										<b>#stText.setting.inspectTemplateNever#</b>
 									</label>
-									<div class="comment">#stText.setting.inspectTemplateNeverDesc#</div>
+									<div class="muted">#stText.setting.inspectTemplateNeverDesc#</div>
 								</li>
 								<li>
 									<!--- once --->
@@ -130,7 +130,7 @@ Create Datasource --->
 										<input class="radio" type="radio" name="inspectTemplate" value="once"<cfif settings.inspectTemplate EQ "once"> checked="checked"</cfif>>
 										<b>#stText.setting.inspectTemplateOnce#</b>
 									</label>
-									<div class="comment">#stText.setting.inspectTemplateOnceDesc#</div>
+									<div class="muted">#stText.setting.inspectTemplateOnceDesc#</div>
 								</li>
 								<li>
 									<!--- always --->
@@ -138,14 +138,14 @@ Create Datasource --->
 										<input class="radio" type="radio" name="inspectTemplate" value="always"<cfif settings.inspectTemplate EQ "always"> checked="checked"</cfif>>
 										<b>#stText.setting.inspectTemplateAlways#</b>
 									</label>
-									<div class="comment">#stText.setting.inspectTemplateAlwaysDesc#</div>
+									<div class="muted">#stText.setting.inspectTemplateAlwaysDesc#</div>
 								</li>
 							</ul>
 						<cfelse>
 							<cfif ListFindNoCase("never,once,always",settings.inspectTemplate)>
 								<input type="hidden" name="inspectTemplate" value="#settings.inspectTemplate#">
 								<b>#stText.setting["inspectTemplate"& settings.inspectTemplate]#</b><br />
-								<div class="comment">#stText.setting["inspectTemplate#settings.inspectTemplate#Desc"]#</div>
+								<div class="muted">#stText.setting["inspectTemplate#settings.inspectTemplate#Desc"]#</div>
 							</cfif>
 						</cfif>
 					</td>
@@ -154,8 +154,8 @@ Create Datasource --->
 				<tr>
 					<th scope="row">#stText.setting.templateCache#</th>
 					<td class="fieldPadded">
-						<input class="button submit btn btn-primary" type="submit" name="mainAction" value="#btnClearTemplateCache#">
-						<div class="comment">#stText.setting.templateCacheClearDesc#</div>
+						<input class="button submit btn btn-danger" type="submit" name="mainAction" value="#btnClearTemplateCache#">
+						<div class="muted">#stText.setting.templateCacheClearDesc#</div>
 					</td>
 				</tr>
 				
@@ -163,8 +163,8 @@ Create Datasource --->
 				<tr>
 					<th scope="row">#stText.setting.queryCache#</th>
 					<td class="fieldPadded">
-						<input class="button submit btn btn-primary" type="submit" name="mainAction" value="#btnClearQueryCache#">
-						<div class="comment">#stText.setting.queryCacheClearDesc#</div>
+						<input class="button submit btn btn-danger" type="submit" name="mainAction" value="#btnClearQueryCache#">
+						<div class="muted">#stText.setting.queryCacheClearDesc#</div>
 					</td>
 				</tr>
 				
@@ -172,8 +172,8 @@ Create Datasource --->
 				<tr>
 					<th scope="row">#stText.setting.componentCache#</th>
 					<td class="fieldPadded">
-						<input class="button submit btn btn-primary" type="submit" name="mainAction" value="#btnClearComponentCache#">
-						<div class="comment">#stText.setting.componentCacheClearDesc#</div>
+						<input class="button submit btn btn-danger" type="submit" name="mainAction" value="#btnClearComponentCache#">
+						<div class="muted">#stText.setting.componentCacheClearDesc#</div>
 					</td>
 				</tr>
 				
@@ -181,8 +181,8 @@ Create Datasource --->
 				<tr>
 					<th scope="row">#stText.setting.ctCache#</th>
 					<td class="fieldPadded">
-						<input class="button submit btn btn-primary" type="submit" name="mainAction" value="#btnClearCTCache#">
-						<div class="comment">#stText.setting.ctCacheClearDesc#</div>
+						<input class="button submit btn btn-danger" type="submit" name="mainAction" value="#btnClearCTCache#">
+						<div class="muted">#stText.setting.ctCacheClearDesc#</div>
 					</td>
 				</tr>
 				<cfif hasAccess>

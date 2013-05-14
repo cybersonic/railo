@@ -133,7 +133,7 @@ Error Output --->
 										<cfset isFromTemplate=true>
 									</cfif>
 								</cfloop>
-								<ul class="radiolist">
+								<ul class="radiolist unstyled">
 									<li>
 										<input type="radio" class="radio" name="errType#statusCode#" value="Select" onclick="disableField(this,#statusCode#)" <cfif isFromTemplate>checked</cfif>>
 										<select name="errorTemplate_Select#statusCode#" id="errorTemplate_Select#statusCode#" <cfif not isFromTemplate>disabled</cfif> class="medium">
@@ -149,7 +149,7 @@ Error Output --->
 										<input type="text" name="errorTemplate_File#statusCode#" value="#err.str[statusCode]#" id="errorTemplate_File[statusCode]" <cfif isFromTemplate>disabled</cfif> class="large">
 									</li>
 								</ul>
-								<div class="comment">#stText.err.errorTemplateDescription[statusCode]#</div>
+								<div class="muted">#stText.err.errorTemplateDescription[statusCode]#</div>
 							<cfelse>
 								<b>#err.str[statusCode]#</b>
 								<!---<input type="hidden" name="errorTemplate#statusCode#" value="#err.str[statusCode]#">--->
@@ -165,7 +165,7 @@ Error Output --->
 						<cfelse>
 						<b>#YesNoFormat(err.doStatusCode)#</b><br />
 						</cfif>
-						<div class="comment">#stText.err.errorStatusCodeDescription#</div><br>
+						<div class="muted">#stText.err.errorStatusCodeDescription#</div><br>
 						
 					</td>
 				</tr>

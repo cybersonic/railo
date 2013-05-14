@@ -216,7 +216,7 @@ list all mappings and display necessary edit fields --->
 						<td>
 							<cfinput onKeyDown="checkTheBox(this)" type="text" 
 							name="url_1" value="" required="no" class="xlarge">
-							<div class="comment">#stText.ext.prov.urlDesc#</div>
+							<div class="muted">#stText.ext.prov.urlDesc#</div>
 						</td>
 					</tr>
 				</tbody>

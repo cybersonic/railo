@@ -222,3 +222,12 @@ td.fieldPadded {
 	padding-top:10px;
 	padding-bottom:10px;
 }
+
+/*
+Lists
+*/
+.checkbox + .comment, .radio + .comment, .radiolist label + .comment.inline {
+	display:inline;
+	padding-left:10px;
+}
+

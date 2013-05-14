@@ -109,7 +109,7 @@ Redirtect to entry --->
 					<tr>
 						<th scope="row">#stText.Settings.gateway.ListenerCfcPath#</th>
 						<td><cfinput type="text" name="listenerCfcPath" value="#entry.listenerCfcPath#" required="#driver.getListenerCfcMode() EQ "required"#" class="large" message="Missing value for field listener CFC Path">
-						<div class="comment">
+						<div class="muted">
 							<cfif structKeyExists(driver,'getListenerCFCDescription')>
 								#driver.getListenerCFCDescription()#
 							<cfelse>
@@ -234,7 +234,7 @@ Redirtect to entry --->
 							<div class="comment" style="padding-bottom:4px">#desc._top#</div>
 						</cfif>
 						<cfif listLen(field.getValues()) GT 1>
-							<ul class="radiolist">
+							<ul class="radiolist unstyled">
 								<cfloop index="item" list="#field.getValues()#">
 									<li>
 										<label>
@@ -257,7 +257,7 @@ Redirtect to entry --->
 					</cfif>
 					<cfif type NEQ "hidden">
 						<cfif isSimpleValue(field.getDescription()) and len(trim(field.getDescription()))>
-							<div class="comment">#field.getDescription()#</div>
+							<div class="muted">#field.getDescription()#</div>
 						</cfif>
 					</td>
 				</tr>

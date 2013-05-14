@@ -399,7 +399,7 @@
 									<tr>
 										<td colspan="3">
 											<h4><cfif len(trim(result.title)) EQ 0>{no title}<cfelse>#result.title#</cfif></h4>
-											<div class="comment">#result.summary#</div>
+											<div class="muted">#result.summary#</div>
 										</td>
 									</tr>
 								</cfloop>

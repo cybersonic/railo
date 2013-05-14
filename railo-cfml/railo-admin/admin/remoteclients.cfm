@@ -41,10 +41,10 @@
 						<tr>
 			</cfif>--->
 							<th scope="row">Choose clients
-								<div class="comment">#caller.stText.remote.sync.desc#</div>
+								<div class="muted">#caller.stText.remote.sync.desc#</div>
 							</th>
 							<td>
-								<ul class="radiolist">
+								<ul class="radiolist unstyled">
 									<cfloop query="clients"><cfif ListFindNoCase(clients.usage,"synchronisation")>
 										<li>
 											<label>

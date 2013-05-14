@@ -109,7 +109,7 @@ Error Output --->
 						<cfelse>
 							<b>#yesNoFormat(dbSetting.psq)#</b>
 						</cfif>
-						<div class="comment">#stText.Settings.PreserveSingleQuotesDescription#</div>
+						<div class="muted">#stText.Settings.PreserveSingleQuotesDescription#</div>
 					</td>
 				</tr>
 				<cfif access NEQ 0>

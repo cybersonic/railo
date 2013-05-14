@@ -429,19 +429,19 @@ Error Output --->
 					<h4>
 						<a href="http://www.getrailo.com/index.cfm/services/support/" target="_blank">#stText.Overview.Professional#</a>
 					</h4>
-					<div class="comment">#stText.Overview.ProfessionalDesc#</div>
+					<div class="muted">#stText.Overview.ProfessionalDesc#</div>
 					
 					<!--- Mailing list --->
 					<h4>
 						<a href="http://groups.google.com/group/railo" target="_blank">#stText.Overview.Mailinglist#</a>
 					</h4>
-					<div class="comment">#stText.Overview.MailinglistDesc#</div>
+					<div class="muted">#stText.Overview.MailinglistDesc#</div>
 					
 					<!--- Book --->
 					<h4>
 						<a href="http://www.packtpub.com/railo-3-beginners-guide-to-develop-deploy-complex-applications-online/book" target="_blank">#stText.Overview.book#</a>
 					</h4>
-					<div class="comment">#stText.Overview.bookDesc#</div>
+					<div class="muted">#stText.Overview.bookDesc#</div>
 					
 					
 					<!--- <a href="http://www.linkedin.com/e/gis/71368/0CF7D323BBC1" target="_blank">Linked in</a>--->
@@ -450,13 +450,13 @@ Error Output --->
 					<h4>
 						<a href="https://jira.jboss.org/jira/browse/RAILO" target="_blank">#stText.Overview.issueTracker#</a>
 					</h4>
-					<div class="comment">#stText.Overview.bookDesc#</div>
+					<div class="muted">#stText.Overview.bookDesc#</div>
 					
 					<!--- Blog --->
 					<h4>
 						<a href="http://blog.getrailo.com/" target="_blank">#stText.Overview.blog#</a>
 					</h4>
-					<div class="comment">#stText.Overview.bookDesc#</div>
+					<div class="muted">#stText.Overview.bookDesc#</div>
 					
 					
 					
@@ -464,7 +464,7 @@ Error Output --->
 					<h4>
 						<a href="https://twitter.com/##!/railo" target="_blank">#stText.Overview.twitter#</a>
 					</h4>
-					<div class="comment">#stText.Overview.twitterDesc#</div>
+					<div class="muted">#stText.Overview.twitterDesc#</div>
 				</div>
 				
 			</div>

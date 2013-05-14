@@ -152,7 +152,7 @@ list all mappings and display necessary edit fields --->
 					<td>
 						<cfif hasAccess NEQ 0><input type="checkbox" class="checkbox" name="list" value="yes" <cfif settings.list>checked</cfif>>
 						<cfelse><b>#yesNoFormat(settings.list)#</b></cfif>
-						<div class="comment">#stText.rest.listDesc#</div>
+						<div class="muted">#stText.rest.listDesc#</div>
 					</td>
 				</tr>
 <!---

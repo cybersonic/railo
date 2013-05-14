@@ -273,7 +273,7 @@ Redirtect to entry --->
 					<td>
 						<cfinput type="text" name="url" value="" class="xlarge" required="yes" 
 						message="#stText.Schedule.URLMissing#">
-						<div class="comment">#stText.Schedule.URLDescription#</div>
+						<div class="muted">#stText.Schedule.URLDescription#</div>
 					</td>
 				</tr>
 				<tr>
@@ -286,7 +286,7 @@ Redirtect to entry --->
 							<option value="weekly">#stText.Schedule.Weekly#</option>
 							<option value="monthly">#stText.Schedule.Monthly#</option>
 						</select>
-						<div class="comment">#stText.Schedule.IntervalTypeDesc#</div>
+						<div class="muted">#stText.Schedule.IntervalTypeDesc#</div>
 					</td>
 				</tr>
 				<tr>

@@ -257,7 +257,7 @@
 						<thead>
 							<tr>
 								<th>#stText.remote.ot.exetime#
-									<div class="comment">(mm/dd/yyyy HH:mm:ss)</div>
+									<div class="muted">(mm/dd/yyyy HH:mm:ss)</div>
 								</th>
 								<th>#stText.remote.ot.error#</th>
 							</tr>

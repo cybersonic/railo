@@ -205,7 +205,7 @@
 						<td>
 							<cfinput type="text" name="host" 
 							value="#datasource.host#" class="large" required="#typeHost EQ TYPE_REQUIRED#">
-							<div class="comment">#stText.Settings.dbHostDesc#</div>
+							<div class="muted">#stText.Settings.dbHostDesc#</div>
 						</td>
 					</tr>
 				</cfif>
@@ -216,7 +216,7 @@
 						<td>
 							<cfinput type="text" name="database" 
 							value="#datasource.database#" class="large" required="#typeDataBase EQ TYPE_REQUIRED#">
-							<div class="comment">#stText.Settings.dbDatabaseDesc#</div>
+							<div class="muted">#stText.Settings.dbDatabaseDesc#</div>
 						</td>
 					</tr>
 				</cfif>
@@ -227,7 +227,7 @@
 						<td>
 							<cfinput type="text" name="port" validate="integer" 
 							value="#datasource.port#" class="small" required="#typePort EQ TYPE_REQUIRED#">
-							<div class="comment">#stText.Settings.dbPortDesc#</div>
+							<div class="muted">#stText.Settings.dbPortDesc#</div>
 						</td>
 					</tr>
 				</cfif>
@@ -243,7 +243,7 @@
 								#timezones.id# - #timezones.display#</option>
 							</cfoutput>
 						</select>
-						<div class="comment">#stText.Settings.dbtimezoneDesc#</div>
+						<div class="muted">#stText.Settings.dbtimezoneDesc#</div>
 						<div class="warning nofocus">
 							This feature is currently in Beta State.
 							If you have any problems while using this Implementation,
@@ -259,7 +259,7 @@
 						<td>
 							<cfinput type="text" name="username" 
 							value="#datasource.username#" class="medium" required="#typeUsername EQ TYPE_REQUIRED#">
-							<div class="comment">#stText.Settings.dbUserDesc#</div>
+							<div class="muted">#stText.Settings.dbUserDesc#</div>
 						</td>
 					</tr>
 				</cfif>
@@ -270,7 +270,7 @@
 						<td>
 							<cfinput type="password" name="Password"  passthrough='autocomplete="off"'
 							value="#datasource.password#" class="medium" onClick="this.value='';" required="#typePassword EQ TYPE_REQUIRED#">
-							<div class="comment">#stText.Settings.dbPassDesc#</div>
+							<div class="muted">#stText.Settings.dbPassDesc#</div>
 						</td>
 					</tr>
 				</cfif>
@@ -289,7 +289,7 @@
 							<cfloop index="idx" from="20" to="100" step="10"><option  <cfif datasource.ConnectionLimit EQ idx>selected</cfif>>#idx#</option></cfloop>
 							<cfloop index="idx" from="200" to="1000" step="100"><option  <cfif datasource.ConnectionLimit EQ idx>selected</cfif>>#idx#</option></cfloop>
 						</select>
-						<div class="comment">#stText.Settings.dbConnLimitDesc#</div>
+						<div class="muted">#stText.Settings.dbConnLimitDesc#</div>
 					</td>
 				</tr>
 				<!--- Connection Timeout --->
@@ -301,7 +301,7 @@
 						</select>
 						<!--- <cfinput type="text" name="ConnectionTimeout" 
 						validate="integer" value="#datasource.ConnectionTimeout#" style="width:60px"> --->
-						<div class="comment">#stText.Settings.dbConnTimeoutDesc#</div>
+						<div class="muted">#stText.Settings.dbConnTimeoutDesc#</div>
 					</td>
 				</tr>
 				<!--- validate --->
@@ -309,7 +309,7 @@
 					<th scope="row">#stText.Settings.dbValidate#</th>
 					<td>
 						<cfinput type="checkbox" class="checkbox" name="validate" value="yes" checked="#isDefined('datasource.validate') and datasource.validate#">
-						<div class="comment">#stText.Settings.dbValidateDesc#</div>
+						<div class="muted">#stText.Settings.dbValidateDesc#</div>
 					</td>
 				</tr>
 
@@ -333,7 +333,7 @@
 									<cfloop index="idx" from="1" to="30"><option value="#idx*60000*60*24#"  <cfif datasource.metaCacheTimeout EQ idx*60000*60*24><cfset selected=true>selected</cfif>>#idx# #stText.Settings.days#</option></cfloop>
 								</optgroup>
 							</select>
-							<div class="comment">#stText.Settings.dbMetaCacheTimeoutDesc#</div>
+							<div class="muted">#stText.Settings.dbMetaCacheTimeoutDesc#</div>
 						</td>
 					</tr>
 					<cfif actionType EQ "update">
@@ -350,7 +350,7 @@
 					<th scope="row">#stText.Settings.dbBlob#</th>
 					<td>
 						<cfinput type="checkbox" class="checkbox" name="blob" value="yes" checked="#datasource.blob#">
-						<div class="comment">#stText.Settings.dbBlobDesc#</div>
+						<div class="muted">#stText.Settings.dbBlobDesc#</div>
 					</td>
 				</tr>
 				<!--- Clob --->
@@ -358,7 +358,7 @@
 					<th scope="row">#stText.Settings.dbClob#</th>
 					<td>
 						<cfinput type="checkbox" class="checkbox" name="clob" value="yes" checked="#datasource.clob#">
-						<div class="comment">#stText.Settings.dbClobDesc#</div>
+						<div class="muted">#stText.Settings.dbClobDesc#</div>
 					</td>
 				</tr>
 				<!--- Allow --->
@@ -383,7 +383,7 @@
 					<th scope="row">#stText.Settings.dbStorage#</th>
 					<td>
 						<cfinput type="checkbox" class="checkbox" name="storage" value="yes" checked="#isDefined('datasource.storage') and datasource.storage#">
-						<div class="comment">#stText.Settings.dbStorageDesc#</div>
+						<div class="muted">#stText.Settings.dbStorageDesc#</div>
 					</td>
 				</tr>
 

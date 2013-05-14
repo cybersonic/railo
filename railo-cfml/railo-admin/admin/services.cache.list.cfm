@@ -258,7 +258,7 @@ function defaultValue(field) {
 										<option value="#connections.name#" <cfif connections.default EQ type>selected="selected"</cfif>>#connections.name#</option>
 									</cfloop>
 								</select>
-								<div class="comment">#stText.Settings.cache['defaulttype' &type& 'Desc']#</div>
+								<div class="muted">#stText.Settings.cache['defaulttype' &type& 'Desc']#</div>
 							</td>
 						</tr>
 					</cfloop>

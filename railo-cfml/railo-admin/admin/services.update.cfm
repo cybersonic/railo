@@ -137,21 +137,21 @@ Error Output --->
 										<input type="radio" class="radio" name="location" value="http://www.getrailo.org"<cfif update.location EQ 'http://www.getrailo.org'> <cfset isCustom=false>checked="checked"</cfif> />
 										<b>#stText.services.update.location_www#</b>
 									</label>
-									<div class="comment">#stText.services.update.location_wwwdesc#</div>
+									<div class="muted">#stText.services.update.location_wwwdesc#</div>
 								</li>
 								<li>
 									<label>
 										<input type="radio" class="radio" name="location" value="http://preview.getrailo.org"<cfif update.location EQ 'http://preview.getrailo.org'> <cfset isCustom=false>checked="checked"</cfif> />
 										<b>#stText.services.update.location_preview#</b>
 									</label>
-									<div class="comment">#stText.services.update.location_previewdesc#</div>
+									<div class="muted">#stText.services.update.location_previewdesc#</div>
 								</li>
 								<li>
 									<label>
 										<input type="radio" class="radio" name="location" value="http://dev.getrailo.org"<cfif update.location EQ 'http://dev.getrailo.org'> <cfset isCustom=false>checked="checked"</cfif> />
 										<b>#stText.services.update.location_dev#</b>
 									</label>
-									<div class="comment">#stText.services.update.location_devdesc#</div>
+									<div class="muted">#stText.services.update.location_devdesc#</div>
 								</li>
 								<li>
 									<label>
@@ -159,7 +159,7 @@ Error Output --->
 										<b>#stText.services.update.location_custom#</b>
 									</label>
 									<input id="customtextinput" type="text" class="text" name="locationCustom" size="40" value="<cfif isCustom>#update.location#</cfif>">
-									<div class="comment">#stText.services.update.location_customDesc#</div>
+									<div class="muted">#stText.services.update.location_customDesc#</div>
 									
 									<cfsavecontent variable="headText">
 										<script type="text/javascript">
@@ -193,7 +193,7 @@ Error Output --->
 						<cfelse>
 							<b>#update.type#</b>
 						</cfif>
-						<div class="comment">#stText.services.update.typeDesc#</div>
+						<div class="muted">#stText.services.update.typeDesc#</div>
 					</td>
 				</tr>
 				<cfif hasAccess>

@@ -175,20 +175,20 @@ Error Output--->
 					<td>
 						<cfinput type="text" name="url" value="#task.url#" class="xlarge" required="yes" 
 						message="#stText.Schedule.URLMissing#">
-						<div class="comment">#stText.Schedule.NameDescEdit#</div></td>
+						<div class="muted">#stText.Schedule.NameDescEdit#</div></td>
 				</tr>
 				<tr>
 					<th scope="row">#stText.Schedule.Port#</th>
 					<td>
 						<cfinput type="text" name="port" value="#task.port#" class="number" required="no" validate="integer">
-						<div class="comment">#stText.Schedule.PortDescription#</div>
+						<div class="muted">#stText.Schedule.PortDescription#</div>
 					</td>
 				</tr>
 				<tr>
 					<th scope="row">#stText.Schedule.Timeout#</th>
 					<td>
 						<cfinput type="text" name="timeout" value="#task.timeout#" class="number" required="no" validate="integer">
-						<div class="comment">#stText.Schedule.TimeoutDescription#</div>
+						<div class="muted">#stText.Schedule.TimeoutDescription#</div>
 					</td>
 				</tr>
 				
@@ -197,7 +197,7 @@ Error Output--->
 					<td>
 						<cfinput type="text" name="username" value="#task.username#" class="medium"
 						required="no">
-						<div class="comment">#stText.Schedule.UserNameDescription#</div>
+						<div class="muted">#stText.Schedule.UserNameDescription#</div>
 					</td>
 				</tr>
 				<tr>
@@ -205,7 +205,7 @@ Error Output--->
 					<td>
 						
 						<cfinput type="password" name="password" value="#task.password#" class="medium" required="no">
-						<div class="comment">#stText.Schedule.PasswordDescription#</div>
+						<div class="muted">#stText.Schedule.PasswordDescription#</div>
 					</td>
 				</tr>
 			</tbody>
@@ -219,27 +219,27 @@ Error Output--->
 					<th scope="row">#stText.Schedule.Server#</th>
 					<td>
 						<cfinput type="text" name="proxyserver" value="#task.proxyserver#" class="large" required="no">
-						<div class="comment">#stText.Schedule.ProxyServerDesc#</div>
+						<div class="muted">#stText.Schedule.ProxyServerDesc#</div>
 					</td>
 				</tr>
 				<tr>
 					<th scope="row">#stText.Schedule.Port#</th>
 					<td><cfinput type="text" name="proxyport" value="#task.proxyport#" class="number" validate="integer" required="no">
-						<div class="comment">#stText.Schedule.ProxyPort#</div>
+						<div class="muted">#stText.Schedule.ProxyPort#</div>
 					</td>
 				</tr>
 				<tr>
 					<th scope="row">#stText.Schedule.Username#</th>
 					<td>
 						<cfinput type="text" name="proxyuser" value="#task.proxyuser#" class="medium" required="no">
-						<div class="comment">#stText.Schedule.ProxyUserName#</div>
+						<div class="muted">#stText.Schedule.ProxyUserName#</div>
 					</td>
 				</tr>
 				<tr>
 					<th scope="row">#stText.Schedule.Password#</th>
 					<td>
 						<cfinput type="text" name="proxypassword" value="#task.proxypassword#" class="medium" required="no">
-						<div class="comment">#stText.Schedule.ProxyPassword#</div>
+						<div class="muted">#stText.Schedule.ProxyPassword#</div>
 					</td>
 				</tr>
 			</tbody>
@@ -252,20 +252,20 @@ Error Output--->
 				<tr>
 					<th scope="row">#stText.Schedule.Publish#</th>
 					<td><input type="checkbox" class="checkbox" name="publish" value="yes" <cfif task.publish>checked</cfif>>
-						<div class="comment">#stText.Schedule.StoreResponse#</div></td>
+						<div class="muted">#stText.Schedule.StoreResponse#</div></td>
 				</tr>
 				<tr>
 					<th scope="row">#stText.Schedule.File#</th>
 					<td>
 						<cfinput type="text" name="file" value="#toFile(task.path,task.file)#" class="large" required="no">
-						<div class="comment">#stText.Schedule.FileDescription#</div>
+						<div class="muted">#stText.Schedule.FileDescription#</div>
 					</td>
 				</tr>
 				<tr>
 					<th scope="row">#stText.Schedule.Resolve_URL#</th>
 					<td>
 						<input type="checkbox" class="checkbox" name="resolveurl" value="yes" <cfif task.resolveurl>checked</cfif>>
-						<div class="comment">#stText.Schedule.ResolveDescription#</div>
+						<div class="muted">#stText.Schedule.ResolveDescription#</div>
 					</td>
 				</tr>
 			</tbody>
@@ -343,7 +343,7 @@ Error Output--->
 										</tr>
 									</tbody>
 								</table>
-								<div class="comment">#stText.Schedule.ExecuteAtDesc#</div>
+								<div class="muted">#stText.Schedule.ExecuteAtDesc#</div>
 							</td>
 						</tr>
 					</cfcase>
@@ -372,7 +372,7 @@ Error Output--->
 										</tr>
 									</tbody>
 								</table>
-								<div class="comment">#stText.Schedule.StartsAtDesc#</div>
+								<div class="muted">#stText.Schedule.StartsAtDesc#</div>
 							</td>
 						</tr>
 						<tr>
@@ -394,7 +394,7 @@ Error Output--->
 										</tr>
 									</tbody>
 								</table>
-								<div class="comment">#stText.Schedule['ExecutionTimeDesc'& task.interval ]#</div>
+								<div class="muted">#stText.Schedule['ExecutionTimeDesc'& task.interval ]#</div>
 							</td>
 						</tr>
 						<tr>
@@ -416,7 +416,7 @@ Error Output--->
 										</tr>
 									</tbody>
 								</table>
-								<div class="comment">#stText.Schedule['EndsAtDesc'& task.interval ]#</div>
+								<div class="muted">#stText.Schedule['EndsAtDesc'& task.interval ]#</div>
 							</td>
 						</tr>
 					</cfcase>
@@ -440,7 +440,7 @@ Error Output--->
 										</tr>
 									</tbody>
 								</table>
-								<div class="comment">#stText.Schedule.StartDateDesc#</div>
+								<div class="muted">#stText.Schedule.StartDateDesc#</div>
 							</td>
 						</tr>
 						<tr>
@@ -484,7 +484,7 @@ Error Output--->
 										</tr>
 									</tbody>
 								</table>
-								<div class="comment">#stText.Schedule.endDateDesc#</div>
+								<div class="muted">#stText.Schedule.endDateDesc#</div>
 							</td>
 						</tr>
 						<tr>
@@ -538,7 +538,7 @@ Error Output--->
 										</tr>
 									</tbody>
 								</table>
-								<div class="comment">#stText.Schedule.IntervalDesc#</div>
+								<div class="muted">#stText.Schedule.IntervalDesc#</div>
 							</td>
 						</tr>
 					</cfdefaultcase>
@@ -547,7 +547,7 @@ Error Output--->
 					<th scope="row">#stText.Schedule.paused#</th>	
 					<td>
 						<input type="checkbox" class="checkbox" name="paused" value="true"<cfif task.paused> checked="checked"</cfif> />
-						<div class="comment">#stText.Schedule.pauseDesc#</div>
+						<div class="muted">#stText.Schedule.pauseDesc#</div>
 					</td>
 				</tr>
 				<cfmodule template="remoteclients.cfm" colspan="2">

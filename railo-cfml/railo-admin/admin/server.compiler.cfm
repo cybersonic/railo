@@ -99,14 +99,14 @@ Redirtect to entry --->
 					<th scope="row">#stText.compiler.nullSupport#</th>
 					<td>
 						<cfif hasAccess && request.admintype EQ "server">
-							<ul class="radiolist">
+							<ul class="radiolist unstyled">
 								<li>
 									<!--- full --->
 									<label>
 										<input class="radio" type="radio" name="nullSupport" value="true"<cfif setting.nullSupport> checked="checked"</cfif>>
 										<b>#stText.compiler.nullSupportFull#</b>
 									</label>
-									<div class="comment">#stText.compiler.nullSupportFullDesc#</div>
+									<div class="muted">#stText.compiler.nullSupportFullDesc#</div>
 								</li>
 								<li>
 									<!--- partial --->
@@ -114,14 +114,14 @@ Redirtect to entry --->
 										<input class="radio" type="radio" name="nullSupport" value="false"<cfif !setting.nullSupport> checked="checked"</cfif>>
 										<b>#stText.compiler.nullSupportPartial#</b>
 									</label>
-									<div class="comment">#stText.compiler.nullSupportPartialDesc#</div>
+									<div class="muted">#stText.compiler.nullSupportPartialDesc#</div>
 								</li>
 							</ul>
 						<cfelse>
 							<cfset strNullSupport=setting.nullSupport?"full":"partial">
 							<input type="hidden" name="nullSupport" value="#setting.nullSupport#">
 							<b>#stText.compiler["nullSupport"& strNullSupport]#</b><br />
-							<div class="comment">#stText.compiler["nullSupport"& strNullSupport&"Desc"]#</div>
+							<div class="muted">#stText.compiler["nullSupport"& strNullSupport&"Desc"]#</div>
 							<cfif request.admintype EQ "web"><div class="warning nofocus">#stText.compiler.nullSupportOnlyServer#</div></cfif>
 						</cfif>
 					</td>
@@ -133,14 +133,14 @@ Redirtect to entry --->
 					<th scope="row">#stText.setting.dotNotation#</th>
 					<td>
 						<cfif hasAccess>
-							<ul class="radiolist">
+							<ul class="radiolist unstyled">
 								<li>
 									<!--- original case --->
 									<label>
 										<input class="radio" type="radio" name="dotNotation" value="oc"<cfif !setting.dotNotationUpperCase> checked="checked"</cfif>>
 										<b>#stText.setting.dotNotationOriginalCase#</b>
 									</label>
-									<div class="comment">#replace(stText.setting.dotNotationOriginalCaseDesc, server.separator.line, '<br />', 'all')#</div>
+									<div class="muted">#replace(stText.setting.dotNotationOriginalCaseDesc, server.separator.line, '<br />', 'all')#</div>
 								</li>
 								<li>
 									<!--- upper case --->
@@ -148,7 +148,7 @@ Redirtect to entry --->
 										<input class="radio" type="radio" name="dotNotation" value="uc"<cfif setting.dotNotationUpperCase> checked="checked"</cfif>>
 										<b>#stText.setting.dotNotationUpperCase#</b>
 									</label>
-									<div class="comment">#replace(stText.setting.dotNotationUpperCaseDesc, server.separator.line, '<br />', 'all')#</div>
+									<div class="muted">#replace(stText.setting.dotNotationUpperCaseDesc, server.separator.line, '<br />', 'all')#</div>
 								</li>
 							</ul>
 						<cfelse>
@@ -156,7 +156,7 @@ Redirtect to entry --->
 							<cfset strDotNotationID=setting.dotNotationUpperCase?"Upper":"Original">
 							<input type="hidden" name="dotNotation" value="#strDotNotation#">
 							<b>#stText.setting["dotNotation"& strDotNotationID &"Case"]#</b><br />
-							<div class="comment">#replace(stText.setting["dotNotation"& strDotNotationID &"CaseDesc"], server.separator.line, '<br />', 'all')#</div>
+							<div class="muted">#replace(stText.setting["dotNotation"& strDotNotationID &"CaseDesc"], server.separator.line, '<br />', 'all')#</div>
 						</cfif>
 					</td>
 				</tr>
@@ -170,7 +170,7 @@ Redirtect to entry --->
 						<cfelse>
 							<b>#yesNoFormat(setting.supressWSBeforeArg)#</b><br /><input type="hidden" name="supressWSBeforeArg" value="#setting.supressWSBeforeArg#">
 						</cfif>
-						<div class="comment">#stText.setting.supressWSBeforeArgDesc#</div>
+						<div class="muted">#stText.setting.supressWSBeforeArgDesc#</div>
 					</td>
 				</tr>
 
@@ -182,7 +182,7 @@ Redirtect to entry --->
 				<tfoot>
 					<tr>
 						<td colspan="2">
-							<input class="submit" type="submit" class="submit" name="mainAction" value="#stText.Buttons.Update#">
+							<input class="submit btn btn-primary" type="submit" class="submit" name="mainAction" value="#stText.Buttons.Update#">
 							<input type="reset" class="button reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 							<cfif request.adminType EQ "web"><input class="submit" type="submit" class="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#"></cfif>
 						</td>

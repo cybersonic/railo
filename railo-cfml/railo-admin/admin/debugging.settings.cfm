@@ -134,7 +134,7 @@ Redirtect to entry --->
 										#stText.general.no#
 									</label>
 									
-									<div class="comment">#stText.debug.settings.generalNo#</div>
+									<div class="muted">#stText.debug.settings.generalNo#</div>
 											
 								</li>
 								<li>
@@ -142,7 +142,7 @@ Redirtect to entry --->
 										<input type="radio" class="radio" name="debug" id="sp_radio_debug" value="true" #_debug.debug ? 'checked="checked"' : ''#> 
 										#stText.general.yes#
 									</label>
-									<div class="comment">#stText.debug.settings.generalYes#</div>
+									<div class="muted">#stText.debug.settings.generalYes#</div>
 									<table class="maintbl autowidth" id="debugoptionstbl">
 									<tbody>
 										<cfloop list="database,exception,tracing,timer,implicitAccess" item="item">
@@ -157,7 +157,7 @@ Redirtect to entry --->
 													<b>#_debug[item] ? stText.general.yes : stText.general.no#</b>
 													<input type="hidden" name="#item#" value="#_debug[item]#">
 												</cfif>
-												<div class="comment">#stText.debug.settings[item&"Desc"]#</div>
+												<div class="muted">#stText.debug.settings[item&"Desc"]#</div>
 												
 												<cfif item EQ "database">
 												<table class="maintbl autowidth" id="debugoptionqutbl">
@@ -173,7 +173,7 @@ Redirtect to entry --->
 																<b>#_debug.queryUsage ? stText.general.yes : stText.general.no#</b>
 																<input type="hidden" name="queryUsage" value="#_debug.queryUsage#">
 															</cfif>
-															<div class="comment">#stText.debug.settings["queryUsageDesc"]#</div>
+															<div class="muted">#stText.debug.settings["queryUsageDesc"]#</div>
 														</td>
 													</tr>
 												</table>
@@ -190,7 +190,7 @@ Redirtect to entry --->
 						<cfelse>
 							<!---<input type="hidden" name="scriptProtect" value="#appSettings.scriptProtect#">--->
 							<b>#lbl#</b>
-							<div class="comment">#_debug.debug?stText.debug.settings.generalYes:stText.debug.settings.generalNo#</div>
+							<div class="muted">#_debug.debug?stText.debug.settings.generalYes:stText.debug.settings.generalNo#</div>
 							<cfloop list="database,exception,tracing,timer,implicitAccess" item="item">
 								<cfif _debug[item]>- #stText.debug.settings[item]#<br></cfif>
 							</cfloop>

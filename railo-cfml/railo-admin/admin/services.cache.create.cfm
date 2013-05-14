@@ -91,7 +91,7 @@ Redirtect to entry --->
 					<th scope="row">#stText.Settings.cache.storage#</th>
 					<td>
 						<cfinput type="checkbox" class="checkbox" name="storage" value="yes" checked="#connection.storage#">
-						<div class="comment">#stText.Settings.cache.storageDesc#</div>
+						<div class="muted">#stText.Settings.cache.storageDesc#</div>
 					</td>
 				</tr>
 			</tbody>
@@ -202,10 +202,10 @@ Redirtect to entry --->
 							<cfelseif type EQ "radio" or type EQ "checkbox">
 								<cfset desc=field.getDescription()>
 								<cfif isStruct(desc) and StructKeyExists(desc,'_top')>
-									<div class="comment">#desc._top#</div>
+									<div class="muted">#desc._top#</div>
 								</cfif>
 								<cfif listLen(field.getValues()) GT 1>
-									<ul class="radiolist">
+									<ul class="radiolist unstyled">
 										<cfloop index="item" list="#field.getValues()#">
 											<li>
 												<label>
@@ -223,11 +223,11 @@ Redirtect to entry --->
 									<cfinput type="#type#" class="#type#" name="custom_#field.getName()#" value="#item#" checked="#item EQ default#">
 								</cfif>
 								<cfif isStruct(desc) and StructKeyExists(desc,'_bottom')>
-									<div class="comment">#desc._bottom#</div>
+									<div class="muted">#desc._bottom#</div>
 								</cfif>
 							</cfif>
 							<cfif isSimpleValue(field.getDescription()) and len(trim(field.getDescription()))>
-								<div class="comment">#field.getDescription()#</div>
+								<div class="muted">#field.getDescription()#</div>
 							</cfif>
 						</td>
 					</tr>
@@ -241,7 +241,7 @@ Redirtect to entry --->
 								<option <cfif connection.default EQ type>selected="selected"</cfif> value="#type#">#stText.Settings.cache['defaultType'& type]#</option>
 							</cfloop>
 						</select>
-						<div class="comment">#stText.Settings.cache.defaultDesc#</div>
+						<div class="muted">#stText.Settings.cache.defaultDesc#</div>
 					</td>
 				</tr>
 			</tbody>

@@ -11,7 +11,7 @@
 <tr>
 	<th scope="row">#lang.id#</th>
 	<td>
-		<div class="comment">#lang.commentId#</div><br>
+		<div class="muted">#lang.commentId#</div><br>
 		<cfinput required="yes" type="text" name="id" value="#req.ddns.id#" message="#lang.messageId#" size="40"/>
 		
 	</td>
@@ -19,7 +19,7 @@
 <tr>
 	<th scope="row">#lang.onOff#</th>
 	<td>
-		<div class="comment">#lang.commentOnOff#</div><br>
+		<div class="muted">#lang.commentOnOff#</div><br>
 		<input type="checkbox" class="checkbox" name="enabled" value="yes" <cfif req.ddns.enabled>checked="checked"</cfif>  />
 		
 	</td>

@@ -146,7 +146,7 @@ Error Output --->
 							<input type="hidden" name="templateCharset" value="#charset.templateCharset#">
 							<b>#charset.templateCharset#</b>
 						</cfif>
-						<div class="comment">#stText.charset.templateCharsetDescription#</div>
+						<div class="muted">#stText.charset.templateCharsetDescription#</div>
 					</td>
 				</tr>--->
 				
@@ -160,7 +160,7 @@ Error Output --->
 							<input type="hidden" name="webCharset" value="#charset.webCharset#">
 							<b>#charset.webCharset#</b>
 						</cfif>
-						<div class="comment">#stText.charset.webCharsetDescription#</div>
+						<div class="muted">#stText.charset.webCharsetDescription#</div>
 					</td>
 				</tr>--->
 				
@@ -174,7 +174,7 @@ Error Output --->
 							<input type="hidden" name="resourceCharset" value="#charset.resourceCharset#">
 							<b>#charset.resourceCharset#</b>
 						</cfif>
-						<div class="comment">#stText.charset.resourceCharsetDescription#</div>
+						<div class="muted">#stText.charset.resourceCharsetDescription#</div>
 					</td>
 				</tr> --->
 			</tbody>

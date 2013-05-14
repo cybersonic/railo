@@ -82,7 +82,7 @@
 					<h3>
 						<a href="server.cfm?action=services.update" style="text-decoration:none;">Core</a>
 					</h3>
-					<div class="comment">
+					<div class="muted">
 						<cfif hasUpdate>
 							#replace(replace(replace(stText.services.update.update,'{available}','<b>(#avi#)</b>'),'{current}','<b>(#curr#)</b>'),'{avaiable}','<b>(#avi#)</b>')#<br />
 						<cfelse>
@@ -94,7 +94,7 @@
 				<h3>
 					<a href="#self#?action=extension.applications" style="text-decoration:none;">Extensions</a>
 				</h3>
-				<div class="comment">
+				<div class="muted">
 					<cfif not extensions.recordcount>
 						You have no extensions installed yet.
 					<cfelseif len(ext)>
