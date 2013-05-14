@@ -26,7 +26,7 @@
 	<form method="get" action="#cgi.SCRIPT_NAME#">
 		<input type="hidden" name="action" value="admin.search" />
 		<input type="text" name="q" class="medium" size="50"<cfif structKeyExists(url, 'q')> value="#url.q#"</cfif> placeholder="#stText.buttons.search#" />
-		<input type="submit" class="button submit" value="#stText.buttons.search#" />
+		<input type="submit" class="button submit btn btn-primary" value="#stText.buttons.search#" />
 	</form>
 </cfoutput>
 <cfif structKeyExists(url, 'q') and len(url.q)>

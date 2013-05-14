@@ -340,7 +340,7 @@
 						<tr>
 							<th scope="row">#stText.Settings.flushCache#</th>
 							<td>
-								<input type="submit" class="button submit" name="_run" value="#stText.Settings.flushCache#">
+								<input type="submit" class="button submit btn btn-primary" name="_run" value="#stText.Settings.flushCache#">
 							</td>
 						</tr>
 					</cfif>
@@ -443,7 +443,7 @@
 					<td colspan="2">
 						<input type="hidden" name="mark" value="#structKeyExists(form,'mark')?form.mark:'update'#">
 						<input type="hidden" name="run" value="create2">
-						<input type="submit" class="button submit" name="_run" value="#stText.Buttons[actionType]#">
+						<input type="submit" class="button submit btn btn-primary" name="_run" value="#stText.Buttons[actionType]#">
 						<input onclick="window.location='#request.self#?action=#url.action#';" type="button" class="button" name="cancel" value="#stText.Buttons.Cancel#">
 					</td>
 				</tr>

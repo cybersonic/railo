@@ -120,10 +120,10 @@ Error Output --->
 				<tfoot>
 					<tr>
 						<td colspan="2">
-							<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.Update#">
-							<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Update#">
+							<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 							<cfif request.adminType EQ "web">
-								<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#">
+								<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.resetServerAdmin#">
 							</cfif>
 						</td>
 					</tr>
@@ -230,8 +230,8 @@ list all mappings and display necessary edit fields --->
 				<tfoot>
 					<tr>
 						<td colspan="5">
-							<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.Verify#">
-							<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Verify#">
+							<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 						 </td>
 					</tr>
 				</tfoot>
@@ -292,9 +292,9 @@ list all mappings and display necessary edit fields --->
 				<tfoot>
 					<tr>
 						<td colspan="6">
-							<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.Verify#">
-							<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
-							<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.Delete#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Verify#">
+							<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Delete#">
 						 </td>
 					</tr>
 				</tfoot>
@@ -337,8 +337,8 @@ list all mappings and display necessary edit fields --->
 					<tr>
 						<td colspan="2">
 							<input type="hidden" name="mark" value="create">
-							<input type="submit" class="button submit" name="run" value="#stText.Buttons.Create#">
-							<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
+							<input type="submit" class="button submit btn btn-primary" name="run" value="#stText.Buttons.Create#">
+							<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 						</td>
 					</tr>
 				</tfoot>

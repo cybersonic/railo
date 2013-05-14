@@ -230,8 +230,8 @@
 									<input type="hidden" class="checkbox" name="row_#tasks.currentrow#" value="#tasks.currentrow#">
 									<input type="hidden" name="id_#tasks.currentrow#" value="#tasks.id#">
 									<input onclick="window.location='#request.self#?action=#url.action#';" type="button" class="button cancel" name="cancel" value="#stText.Buttons.Cancel#">
-									<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.Execute#">
-									<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.Delete#">
+									<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Execute#">
+									<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Delete#">
 								</td>
 							</tr>
 						</tfoot>
@@ -363,7 +363,7 @@
 						<td width="250" class="tblHead"><input type="text" name="nameFilter" style="width:250px" value="#session.filter.name#" /></td>
 						<th scope="row"><input type="text" name="nextFilter" style="width:90px" value="#session.filter.next#" /></th>
 						<th scope="row"><input type="text" name="triesFilter" style="width:90px" value="#session.filter.tries#" /></th>
-						<th scope="row"><input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.filter#"></th>
+						<th scope="row"><input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.filter#"></th>
 					</tr>
 					--->
 					<cfloop query="tasks">
@@ -423,9 +423,9 @@
 					<tfoot>
 						 <tr>
 							<td colspan="6">
-								<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
-								<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.Execute#">
-								<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.Delete#">
+								<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
+								<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Execute#">
+								<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Delete#">
 								<input type="submit" class="button" name="mainAction" value="#stText.Buttons.DeleteAll#">
 							</td>	
 						</tr>

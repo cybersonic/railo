@@ -330,7 +330,7 @@
 				<tr>
 					<td colspan="2">
 						<input type="hidden" name="mainAction" value="#prefix#Udpate">
-						<input type="submit" class="button submit" name="subAction" value="#stText.Buttons.Update#">
+						<input type="submit" class="button submit btn btn-primary" name="subAction" value="#stText.Buttons.Update#">
 						<input onclick="window.location='#go(url.action)#';" type="button" class="button" name="cancel" value="#stText.Buttons.Cancel#">
 					</td>
 				</tr>

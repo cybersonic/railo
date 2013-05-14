@@ -203,7 +203,7 @@ Redirtect to entry --->
 							<b>#yesNoFormat(setting.customTagPathCache)#</b>
 						</cfif>
 						<div class="comment">#stText.CustomTags.customTagPathCacheDesc#</div>
-						<cfif setting.customTagPathCache><input type="submit" class="button submit" name="mainAction" value="#flushName#"></cfif>
+						<cfif setting.customTagPathCache><input type="submit" class="button submit btn btn-primary" name="mainAction" value="#flushName#"></cfif>
 					</td>
 				</tr>
 
@@ -254,8 +254,8 @@ Redirtect to entry --->
 				<tfoot>
 					<tr>
 						<td colspan="2">
-							<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.Update#">
-							<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Update#">
+							<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 						</td>
 					</tr>
 				</tfoot>
@@ -398,9 +398,9 @@ Redirtect to entry --->
 					<tr>
 						<td colspan="6">
 							<input type="hidden" name="mainAction" value="#stText.Buttons.Update#">
-							<input type="submit" class="button submit" name="subAction" value="#stText.Buttons.Update#">
-							<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
-							<input type="submit" class="button submit" name="subAction" value="#stText.Buttons.Delete#">
+							<input type="submit" class="button submit btn btn-primary" name="subAction" value="#stText.Buttons.Update#">
+							<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
+							<input type="submit" class="button submit btn btn-primary" name="subAction" value="#stText.Buttons.Delete#">
 						 </td>
 					</tr>
 				</tfoot>

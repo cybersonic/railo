@@ -11,7 +11,7 @@
 		</cfif>
 		
 		<cfform onerror="customError" action="#request.self#?action=#url.action#" method="post">
-			<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.ok#">
+			<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.ok#">
 		</cfform>
 	</div>
 </cfoutput>

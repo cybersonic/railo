@@ -138,7 +138,7 @@ function doEnableProxy(enableProxy) {
 <tr>
 	<td colspan="2">
 		
-		<input class="button submit" type="submit" name="mainAction" value="#iif(proxy.enabled,de(stText.proxy.disable),de(stText.proxy.enable))#">
+		<input class="button submit btn btn-primary" type="submit" name="mainAction" value="#iif(proxy.enabled,de(stText.proxy.disable),de(stText.proxy.enable))#">
 	
 	</td>
 </tr>
@@ -221,8 +221,8 @@ function doEnableProxy(enableProxy) {
 <cfif hasAccess>
 <tr>
 	<td colspan="2">
-		<input class="button submit" type="submit" name="mainAction" value="#stText.Buttons.Update#">
-		<input class="button reset" type="reset" name="cancel" value="#stText.Buttons.Cancel#">
+		<input class="button submit btn btn-primary" type="submit" name="mainAction" value="#stText.Buttons.Update#">
+		<input class="button reset btn" type="reset" name="cancel" value="#stText.Buttons.Cancel#">
 	</td>
 </tr>
 </cfif>

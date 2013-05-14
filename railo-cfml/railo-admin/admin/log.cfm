@@ -55,8 +55,8 @@
 <!---<cfmodule template="remoteclients.cfm" colspan="2">--->
 <tr>
 	<td colspan="2">
-		<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
-		<input type="submit" class="button submit" name="run" value="#stText.Buttons.update#">
+		<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
+		<input type="submit" class="button submit btn btn-primary" name="run" value="#stText.Buttons.update#">
 	</td>
 </tr>
 </cfform>

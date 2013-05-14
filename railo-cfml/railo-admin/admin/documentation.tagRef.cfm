@@ -45,7 +45,7 @@
 			<tfoot>
 				<tr>
 					<td colspan="2">
-						<input class="button submit" type="submit" name="mainAction" value="#stText.Buttons.OK#"> 
+						<input class="button submit btn btn-primary" type="submit" name="mainAction" value="#stText.Buttons.OK#"> 
 					</td>
 				</tr>
 			</tfoot>

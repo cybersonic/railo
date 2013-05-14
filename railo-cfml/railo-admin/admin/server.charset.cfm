@@ -78,10 +78,65 @@ Error Output --->
 	
 	<div class="pageintro">#stText.charset[request.adminType]#</div>
 	
-	<cfform onerror="customError" action="#request.self#?action=#url.action#" method="post">
+	<cfform onerror="customError" action="#request.self#?action=#url.action#" method="post" class="form-horizontal">
+
+		<div class="control-group">
+			<label class="control-label" for="templateCharset">#stText.charset.templateCharset#</label>
+
+			<div class="controls">
+						<cfif hasAccess>
+							<input type="text" class="small" name="templateCharset" value="#charset.templateCharset#" />
+						<cfelse>
+							<input type="hidden" name="templateCharset" value="#charset.templateCharset#" placeholder="#charset.templateCharset#">
+							<b>#charset.templateCharset#</b>
+						</cfif>
+						<div class="muted">#stText.charset.templateCharsetDescription#</div>
+			</div>
+
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="webCharset">#stText.charset.webCharset#</label>
+
+			<div class="controls">
+						<cfif hasAccess>
+							<input type="text" class="small" name="webCharset" value="#charset.webCharset#">
+						<cfelse>
+							<input type="hidden" name="webCharset" value="#charset.webCharset#">
+							<b>#charset.webCharset#</b>
+						</cfif>
+						<div class="muted">#stText.charset.webCharsetDescription#</div>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="resourceCharset">#stText.charset.resourceCharset#</label>
+
+			<div class="controls">
+						<cfif hasAccess>
+							<input type="text" class="small" name="resourceCharset" value="#charset.resourceCharset#">
+						<cfelse>
+							<input type="hidden" name="resourceCharset" value="#charset.resourceCharset#">
+							<b>#charset.resourceCharset#</b>
+						</cfif>
+						<div class="muted">#stText.charset.resourceCharsetDescription#</div>
+			</div>
+		</div>
+
+		<cfif hasAccess>
+		<div class="form-actions">
+					<cfmodule template="remoteclients.cfm" colspan="2">
+		
+							<input class="button submit btn btn-primary" type="submit" name="mainAction" value="#stText.Buttons.Update#">
+							<input class="button reset btn" type="reset" name="cancel" value="#stText.Buttons.Cancel#">
+							<cfif request.adminType EQ "web"><input class="button submit btn" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#"></cfif>
+		</div>
+		</cfif>
+
+
 		<table class="maintbl">
 			<tbody>
-				<!--- Template --->
+				<!--- Template 
 				<tr>
 					<th scope="row">#stText.charset.templateCharset#</th>
 					<td>
@@ -93,9 +148,9 @@ Error Output --->
 						</cfif>
 						<div class="comment">#stText.charset.templateCharsetDescription#</div>
 					</td>
-				</tr>
+				</tr>--->
 				
-				<!--- Web --->
+				<!--- Web 
 				<tr>
 					<th scope="row">#stText.charset.webCharset#</th>
 					<td>
@@ -107,9 +162,9 @@ Error Output --->
 						</cfif>
 						<div class="comment">#stText.charset.webCharsetDescription#</div>
 					</td>
-				</tr>
+				</tr>--->
 				
-				<!--- Resource --->
+				<!--- Resource
 				<tr>
 					<th scope="row">#stText.charset.resourceCharset#</th>
 					<td>
@@ -121,20 +176,9 @@ Error Output --->
 						</cfif>
 						<div class="comment">#stText.charset.resourceCharsetDescription#</div>
 					</td>
-				</tr>
+				</tr> --->
 			</tbody>
-			<cfif hasAccess>
-				<tfoot>
-					<cfmodule template="remoteclients.cfm" colspan="2">
-					<tr>
-						<td colspan="2">
-							<input class="button submit" type="submit" name="mainAction" value="#stText.Buttons.Update#">
-							<input class="button reset" type="reset" name="cancel" value="#stText.Buttons.Cancel#">
-							<cfif request.adminType EQ "web"><input class="button submit" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#"></cfif>
-						</td>
-					</tr>
-				</tfoot>
-			</cfif>
+			
 		</table>
 	</cfform>
 </cfoutput>

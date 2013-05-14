@@ -80,10 +80,10 @@ Error Output --->
 			<tfoot>
 				<tr>
 					<td colspan="2">
-						<input class="button submit" type="submit" name="mainAction" value="#stText.services.certificate.list#">
-						<input class="button submit" type="submit" name="mainAction" value="#stText.services.certificate.install#">
-						<input class="button reset" type="reset" name="cancel" value="#stText.Buttons.Cancel#">
-						<cfif request.adminType EQ "web"><input class="button submit" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#"></cfif>
+						<input class="button submit btn btn-primary" type="submit" name="mainAction" value="#stText.services.certificate.list#">
+						<input class="button submit btn btn-primary" type="submit" name="mainAction" value="#stText.services.certificate.install#">
+						<input class="button reset btn" type="reset" name="cancel" value="#stText.Buttons.Cancel#">
+						<cfif request.adminType EQ "web"><input class="button submit btn btn-primary" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#"></cfif>
 					</td>
 				</tr>
 			</tfoot>

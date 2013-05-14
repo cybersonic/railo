@@ -189,8 +189,8 @@ Redirtect to entry --->
 					<tr>
 						<td></td>
 						<td colspan="3">
-							<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.refresh#">
-							<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.refresh#">
+							<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 						</td>	
 					</tr>
 				</tfoot>
@@ -259,9 +259,9 @@ Redirtect to entry --->
 						<td></td>
 						<td colspan="4" id="btns">
 							<input type="submit" class="button" name="mainAction" value="#stText.Buttons.refresh#">
-							<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.delete#">
-							<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.restart#">
-							<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.stopstart#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.delete#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.restart#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.stopstart#">
 						</td>	
 					</tr>
 				</tfoot>
@@ -298,8 +298,8 @@ Redirtect to entry --->
 					<tfoot>
 						<tr>
 							<td colspan="2">
-								<input type="submit" class="button submit" name="run" value="#stText.Buttons.create#">
-								<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
+								<input type="submit" class="button submit btn btn-primary" name="run" value="#stText.Buttons.create#">
+								<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 							</td>
 						</tr>
 					</tfoot>

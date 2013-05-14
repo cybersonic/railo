@@ -281,7 +281,7 @@ Redirtect to entry --->
 		</cfif>
 				<tr>
 					<td colspan="2">
-						<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.submit#">
+						<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.submit#">
 					</td>
 				</tr>
 			</tfoot>

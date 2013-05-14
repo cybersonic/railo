@@ -173,11 +173,11 @@
 							 <tr>
 								<td colspan="8">
 									<input type="hidden" name="run" value="action">
-									<input type="submit" class="button submit" name="action" value="#stText.Buttons.Repair#">
-									<input type="submit" class="button submit" name="action" value="#stText.Buttons.Optimize#">
-									<input type="submit" class="button submit" name="action" value="#stText.Buttons.Purge#">
-									<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
-									<input type="submit" class="button submit" name="action" value="#stText.Buttons.Delete#">
+									<input type="submit" class="button submit btn btn-primary" name="action" value="#stText.Buttons.Repair#">
+									<input type="submit" class="button submit btn btn-primary" name="action" value="#stText.Buttons.Optimize#">
+									<input type="submit" class="button submit btn btn-primary" name="action" value="#stText.Buttons.Purge#">
+									<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
+									<input type="submit" class="button submit btn btn-primary" name="action" value="#stText.Buttons.Delete#">
 								</td>	
 							</tr>
 						</tfoot>
@@ -217,7 +217,7 @@
 					<tfoot>
 						<tr>
 							<td colspan="2">
-								<input type="submit" class="button submit" name="run" value="#stText.Buttons.Create#">
+								<input type="submit" class="button submit btn btn-primary" name="run" value="#stText.Buttons.Create#">
 								<input type="reset" class="vutton reset" name="cancel" value="#stText.Buttons.Cancel#">
 							</td>
 						</tr>
@@ -313,7 +313,7 @@
 									<input onclick="window.location='#request.self#?action=#url.action#';" 
 										type="button" class="button cancel" name="canel" value="#stText.Buttons.Cancel#">
 									<input type="hidden" name="run" value="index">
-									<input type="submit" class="button submit" name="_run" value="#stText.Buttons.Update#">
+									<input type="submit" class="button submit btn btn-primary" name="_run" value="#stText.Buttons.Update#">
 								</td>
 							</tr>
 						</tfoot>
@@ -348,7 +348,7 @@
 						</tbody>
 						<tfoot>
 							<tr><td colspan="2">
-								<input type="submit" class="button submit" name="search" value="#stText.Buttons.Search#">
+								<input type="submit" class="button submit btn btn-primary" name="search" value="#stText.Buttons.Search#">
 							</td></tr>
 						</tfoot>
 					</table>

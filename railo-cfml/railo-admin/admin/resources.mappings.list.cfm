@@ -93,11 +93,11 @@
 					<tr>
 						<td colspan="7">
 							<input type="hidden" name="mainAction" value="#stText.Buttons.save#">
-							<!---<input type="submit" class="button submit" name="subAction" value="#stText.Buttons.save#">
+							<!---<input type="submit" class="button submit btn btn-primary" name="subAction" value="#stText.Buttons.save#">
 							--->
-							<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
-							<input type="submit" class="button submit" name="subAction" value="#stText.Buttons.Delete#">
-							<input type="submit" class="button submit" name="subAction" value="#stText.Buttons.compileAll#">
+							<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
+							<input type="submit" class="button submit btn btn-primary" name="subAction" value="#stText.Buttons.Delete#">
+							<input type="submit" class="button submit btn btn-primary" name="subAction" value="#stText.Buttons.compileAll#">
 						</td>
 					</tr>
 				</tfoot>
@@ -154,7 +154,7 @@
 					<tr>
 						<td colspan="2">
 							<input type="hidden" name="mainAction" value="#stText.Buttons.save#">
-							<input type="submit" class="button submit" name="subAction" value="#stText.Buttons.save#">
+							<input type="submit" class="button submit btn btn-primary" name="subAction" value="#stText.Buttons.save#">
 						</td>
 					</tr>
 				</tfoot>

@@ -170,9 +170,9 @@ list all mappings and display necessary edit fields --->
 					<tfoot>
 						<tr>
 							<td colspan="#4+usage.recordcount#">
-								<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.Verify#">
-								<input type="reset" class="button reset" name="cancel" value="#stText.Buttons.Cancel#">
-								<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.Delete#">
+								<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Verify#">
+								<input type="reset" class="button reset btn" name="cancel" value="#stText.Buttons.Cancel#">
+								<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Delete#">
 							</td>	
 						</tr>
 					</tfoot>
@@ -187,7 +187,7 @@ list all mappings and display necessary edit fields --->
 		<!--- Create Remote Client --->
 		<h2>New remote client</h2>
 		<cfform onerror="customError" action="#request.self#?action=#url.action#&action2=create" method="post">
-			<input type="submit" class="button submit" name="run" value="#stText.remote.newClient#">
+			<input type="submit" class="button submit btn btn-primary" name="run" value="#stText.remote.newClient#">
 		</cfform>
 	</cfoutput>
 </cfif>

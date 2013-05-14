@@ -204,8 +204,8 @@ Error Output --->
 				<tfoot>
 					<tr>
 						<td colspan="2">
-							<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.Update#">
-							<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Update#">
+							<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 						</td>
 					</tr>
 				</tfoot>
@@ -264,7 +264,7 @@ Version ","all");
 				<tfoot>
 					<tr>
 						<td>
-							<input type="submit" class="button submit" name="mainAction" value="#stText.services.update.exeRun#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.services.update.exeRun#">
 						</td>
 					</tr>
 				</tfoot>
@@ -281,7 +281,7 @@ Version ","all");
 				<tfoot>
 					<tr>
 						<td colspan="2">
-							<input type="submit" class="button submit" name="mainAction" value="#stText.services.update.lib#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.services.update.lib#">
 						</td>
 					</tr>
 				</tfoot>
@@ -313,8 +313,8 @@ Version ","all");
 				<tfoot>
 					<tr>
 						<td>
-							<input type="submit" class="button submit" name="mainAction" value="#stText.services.update.removeRun#">
-							<input type="submit" class="button submit" name="latest" value="#replace(stText.services.update.removeLatest,'{version}',version)#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.services.update.removeRun#">
+							<input type="submit" class="button submit btn btn-primary" name="latest" value="#replace(stText.services.update.removeLatest,'{version}',version)#">
 						</td>
 					</tr>
 				</tfoot>

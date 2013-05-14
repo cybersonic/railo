@@ -10,7 +10,7 @@
 	</tr>
 	</table>
 	<br />
-	<input class="button submit" type="submit" name="submit" value="#lang.btnSubmit#" />
+	<input class="button submit btn btn-primary" type="submit" name="submit" value="#lang.btnSubmit#" />
 </form>
 	
 </cfoutput>

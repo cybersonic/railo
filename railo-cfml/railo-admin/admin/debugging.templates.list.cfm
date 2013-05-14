@@ -146,8 +146,8 @@ Redirtect to entry --->
 						<tfoot>
 							<tr>
 								<td colspan="#isWeb?5:3#">
-									<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.delete#">
-									<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
+									<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.delete#">
+									<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 								</td>	
 							</tr>
 						</tfoot>
@@ -188,8 +188,8 @@ Redirtect to entry --->
 					<tfoot>
 						<tr>
 							<td colspan="2">
-								<input type="submit" class="button submit" name="run" value="#stText.Buttons.create#">
-								<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
+								<input type="submit" class="button submit btn btn-primary" name="run" value="#stText.Buttons.create#">
+								<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 							</td>
 						</tr>
 					</tfoot>

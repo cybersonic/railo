@@ -80,7 +80,7 @@
 							<input type="checkbox" class="checkbox" name="componentPathCache" value="yes" <cfif component.componentPathCache>checked</cfif>>
 							<div class="comment">#stText.Components.componentPathCacheDesc#</div>
 							<cfif component.componentPathCache>
-								<input type="submit" class="button submit" name="mainAction" value="#flushName#">
+								<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#flushName#">
 							</cfif>
 						<cfelse>
 							<b>#YesNoFormat(component.componentPathCache)#</b>
@@ -157,9 +157,9 @@
 				<tfoot>
 					<tr>
 						<td colspan="2">
-							<input class="button submit" type="submit" name="mainAction" value="#stText.Buttons.Update#">
-							<input type="reset" class="reset" name="cancel" value="#stText.Buttons.cancel#">
-							<cfif request.adminType EQ "web"><input class="button submit" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#"></cfif>
+							<input class="button submit btn btn-primary" type="submit" name="mainAction" value="#stText.Buttons.Update#">
+							<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.cancel#">
+							<cfif request.adminType EQ "web"><input class="button submit btn btn-primary" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#"></cfif>
 						</td>
 					</tr>
 				</tfoot>
@@ -271,9 +271,9 @@
 					<tr>
 						<td colspan="7">
 							<input type="hidden" name="mainAction" value="#stText.Buttons.Update#">
-							<input type="submit" class="button submit" name="subAction" value="#stText.Buttons.Update#">
-							<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
-							<input type="submit" class="button submit" name="subAction" value="#stText.Buttons.Delete#">
+							<input type="submit" class="button submit btn btn-primary" name="subAction" value="#stText.Buttons.Update#">
+							<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
+							<input type="submit" class="button submit btn btn-primary" name="subAction" value="#stText.Buttons.Delete#">
 						</td>	
 					</tr>
 				</cfif>
@@ -335,7 +335,7 @@
 						<td colspan="2">
 							<input type="hidden" name="mainAction" value="#stText.Buttons.update#">
 							<input type="hidden" name="subAction" value="#stText.Buttons.update#">
-							<input type="submit" class="button submit" name="sdasd" value="#stText.Buttons.save#" />
+							<input type="submit" class="button submit btn btn-primary" name="sdasd" value="#stText.Buttons.save#" />
 						</td>
 					</tr>
 				</tfoot>

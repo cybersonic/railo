@@ -183,7 +183,7 @@ Redirtect to entry --->
 					<tr>
 						<td colspan="2">
 							<input class="submit" type="submit" class="submit" name="mainAction" value="#stText.Buttons.Update#">
-							<input type="reset" class="button reset" name="cancel" value="#stText.Buttons.Cancel#">
+							<input type="reset" class="button reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 							<cfif request.adminType EQ "web"><input class="submit" type="submit" class="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#"></cfif>
 						</td>
 					</tr>

@@ -257,9 +257,9 @@ Defaults --->
 					<tr>
 						<td colspan="2"><cfoutput>
 							<input type="hidden" name="mainAction" value="#stText.Buttons.Setting#">
-							<input type="submit" class="button submit" name="_mainAction" value="#stText.Buttons.Update#">
-							<input type="reset" class="reset" name="canel" value="#stText.Buttons.Cancel#">
-							<cfif request.adminType EQ "web"><input class="button submit" type="submit" name="_mainAction" value="#stText.Buttons.resetServerAdmin#"></cfif>
+							<input type="submit" class="button submit btn btn-primary" name="_mainAction" value="#stText.Buttons.Update#">
+							<input type="reset" class="reset btn" name="canel" value="#stText.Buttons.Cancel#">
+							<cfif request.adminType EQ "web"><input class="button submit btn btn-primary" type="submit" name="_mainAction" value="#stText.Buttons.resetServerAdmin#"></cfif>
 						</cfoutput></td>
 					</tr>
 				</tfoot>
@@ -402,10 +402,10 @@ Defaults --->
 					<tr>
 						<td colspan="7">
 							<input type="hidden" name="mainAction" value="#stText.Buttons.Update#">
-							<input type="submit" class="button submit" name="subAction" value="#stText.Buttons.Verify#">
-							<input type="submit" class="button submit" name="subAction" value="#stText.Buttons.Update#">
-							<input type="reset" class="button reset" name="cancel" value="#stText.Buttons.Cancel#">
-							<input type="submit" class="button submit" name="subAction" value="#stText.Buttons.Delete#">
+							<input type="submit" class="button submit btn btn-primary" name="subAction" value="#stText.Buttons.Verify#">
+							<input type="submit" class="button submit btn btn-primary" name="subAction" value="#stText.Buttons.Update#">
+							<input type="reset" class="button reset btn" name="cancel" value="#stText.Buttons.Cancel#">
+							<input type="submit" class="button submit btn btn-primary" name="subAction" value="#stText.Buttons.Delete#">
 						</td>	
 					</tr>
 				</tfoot>

@@ -248,7 +248,7 @@ Redirtect to entry --->
 			<tfoot>
 				<tr>
 					<td colspan="2">
-						<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.submit#">
+						<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.submit#">
 					</td>
 				</tr>
 			</tfoot>
@@ -268,7 +268,7 @@ Redirtect to entry --->
 	</tr>
 	</table>
 	<br />
-	<input class="button submit" type="submit" name="submit" value="#lang.btnSubmit#" />
+	<input class="button submit btn btn-primary" type="submit" name="submit" value="#lang.btnSubmit#" />
 </form>
 	
 </cfoutput>

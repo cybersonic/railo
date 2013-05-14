@@ -41,7 +41,7 @@
 	
 	<h2>Reset the security key</h2>
 	<cfform onerror="customError" action="#request.self#?action=#url.action#" method="post">
-		<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.reset#">
+		<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.reset#">
 	</cfform>
 </cfoutput>
 

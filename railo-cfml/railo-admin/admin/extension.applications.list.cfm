@@ -40,7 +40,7 @@
 				<tr>
 					<td>&nbsp;</td>
 					<td>
-						<input type="submit" class="button submit" value="#stText.ext.upload#" />
+						<input type="submit" class="button submit btn btn-primary" value="#stText.ext.upload#" />
 					</td>
 				</tr>
 			</tfoot>
@@ -62,7 +62,7 @@
 						<input type="text" name="filter" id="filter" class="txt" value="#session.extFilter.filter#" />
 					</li>
 					<li>
-						<input type="submit" class="button submit" name="mainAction" value="#stText.buttons.filter#" />
+						<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.buttons.filter#" />
 					</li>
 				</ul>
 				<div class="clear"></div>
@@ -126,7 +126,7 @@
 					<input type="text" name="filter2" id="filter2" class="txt" value="#session.extFilter.filter2#" />
 				</li>
 				<li>
-					<input type="submit" class="button submit" name="mainAction" value="#stText.buttons.filter#" />
+					<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.buttons.filter#" />
 				</li>
 			</ul>
 			<div class="clear"></div>

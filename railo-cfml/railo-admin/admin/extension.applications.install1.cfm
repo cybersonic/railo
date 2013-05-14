@@ -35,7 +35,7 @@
 	
 	<cfif len(cgi.http_referer)>
 		<cfform onerror="customError" action="#cgi.http_referer#" method="post">
-			<cfoutput><input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.cancel#"></cfoutput>
+			<cfoutput><input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.cancel#"></cfoutput>
 		</cfform>
 	</cfif>
 <cfelse>
@@ -66,9 +66,9 @@
 						<td>&nbsp;</td>
 						<td>
 							<span style="float:right">
-								<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.dontagree#" />
+								<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.dontagree#" />
 							</span>
-							<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.agree#" />
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.agree#" />
 						</td>
 					</tr>
 				</tfoot>

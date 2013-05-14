@@ -186,7 +186,7 @@ Redirtect to entry --->
 						<input type="text" name="urlFilter" class="txt" value="#session.st.urlFilter#" />
 					</li>
 					<li>
-						<input type="submit" class="button submit" name="mainAction" value="#stText.buttons.filter#" />
+						<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.buttons.filter#" />
 					</li>
 				</ul>
 				<div class="clear"></div>
@@ -246,11 +246,11 @@ Redirtect to entry --->
 				<tfoot>
 					<tr>
 						<td colspan="6">
-							<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.Execute#">
-							<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
-							<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.Delete#">
-							<input type="submit" class="button submit" name="mainAction" value="#stText.Schedule.pause#">
-							<input type="submit" class="button submit" name="mainAction" value="#stText.Schedule.resume#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Execute#">
+							<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Delete#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Schedule.pause#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Schedule.resume#">
 						</td>
 					</tr>
 				</tfoot>
@@ -340,8 +340,8 @@ Redirtect to entry --->
 			<tfoot>
 				<tr>
 					<td colspan="2">
-						<input type="reset" class="button reset" name="cancel" value="#stText.Buttons.Cancel#">
-						<input type="submit" class="button submit" name="run" value="#stText.Buttons.Create#">
+						<input type="reset" class="button reset btn" name="cancel" value="#stText.Buttons.Cancel#">
+						<input type="submit" class="button submit btn btn-primary" name="run" value="#stText.Buttons.Create#">
 					</td>
 				</tr>
 			</tfoot>

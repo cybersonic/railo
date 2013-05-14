@@ -360,10 +360,10 @@ Error Output --->
 				<tfoot>
 					<tr>
 						<td colspan="2">
-							<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.Update#">
-							<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Update#">
+							<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 							<cfif request.adminType EQ "web">
-								<input class="button submit" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#">
+								<input class="button submit btn btn-primary" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#">
 							</cfif>
 						</td>
 					</tr>

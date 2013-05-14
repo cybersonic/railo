@@ -292,8 +292,8 @@ Create Datasource --->
 <tr>
 	<td colspan="2">
 		
-      <input class="button submit" type="submit" name="mainAction" value="#stText.Buttons.update#">
-		<input class="button reset" type="reset" name="cancel" value="#stText.Buttons.Cancel#">
+      <input class="button submit btn btn-primary" type="submit" name="mainAction" value="#stText.Buttons.update#">
+		<input class="button reset btn" type="reset" name="cancel" value="#stText.Buttons.Cancel#">
 	</td>
 </tr>
 </table>

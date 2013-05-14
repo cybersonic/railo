@@ -131,8 +131,8 @@ Error Output --->
 				<tfoot>
 					<tr>
 						<td colspan="2">
-							<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.save#">
-							<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.save#">
+							<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 						</td>
 					</tr>
 				</tfoot>
@@ -176,8 +176,8 @@ Error Output --->
 			<tfoot>
 				<tr>
 					<td colspan="2">
-						<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.Change#">
-						<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
+						<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Change#">
+						<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 					</td>
 				</tr>
 			</tfoot>
@@ -217,9 +217,9 @@ Error Output --->
 					<tfoot>
 						<tr>
 							<td colspan="2">
-								<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.Update#">
-								<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.delete#">
-								<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
+								<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Update#">
+								<input type="submit" class="button submit btn btn-danger" name="mainAction" value="#stText.Buttons.delete#">
+								<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 							</td>
 						</tr>
 					</tfoot>
@@ -270,8 +270,8 @@ Error Output --->
 					<tfoot>
 						<tr>
 							<td colspan="2">
-								<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.Reset#">
-								<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
+								<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Reset#">
+								<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 							</td>
 						</tr>
 					</tfoot>

@@ -93,8 +93,8 @@ Overview
 				<tfoot>
 					<tr>
 						<td colspan="4">
-							<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
-							<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.Delete#">
+							<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Delete#">
 						</td>	
 					</tr>
 				</tfoot>
@@ -123,8 +123,8 @@ Overview
 					<tfoot>
 						<tr>
 							<td colspan="2">
-								<input type="submit" class="button submit" name="run" value="#stText.Buttons.Create#">
-								<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
+								<input type="submit" class="button submit btn btn-primary" name="run" value="#stText.Buttons.Create#">
+								<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 							</td>
 						</tr>
 					</tfoot>

@@ -154,8 +154,8 @@ Redirtect to entry --->
 					<tfoot>
 						<tr>
 							<td colspan="4">
-								<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.verify#">
-								<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
+								<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.verify#">
+								<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 							</td>	
 						</tr>
 					</tfoot>
@@ -218,9 +218,9 @@ Redirtect to entry --->
 				<tfoot>
 					<tr>
 						<td colspan="4">
-							<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.verify#">
-							<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.delete#">
-							<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.verify#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.delete#">
+							<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 						</td>	
 					</tr>
 				</tfoot>
@@ -266,9 +266,9 @@ function defaultValue(field) {
 				<tfoot>
 					<tr>
 						<td colspan="2">
-							<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.update#">
+							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.update#">
 							<cfif request.adminType EQ "web">
-								<input class="button submit" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#">
+								<input class="button submit btn btn-primary" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#">
 							</cfif>
 						</td>
 					</tr>
@@ -309,8 +309,8 @@ function defaultValue(field) {
 					<tfoot>
 						<tr>
 							<td colspan="2">
-								<input type="submit" class="button submit" name="run" value="#stText.Buttons.create#">
-								<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
+								<input type="submit" class="button submit btn btn-primary" name="run" value="#stText.Buttons.create#">
+								<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 							</td>
 						</tr>
 					</tfoot>

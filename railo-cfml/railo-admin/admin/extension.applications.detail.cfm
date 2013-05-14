@@ -151,9 +151,9 @@
 		<cfform onerror="customError" action="#request.self#?action=#url.action#" method="post">
 			<input type="hidden" name="uid" value="#url.uid#">
 			
-			<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.update#">
-			<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.uninstall#">
-			<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.cancel#">
+			<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.update#">
+			<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.uninstall#">
+			<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.cancel#">
 		</cfform>
 		
 	<!--- Install --->
@@ -161,15 +161,15 @@
 		<cfform onerror="customError" action="#request.self#?action=#url.action#" method="post">
 			<input type="hidden" name="uid" value="#url.uid#">
 			
-			<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.uninstall#">
-			<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.cancel#">
+			<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.uninstall#">
+			<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.cancel#">
 		</cfform>
 	<cfelse>
 		<cfform onerror="customError" action="#request.self#?action=#url.action#" method="post">
 			<input type="hidden" name="uid" value="#url.uid#">
 			
-			<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.install#">
-			<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.cancel#">
+			<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.install#">
+			<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.cancel#">
 		</cfform>
 	</cfif>
 </cfoutput>

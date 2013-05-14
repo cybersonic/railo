@@ -35,9 +35,9 @@
 			<tfoot>
 				<tr>
 					<td colspan="2">
-						<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.Update#">
-						<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
-						<cfif request.adminType EQ "web"><input class="button submit" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#"></cfif>
+						<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Update#">
+						<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
+						<cfif request.adminType EQ "web"><input class="button submit btn btn-primary" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#"></cfif>
 					</td>
 				</tr>
 			</tfoot>
@@ -68,8 +68,8 @@
 		<cfmodule template="remoteclients.cfm" colspan="2">
 		<tr>
 			<td colspan="2">
-				<input type="submit" class="button submit" name="mainAction" value="#stText.Buttons.Update#">
-				<input type="reset" class="reset" name="cancel" value="#stText.Buttons.Cancel#">
+				<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Update#">
+				<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 			</td>
 		</tr>
 		</cfform>
@@ -106,7 +106,7 @@
 				</tbody>
 				<tfoot>
 					<tr>
-						<td colspan="5"><input type="submit" name="mainAction" class="button submit" value="#stText.Debug.filter#" /></th>
+						<td colspan="5"><input type="submit" name="mainAction" class="button submit btn btn-primary" value="#stText.Debug.filter#" /></th>
 					</tr>
 				</tfoot>
 				<cfif not arrayIsEmpty(logs)>
