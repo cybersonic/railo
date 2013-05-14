@@ -92,6 +92,7 @@ Redirtect to entry --->
 </cfif>
 <!--- 
 Error Output --->
+
 <cfset printError(error)>
 
 
@@ -108,7 +109,6 @@ list all mappings and display necessary edit fields --->
 
 <cfoutput>
 	<div class="pageintro">#stText.remote.desc#</div>
-	
 	<cfif clients.recordcount>
 		<h2>#stText.remote.listClients#</h2>
 		<cfform onerror="customError" action="#request.self#?action=#url.action#" method="post">
@@ -140,7 +140,14 @@ list all mappings and display necessary edit fields --->
 								<!--- <input type="hidden" name="password_#clients.currentrow#" value="#clients.Password#">--->
 							</td>
 							
-							<td>#clients.label#</td>
+							<td>
+								<cfif hasAccess>
+									<a href="#request.self#?action=#url.action#&action2=create&url=#hash(clients.url)#">#clients.label#</a>
+								<cfelse>
+									#clients.label#
+								</cfif>
+								
+							</td>
 							
 							<cfloop query="variables.usage">
 								<cfset has=listFindNoCase(clients.usage,variables.usage.code)>
@@ -160,7 +167,8 @@ list all mappings and display necessary edit fields --->
 							</cfif>
 							<td>
 								<cfif hasAccess>
-									<a href="#request.self#?action=#url.action#&action2=create&url=#hash(clients.url)#" class="btn-mini edit"><span>edit</span></a>
+
+									<a href="#request.self#?action=#url.action#&action2=create&url=#hash(clients.url)#" class="btn-mini edit"><i class="icon-pencil"></i></a>
 								</cfif>
 							</td>
 						</tr>
@@ -172,7 +180,7 @@ list all mappings and display necessary edit fields --->
 							<td colspan="#4+usage.recordcount#">
 								<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Verify#">
 								<input type="reset" class="button reset btn" name="cancel" value="#stText.Buttons.Cancel#">
-								<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Delete#">
+								<input type="submit" class="button submit btn btn-danger" name="mainAction" value="#stText.Buttons.Delete#">
 							</td>	
 						</tr>
 					</tfoot>
