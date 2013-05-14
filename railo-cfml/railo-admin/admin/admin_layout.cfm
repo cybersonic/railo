@@ -43,10 +43,40 @@
 			<li class="#serverActiveclass#"><a href="server.cfm#homeQS#">Server Administrator</a></li>
 			
 			
+			<!--- are we logged in and in the server admin? Then we can go and list all the other contexts! --->
+				<cfif hasNavigation AND request.adminType EQ "server" AND StructKeyExists(session, "password"&request.adminType)>
+					<cfadmin 
+						action="getContexts"
+						type="#request.adminType#"
+						password="#session["password"&request.adminType]#"
+						returnVariable="rst">
+
+				<li class="#webActiveclass#"><a href="web.cfm#homeQS#">Web Administrator</a></li>
+
+				<li class="#webActiveclass# dropdown"><a href="web.cfm#homeQS#" id="webAdminLink"  role="button" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
+
+					<ul class="dropdown-menu" role="menu" aria-labelledby="webAdminLink">
+						<cfloop query="rst">
+							<cfset label = rst.label>
+
+								
+							
+							<cfif Len(rst.url)>
+								<li role="presentation"><a href="#rst.url#/railo-context/admin/web.cfm" role="menuitem">#rst.label# #rst.url#</a></li>				
+							<cfelse>
+								<li role="presentation" class="disabled"><a href="##" role="menuitem">#rst.label# (#rst.path#)></a></li>
+							
+							</cfif>
+							
+						</cfloop>
+					</ul>
+				</li>
+				<cfelse>
+					<li class="#webActiveclass#">
+					<a href="web.cfm#homeQS#">Web Administrator</a>
+					</li>
+				</cfif>
 			
-			<li class="#webActiveclass#"><a href="web.cfm#homeQS#">Web Administrator</a>
-				
-			</li>
 	    </ul>
 		<cfif hasNavigation>
 		<ul class="nav pull-right">
@@ -126,9 +156,16 @@
 						 <li><a href="#home#">Home</a> <span class="divider">/</span></li>
 						<cfif structKeyExists(request,'subTitle')>
 							<li>#attributes.title# <span class="divider">/</span></li>
-							<li>#request.subTitle# </li>
+
+							<li>#request.subTitle#</li>
 						<cfelse>
-							 <li>#attributes.title#</li>
+							<cfset counter = 1>
+							<cfloop list="#attributes.title#" delimiters="-" index="t">
+								<li>#Trim(t)#<cfif counter LT ListLen(attributes.title, "-")> <span class="divider">/</span></cfif></li>			
+								<cfset counter++>
+							</cfloop>
+
+							 
 						</cfif>
 					</ul>
 					<h1>#attributes.title#<cfif structKeyExists(request,'subTitle')> - #request.subTitle#</cfif></h1>
