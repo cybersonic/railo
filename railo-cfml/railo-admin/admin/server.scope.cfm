@@ -266,10 +266,10 @@ Error Output --->
 							<tbody>
 								<cfif hasAccess>
 									<tr>
-										<td><cfinput type="text" name="session_days" value="#scope.sessionTimeout_day#" class="number" required="yes" validate="integer" message="#stText.Scopes.TimeoutDaysValue#Session#stText.Scopes.TimeoutEndValue#"></td>
-										<td><cfinput type="text" name="session_hours" value="#scope.sessionTimeout_hour#" class="number" required="yes" validate="integer" message="#stText.Scopes.TimeoutHoursValue#Session#stText.Scopes.TimeoutEndValue#"></td>
-										<td><cfinput type="text" name="session_minutes" value="#scope.sessionTimeout_minute#" class="number" required="yes" validate="integer" message="#stText.Scopes.TimeoutMinutesValue#Session#stText.Scopes.TimeoutEndValue#"></td>
-										<td><cfinput type="text" name="session_seconds" value="#scope.sessionTimeout_second#" class="number" required="yes" validate="integer" message="#stText.Scopes.TimeoutSecondsValue#Session#stText.Scopes.TimeoutEndValue#"></td>
+										<td><cfinput type="text" name="session_days" value="#scope.sessionTimeout_day#" class="number input-mini" required="yes" validate="integer" message="#stText.Scopes.TimeoutDaysValue#Session#stText.Scopes.TimeoutEndValue#"></td>
+										<td><cfinput type="text" name="session_hours" value="#scope.sessionTimeout_hour#" class="number input-mini" required="yes" validate="integer" message="#stText.Scopes.TimeoutHoursValue#Session#stText.Scopes.TimeoutEndValue#"></td>
+										<td><cfinput type="text" name="session_minutes" value="#scope.sessionTimeout_minute#" class="number input-mini" required="yes" validate="integer" message="#stText.Scopes.TimeoutMinutesValue#Session#stText.Scopes.TimeoutEndValue#"></td>
+										<td><cfinput type="text" name="session_seconds" value="#scope.sessionTimeout_second#" class="number input-mini" required="yes" validate="integer" message="#stText.Scopes.TimeoutSecondsValue#Session#stText.Scopes.TimeoutEndValue#"></td>
 									</tr>
 								<cfelse>
 									<tr>
@@ -300,10 +300,10 @@ Error Output --->
 							<tbody>
 								<cfif hasAccess>
 									<tr>
-										<td><cfinput type="text" name="application_days" value="#scope.applicationTimeout_day#" class="number" required="yes" validate="integer" message="#stText.Scopes.TimeoutDaysValue#application#stText.Scopes.TimeoutEndValue#"></td>
-										<td><cfinput type="text" name="application_hours" value="#scope.applicationTimeout_hour#" class="number" required="yes" validate="integer" message="#stText.Scopes.TimeoutHoursValue#application#stText.Scopes.TimeoutEndValue#"></td>
-										<td><cfinput type="text" name="application_minutes" value="#scope.applicationTimeout_minute#" class="number" required="yes" validate="integer" message="#stText.Scopes.TimeoutMinutesValue#application#stText.Scopes.TimeoutEndValue#"></td>
-										<td><cfinput type="text" name="application_seconds" value="#scope.applicationTimeout_second#" class="number" required="yes" validate="integer" message="#stText.Scopes.TimeoutSecondsValue#application#stText.Scopes.TimeoutEndValue#"></td>
+										<td><cfinput type="text" name="application_days" value="#scope.applicationTimeout_day#" class="number input-mini" required="yes" validate="integer" message="#stText.Scopes.TimeoutDaysValue#application#stText.Scopes.TimeoutEndValue#"></td>
+										<td><cfinput type="text" name="application_hours" value="#scope.applicationTimeout_hour#" class="number input-mini" required="yes" validate="integer" message="#stText.Scopes.TimeoutHoursValue#application#stText.Scopes.TimeoutEndValue#"></td>
+										<td><cfinput type="text" name="application_minutes" value="#scope.applicationTimeout_minute#" class="number input-mini" required="yes" validate="integer" message="#stText.Scopes.TimeoutMinutesValue#application#stText.Scopes.TimeoutEndValue#"></td>
+										<td><cfinput type="text" name="application_seconds" value="#scope.applicationTimeout_second#" class="number input-mini" required="yes" validate="integer" message="#stText.Scopes.TimeoutSecondsValue#application#stText.Scopes.TimeoutEndValue#"></td>
 									</tr>
 								<cfelse>
 									<tr>
@@ -334,10 +334,10 @@ Error Output --->
 							<tbody>
 								<cfif hasAccess>
 									<tr>
-										<td><cfinput type="text" name="client_days" value="#scope.clientTimeout_day#" class="number" required="yes" validate="integer" message="#stText.Scopes.TimeoutDaysValue#client#stText.Scopes.TimeoutEndValue#"></td>
-										<td><cfinput type="text" name="client_hours" value="#scope.clientTimeout_hour#" class="number" required="yes" validate="integer" message="#stText.Scopes.TimeoutHoursValue#client#stText.Scopes.TimeoutEndValue#"></td>
-										<td><cfinput type="text" name="client_minutes" value="#scope.clientTimeout_minute#" class="number" required="yes" validate="integer" message="#stText.Scopes.TimeoutMinutesValue#client#stText.Scopes.TimeoutEndValue#"></td>
-										<td><cfinput type="text" name="client_seconds" value="#scope.clientTimeout_second#" class="number" required="yes" validate="integer" message="#stText.Scopes.TimeoutSecondsValue#client#stText.Scopes.TimeoutEndValue#"></td>
+										<td><cfinput type="text" name="client_days" value="#scope.clientTimeout_day#" class="number input-mini" required="yes" validate="integer" message="#stText.Scopes.TimeoutDaysValue#client#stText.Scopes.TimeoutEndValue#"></td>
+										<td><cfinput type="text" name="client_hours" value="#scope.clientTimeout_hour#" class="number input-mini" required="yes" validate="integer" message="#stText.Scopes.TimeoutHoursValue#client#stText.Scopes.TimeoutEndValue#"></td>
+										<td><cfinput type="text" name="client_minutes" value="#scope.clientTimeout_minute#" class="number input-mini" required="yes" validate="integer" message="#stText.Scopes.TimeoutMinutesValue#client#stText.Scopes.TimeoutEndValue#"></td>
+										<td><cfinput type="text" name="client_seconds" value="#scope.clientTimeout_second#" class="number input-mini" required="yes" validate="integer" message="#stText.Scopes.TimeoutSecondsValue#client#stText.Scopes.TimeoutEndValue#"></td>
 									</tr>
 								<cfelse>
 									<tr>
@@ -363,7 +363,7 @@ Error Output --->
 							<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Update#">
 							<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
 							<cfif request.adminType EQ "web">
-								<input class="button submit btn btn-primary" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#">
+								<input class="button submit btn" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#">
 							</cfif>
 						</td>
 					</tr>

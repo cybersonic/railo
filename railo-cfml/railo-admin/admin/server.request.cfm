@@ -161,7 +161,7 @@ Error Output --->
 							<cfset isNone=appSettings.scriptProtect EQ  "none">
 							<cfset isAll=appSettings.scriptProtect EQ  "all">
 							<cfset isCustom=not isNone and not isAll>
-							<ul class="radiolist" id="sp_options">
+							<ul class="radiolist unstyled" id="sp_options">
 								<li>
 									<label>
 										<input type="radio" class="radio" name="scriptProtect" value="none" <cfif isNone>checked="checked"</cfif>>
@@ -236,16 +236,16 @@ Error Output --->
 								<cfif hasAccess>
 									<tr>
 										<td><cfinput type="text" name="request_days" value="#appSettings.requestTimeout_day#" 
-											class="number" required="yes" validate="integer" 
+											class="number input-mini" required="yes" validate="integer" 
 											message="#stText.Scopes.TimeoutDaysValue#request#stText.Scopes.TimeoutEndValue#"></td>
 										<td><cfinput type="text" name="request_hours" value="#appSettings.requestTimeout_hour#" 
-											class="number" required="yes" validate="integer" 
+											class="number input-mini" required="yes" validate="integer" 
 											message="#stText.Scopes.TimeoutHoursValue#request#stText.Scopes.TimeoutEndValue#"></td>
 										<td><cfinput type="text" name="request_minutes" value="#appSettings.requestTimeout_minute#" 
-											class="number" required="yes" validate="integer" 
+											class="number input-mini" required="yes" validate="integer" 
 											message="#stText.Scopes.TimeoutMinutesValue#request#stText.Scopes.TimeoutEndValue#"></td>
 										<td><cfinput type="text" name="request_seconds" value="#appSettings.requestTimeout_second#" 
-											class="number" required="yes" validate="integer" 
+											class="number input-mini" required="yes" validate="integer" 
 											message="#stText.Scopes.TimeoutSecondsValue#request#stText.Scopes.TimeoutEndValue#"></td>
 									</tr>
 								<cfelse>
@@ -285,7 +285,7 @@ Error Output --->
 						<td colspan="2">
 							<input type="submit" class="button submit btn btn-primary" name="mainAction1" value="#stText.Buttons.Update#">
 							<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
-							<cfif request.adminType EQ "web"><input class="button submit btn btn-primary" type="submit" name="mainAction1" value="#stText.Buttons.resetServerAdmin#"></cfif>
+							<cfif request.adminType EQ "web"><input class="button submit btn" type="submit" name="mainAction1" value="#stText.Buttons.resetServerAdmin#"></cfif>
 						</td>
 					</tr>
 				</tfoot>
@@ -367,7 +367,7 @@ Error Output --->
 						<td colspan="2">
 							<input type="submit" class="button submit btn btn-primary" name="mainAction2" value="#stText.Buttons.Update#">
 							<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
-							<cfif request.adminType EQ "web"><input class="button submit btn btn-primary" type="submit" name="mainAction2" value="#stText.Buttons.resetServerAdmin#"></cfif>
+							<cfif request.adminType EQ "web"><input class="button submit btn" type="submit" name="mainAction2" value="#stText.Buttons.resetServerAdmin#"></cfif>
 						</td>
 					</tr>
 				</tfoot>

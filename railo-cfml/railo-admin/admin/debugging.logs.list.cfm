@@ -37,7 +37,7 @@
 					<td colspan="2">
 						<input type="submit" class="button submit btn btn-primary" name="mainAction" value="#stText.Buttons.Update#">
 						<input type="reset" class="reset btn" name="cancel" value="#stText.Buttons.Cancel#">
-						<cfif request.adminType EQ "web"><input class="button submit btn btn-primary" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#"></cfif>
+						<cfif request.adminType EQ "web"><input class="button submit btn" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#"></cfif>
 					</td>
 				</tr>
 			</tfoot>
@@ -99,9 +99,9 @@
 							<div class="muted">#stText.Debug.filterPath#</div>
 						</td>
 					    <td nowrap><input type="text" name="starttime" class="xlarge" value="#LSDateFormat(session.debugFilter.starttime)# #LSTimeFormat(session.debugFilter.starttime)#" /></td>
-					    <td nowrap><input type="text" name="query" class="number" value="#session.debugFilter.query#" /></td>
-    					<td nowrap><input type="text" name="app" class="number" value="#session.debugFilter.app#" /></td>
-    					<td nowrap><input type="text" name="total" class="number" value="#session.debugFilter.total#" /></td>
+					    <td nowrap><input type="text" name="query" class="number input-mini" value="#session.debugFilter.query#" /></td>
+    					<td nowrap><input type="text" name="app" class="number input-mini" value="#session.debugFilter.app#" /></td>
+    					<td nowrap><input type="text" name="total" class="number input-mini" value="#session.debugFilter.total#" /></td>
 					</tr>
 				</tbody>
 				<tfoot>

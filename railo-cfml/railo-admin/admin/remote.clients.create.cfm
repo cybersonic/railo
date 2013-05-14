@@ -277,7 +277,7 @@ Error Output--->
 				<tr>
 					<th scope="row">#stText.remote.proxyPort#</th>
 					<td>
-						<cfinput type="text" name="proxyPort" value="#rc.proxyPort#" class="number">
+						<cfinput type="text" name="proxyPort" value="#rc.proxyPort#" class="number input-mini">
 						<div class="muted">#stText.remote.proxyPortDesc#</div>
 					</td>
 				</tr>

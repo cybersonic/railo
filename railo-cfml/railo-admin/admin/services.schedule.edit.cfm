@@ -180,14 +180,14 @@ Error Output--->
 				<tr>
 					<th scope="row">#stText.Schedule.Port#</th>
 					<td>
-						<cfinput type="text" name="port" value="#task.port#" class="number" required="no" validate="integer">
+						<cfinput type="text" name="port" value="#task.port#" class="number input-mini" required="no" validate="integer">
 						<div class="muted">#stText.Schedule.PortDescription#</div>
 					</td>
 				</tr>
 				<tr>
 					<th scope="row">#stText.Schedule.Timeout#</th>
 					<td>
-						<cfinput type="text" name="timeout" value="#task.timeout#" class="number" required="no" validate="integer">
+						<cfinput type="text" name="timeout" value="#task.timeout#" class="number input-mini" required="no" validate="integer">
 						<div class="muted">#stText.Schedule.TimeoutDescription#</div>
 					</td>
 				</tr>
@@ -224,7 +224,7 @@ Error Output--->
 				</tr>
 				<tr>
 					<th scope="row">#stText.Schedule.Port#</th>
-					<td><cfinput type="text" name="proxyport" value="#task.proxyport#" class="number" validate="integer" required="no">
+					<td><cfinput type="text" name="proxyport" value="#task.proxyport#" class="number input-mini" validate="integer" required="no">
 						<div class="muted">#stText.Schedule.ProxyPort#</div>
 					</td>
 				</tr>
@@ -333,13 +333,13 @@ Error Output--->
 									</thead>
 									<tbody>
 										<tr>
-											<td><cfinput type="text" name="start_day" value="#task.start.day#" class="number" required="yes" validate="integer"></td>
-											<td><cfinput type="text" name="start_month" value="#task.start.month#" class="number" required="yes" validate="integer"></td>
-											<td><cfinput type="text" name="start_year" value="#task.start.year#" class="number" required="yes" validate="integer"></td>
+											<td><cfinput type="text" name="start_day" value="#task.start.day#" class="number input-mini" required="yes" validate="integer"></td>
+											<td><cfinput type="text" name="start_month" value="#task.start.month#" class="number input-mini" required="yes" validate="integer"></td>
+											<td><cfinput type="text" name="start_year" value="#task.start.year#" class="number input-mini" required="yes" validate="integer"></td>
 											<td>&nbsp;&nbsp;-&nbsp;&nbsp;</td>
-											<td><cfinput type="text" name="start_hour" value="#task.start.hour#" class="number" required="yes" validate="integer"></td>
-											<td><cfinput type="text" name="start_minute" value="#task.start.minute#" class="number" required="yes" validate="integer"></td>
-											<td><cfinput type="text" name="start_second" value="#task.start.second#" class="number" required="yes" validate="integer"></td>
+											<td><cfinput type="text" name="start_hour" value="#task.start.hour#" class="number input-mini" required="yes" validate="integer"></td>
+											<td><cfinput type="text" name="start_minute" value="#task.start.minute#" class="number input-mini" required="yes" validate="integer"></td>
+											<td><cfinput type="text" name="start_second" value="#task.start.second#" class="number input-mini" required="yes" validate="integer"></td>
 										</tr>
 									</tbody>
 								</table>
@@ -366,9 +366,9 @@ Error Output--->
 									</thead>
 									<tbody>
 										<tr>
-											<td><cfinput type="text" name="start_day" value="#task.start.day#" class="number" required="yes" validate="integer"></td>
-											<td><cfinput type="text" name="start_month" value="#task.start.month#" class="number" required="yes" validate="integer"></td>
-											<td><cfinput type="text" name="start_year" value="#task.start.year#" class="number" required="yes" validate="integer"></td>
+											<td><cfinput type="text" name="start_day" value="#task.start.day#" class="number input-mini" required="yes" validate="integer"></td>
+											<td><cfinput type="text" name="start_month" value="#task.start.month#" class="number input-mini" required="yes" validate="integer"></td>
+											<td><cfinput type="text" name="start_year" value="#task.start.year#" class="number input-mini" required="yes" validate="integer"></td>
 										</tr>
 									</tbody>
 								</table>
@@ -388,9 +388,9 @@ Error Output--->
 									</thead>
 									<tbody>
 										<tr>
-											<td><cfinput type="text" name="start_hour" value="#task.start.hour#" class="number" required="yes" validate="integer"></td>
-											<td><cfinput type="text" name="start_minute" value="#task.start.minute#" class="number" required="yes" validate="integer"></td>
-											<td><cfinput type="text" name="start_second" value="#task.start.second#" class="number" required="yes" validate="integer"></td>
+											<td><cfinput type="text" name="start_hour" value="#task.start.hour#" class="number input-mini" required="yes" validate="integer"></td>
+											<td><cfinput type="text" name="start_minute" value="#task.start.minute#" class="number input-mini" required="yes" validate="integer"></td>
+											<td><cfinput type="text" name="start_second" value="#task.start.second#" class="number input-mini" required="yes" validate="integer"></td>
 										</tr>
 									</tbody>
 								</table>
@@ -410,9 +410,9 @@ Error Output--->
 									</thead>
 									<tbody>
 										<tr>
-											<td><cfinput type="text" name="end_day" value="#task.end.day#" class="number" required="no" validate="integer"></td>
-											<td><cfinput type="text" name="end_month" value="#task.end.month#" class="number" required="no" validate="integer"></td>
-											<td><cfinput type="text" name="end_year" value="#task.end.year#" class="number" required="no" validate="integer"></td>
+											<td><cfinput type="text" name="end_day" value="#task.end.day#" class="number input-mini" required="no" validate="integer"></td>
+											<td><cfinput type="text" name="end_month" value="#task.end.month#" class="number input-mini" required="no" validate="integer"></td>
+											<td><cfinput type="text" name="end_year" value="#task.end.year#" class="number input-mini" required="no" validate="integer"></td>
 										</tr>
 									</tbody>
 								</table>
@@ -434,9 +434,9 @@ Error Output--->
 									</thead>
 									<tbody>
 										<tr>
-											<td><cfinput type="text" name="start_day" value="#task.start.day#" class="number" required="yes" validate="integer"></td>
-											<td><cfinput type="text" name="start_month" value="#task.start.month#" class="number" required="yes" validate="integer"></td>
-											<td><cfinput type="text" name="start_year" value="#task.start.year#" class="number" required="yes" validate="integer"></td>
+											<td><cfinput type="text" name="start_day" value="#task.start.day#" class="number input-mini" required="yes" validate="integer"></td>
+											<td><cfinput type="text" name="start_month" value="#task.start.month#" class="number input-mini" required="yes" validate="integer"></td>
+											<td><cfinput type="text" name="start_year" value="#task.start.year#" class="number input-mini" required="yes" validate="integer"></td>
 										</tr>
 									</tbody>
 								</table>
@@ -456,9 +456,9 @@ Error Output--->
 									</thead>
 									<tbody>
 										<tr>
-											<td><cfinput type="text" name="start_hour" value="#task.start.hour#" class="number" required="yes" validate="integer"></td>
-											<td><cfinput type="text" name="start_minute" value="#task.start.minute#" class="number" required="yes" validate="integer"></td>
-											<td><cfinput type="text" name="start_second" value="#task.start.second#" class="number" required="yes" validate="integer"></td>
+											<td><cfinput type="text" name="start_hour" value="#task.start.hour#" class="number input-mini" required="yes" validate="integer"></td>
+											<td><cfinput type="text" name="start_minute" value="#task.start.minute#" class="number input-mini" required="yes" validate="integer"></td>
+											<td><cfinput type="text" name="start_second" value="#task.start.second#" class="number input-mini" required="yes" validate="integer"></td>
 										</tr>
 									</tbody>
 								</table>
@@ -478,9 +478,9 @@ Error Output--->
 									</thead>
 									<tbody>
 										<tr>
-											<td><cfinput type="text" name="end_day" value="#task.end.day#" class="number" required="no" validate="integer"></td>
-											<td><cfinput type="text" name="end_month" value="#task.end.month#" class="number" required="no" validate="integer"></td>
-											<td><cfinput type="text" name="end_year" value="#task.end.year#" class="number" required="no" validate="integer"></td>
+											<td><cfinput type="text" name="end_day" value="#task.end.day#" class="number input-mini" required="no" validate="integer"></td>
+											<td><cfinput type="text" name="end_month" value="#task.end.month#" class="number input-mini" required="no" validate="integer"></td>
+											<td><cfinput type="text" name="end_year" value="#task.end.year#" class="number input-mini" required="no" validate="integer"></td>
 										</tr>
 									</tbody>
 								</table>
@@ -500,9 +500,9 @@ Error Output--->
 									</thead>
 									<tbody>
 										<tr>
-											<td><cfinput type="text" name="end_hour" value="#task.end.hour#" class="number" required="no" validate="integer"></td>
-											<td><cfinput type="text" name="end_minute" value="#task.end.minute#" class="number" required="no" validate="integer"></td>
-											<td><cfinput type="text" name="end_second" value="#task.end.second#" class="number" required="no" validate="integer"></td>
+											<td><cfinput type="text" name="end_hour" value="#task.end.hour#" class="number input-mini" required="no" validate="integer"></td>
+											<td><cfinput type="text" name="end_minute" value="#task.end.minute#" class="number input-mini" required="no" validate="integer"></td>
+											<td><cfinput type="text" name="end_second" value="#task.end.second#" class="number input-mini" required="no" validate="integer"></td>
 										</tr>
 									</tbody>
 								</table>
@@ -523,15 +523,15 @@ Error Output--->
 									</thead>
 									<tbody>
 										<tr>
-											<td><cfinput type="text" name="interval_hour" value="#interval.hour#" class="number" 
+											<td><cfinput type="text" name="interval_hour" value="#interval.hour#" class="number input-mini" 
 												required="no" validate="integer" 
 												message="#stText.General.HourError#">
 											</td>
-											<td><cfinput type="text" name="interval_minute" value="#interval.minute#" class="number" 
+											<td><cfinput type="text" name="interval_minute" value="#interval.minute#" class="number input-mini" 
 												required="no" validate="integer"
 												message="#stText.General.MinuteError#">
 											</td>
-											<td><cfinput type="text" name="interval_second" value="#interval.second#" class="number" 
+											<td><cfinput type="text" name="interval_second" value="#interval.second#" class="number input-mini" 
 												required="no" validate="integer"
 												message="#stText.General.SecondError#">
 											</td>

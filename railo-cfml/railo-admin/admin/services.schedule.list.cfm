@@ -302,9 +302,9 @@ Redirtect to entry --->
 							</thead>
 							<tbody>
 								<tr>
-									<td><cfinput type="text" name="start_day" value="#two(day(now()))#" class="number" required="yes" validate="integer">&nbsp;</td>
-									<td><cfinput type="text" name="start_month" value="#two(month(now()))#" class="number" required="yes" validate="integer">&nbsp;</td>
-									<td><cfinput type="text" name="start_year" value="#two(year(now()))#" class="number" required="yes" validate="integer">&nbsp;</td>
+									<td><cfinput type="text" name="start_day" value="#two(day(now()))#" class="number input-mini" required="yes" validate="integer">&nbsp;</td>
+									<td><cfinput type="text" name="start_month" value="#two(month(now()))#" class="number input-mini" required="yes" validate="integer">&nbsp;</td>
+									<td><cfinput type="text" name="start_year" value="#two(year(now()))#" class="number input-mini" required="yes" validate="integer">&nbsp;</td>
 								</tr>
 							</tbody>
 						</table>
@@ -323,9 +323,9 @@ Redirtect to entry --->
 							</thead>
 							<tbody>
 								<tr>
-									<td><cfinput type="text" name="start_hour" value="00" class="number" required="yes" validate="integer">&nbsp;</td>
-									<td><cfinput type="text" name="start_minute" value="00" class="number" required="yes" validate="integer">&nbsp;</td>
-									<td><cfinput type="text" name="start_second" value="00" class="number" required="yes" validate="integer">&nbsp;</td>
+									<td><cfinput type="text" name="start_hour" value="00" class="number input-mini" required="yes" validate="integer">&nbsp;</td>
+									<td><cfinput type="text" name="start_minute" value="00" class="number input-mini" required="yes" validate="integer">&nbsp;</td>
+									<td><cfinput type="text" name="start_second" value="00" class="number input-mini" required="yes" validate="integer">&nbsp;</td>
 								</tr>
 							</tbody>
 						</table>

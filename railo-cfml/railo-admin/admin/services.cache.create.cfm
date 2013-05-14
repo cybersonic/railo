@@ -170,19 +170,19 @@ Redirtect to entry --->
 										<tr>
 											<td><cfinput type="text" 
 												name="custompart_d_#field.getName()#" 
-												value="#addZero(d)#" class="number" required="#field.getRequired()#"   validate="integer"
+												value="#addZero(d)#" class="number input-mini" required="#field.getRequired()#"   validate="integer"
 												message="Missing value for field #field.getDisplayName()#"></td>
 											<td><cfinput type="text" 
 												name="custompart_h_#field.getName()#" 
-												value="#addZero(h)#" class="number" required="#field.getRequired()#"  maxlength="2"  validate="integer"
+												value="#addZero(h)#" class="number input-mini" required="#field.getRequired()#"  maxlength="2"  validate="integer"
 												message="Missing value for field #field.getDisplayName()#"></td>
 											<td><cfinput type="text" 
 												name="custompart_m_#field.getName()#" 
-												value="#addZero(m)#" class="number" required="#field.getRequired()#"  maxlength="2" validate="integer" 
+												value="#addZero(m)#" class="number input-mini" required="#field.getRequired()#"  maxlength="2" validate="integer" 
 												message="Missing value for field #field.getDisplayName()#"></td>
 											<td><cfinput type="text" 
 												name="custompart_s_#field.getName()#" 
-												value="#addZero(s)#" class="number" required="#field.getRequired()#"  maxlength="2"  validate="integer"
+												value="#addZero(s)#" class="number input-mini" required="#field.getRequired()#"  maxlength="2"  validate="integer"
 												message="Missing value for field #field.getDisplayName()#"></td>
 										</tr>
 									</tbody>

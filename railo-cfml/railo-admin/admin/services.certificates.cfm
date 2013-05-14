@@ -72,7 +72,7 @@ Error Output --->
 				<tr>
 					<th scope="row">#stText.services.certificate.port#</th>
 					<td>
-						<cfinput type="text" name="port" value="#_port#" class="number" required="yes" validate="integer"><br />
+						<cfinput type="text" name="port" value="#_port#" class="number input-mini" required="yes" validate="integer"><br />
 						<div class="muted">#stText.services.certificate.portDesc#</div>
 					</td>
 				</tr>
@@ -83,7 +83,7 @@ Error Output --->
 						<input class="button submit btn btn-primary" type="submit" name="mainAction" value="#stText.services.certificate.list#">
 						<input class="button submit btn btn-primary" type="submit" name="mainAction" value="#stText.services.certificate.install#">
 						<input class="button reset btn" type="reset" name="cancel" value="#stText.Buttons.Cancel#">
-						<cfif request.adminType EQ "web"><input class="button submit btn btn-primary" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#"></cfif>
+						<cfif request.adminType EQ "web"><input class="button submit btn" type="submit" name="mainAction" value="#stText.Buttons.resetServerAdmin#"></cfif>
 					</td>
 				</tr>
 			</tfoot>

@@ -232,7 +232,7 @@ Defaults --->
 					<th scope="row">#stText.Mail.SpoolInterval#</th>
 					<td>
 						<cfif hasAccess>
-							<cfinput type="text" name="spoolInterval" value="#mail.spoolInterval#" validate="integer" class="number" required="no">
+							<cfinput type="text" name="spoolInterval" value="#mail.spoolInterval#" validate="integer" class="number input-mini" required="no">
 						<cfelse>
 							<b>#mail.spoolInterval#</b>
 						</cfif>
@@ -242,7 +242,7 @@ Defaults --->
 					<th scope="row">#stText.Mail.Timeout#</th>
 					<td>
 						<cfif hasAccess>
-							<cfinput type="text" name="timeout" value="#mail.timeout#" validate="integer" class="number" required="no">
+							<cfinput type="text" name="timeout" value="#mail.timeout#" validate="integer" class="number input-mini" required="no">
 						<cfelse>
 							<b>#mail.timeout#</b>
 						</cfif>
@@ -259,7 +259,7 @@ Defaults --->
 							<input type="hidden" name="mainAction" value="#stText.Buttons.Setting#">
 							<input type="submit" class="button submit btn btn-primary" name="_mainAction" value="#stText.Buttons.Update#">
 							<input type="reset" class="reset btn" name="canel" value="#stText.Buttons.Cancel#">
-							<cfif request.adminType EQ "web"><input class="button submit btn btn-primary" type="submit" name="_mainAction" value="#stText.Buttons.resetServerAdmin#"></cfif>
+							<cfif request.adminType EQ "web"><input class="button submit btn" type="submit" name="_mainAction" value="#stText.Buttons.resetServerAdmin#"></cfif>
 						</cfoutput></td>
 					</tr>
 				</tfoot>
