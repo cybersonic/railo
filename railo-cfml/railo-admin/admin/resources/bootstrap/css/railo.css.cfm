@@ -231,3 +231,41 @@ Lists
 	padding-left:10px;
 }
 
+
+/* module Extensions > Applications */
+/* extensions overview */
+.extensionlist {
+	margin-bottom: 20px;
+}
+.extensionthumb {
+	width:140px;
+	height:100px;
+	overflow: hidden;
+	margin:5px 5px 0px 0px;
+	float:left;
+	text-align:center;
+}
+.extensionthumb a {
+	display:block;
+	padding:2px;
+	height: 94px;
+	text-decoration:none !important;
+	border: 1px solid #E0E0E0;
+}
+.extensionthumb a:hover {
+	background-color:#f8f8f8;
+	border-color: #007bb7;
+}
+.extimg {
+	height:50px;
+}
+/* install extension*/
+textarea.licensetext {
+	height:200px;
+	width:100%;
+	font-family:"Courier New",Courier,monospace;
+	font-size : 8pt;
+	color:##595F73;
+	border: 1px solid #666;
+}
+
