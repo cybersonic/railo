@@ -3,53 +3,44 @@
 <cfparam name="languages" default="#{en:'English',de:'Deutsch'}#">
 
 <cfoutput>
-	<cfform name="login" action="#request.self#" method="post"><!--- onerror="customError"--->
-		<table class="maintbl" style="width:300px">
-			<tbody> 
-				<tr>
-					<th scope="row" class="right" nowrap="nowrap">#stText.Login.Password#</th>
-					<td><cfinput type="password" name="new_password" value="" passthrough='autocomplete="off"'
-						class="xlarge" required="yes" message="#stText.Login.PasswordMissing#" />
-					</td>
-				</tr>
-				<tr>
-					<th scope="row" class="right" nowrap="nowrap">#stText.Login.RetypePassword#</th>
-					<td><cfinput type="password" name="new_password_re" value="" passthrough='autocomplete="off"'
-						class="xlarge" required="yes" message="#stText.Login.RetypePasswordMissing#" />
-					</td>
-				</tr>
-				<cfset f="">
-				<cfloop collection="#languages#" item="key">
-					<cfif f EQ "" or key EQ session.railo_admin_lang>
-						<cfset f=key>
-					</cfif>
+	
+	<cfform name="login" action="#request.self#" method="post" class="form-signin"><!--- onerror="customError"--->
+		<h2 class="form-signin-heading">New Password</h2>
+		
+		<!--- Password  --->
+		<cfinput type="password" name="new_password" value="" passthrough='autocomplete="off"'
+			class="xlarge" required="yes" message="#stText.Login.PasswordMissing#" placeholder="#stText.Login.Password#" />
+		
+		<!--- Password Confirm --->
+		<cfinput type="password" name="new_password_re" value="" passthrough='autocomplete="off"'
+			class="xlarge" required="yes" message="#stText.Login.RetypePasswordMissing#" placeholder="#stText.Login.RetypePassword#" />
+				
+		<!--- Language  --->
+		<div>
+		 <label>#stText.Login.language# </label>
+			<cfset aLangKeys = structKeyArray(languages)>
+			<cfset arraySort(aLangKeys, "text")>
+
+			<select name="lang" class="medium">
+				<cfloop from="1" to="#arrayLen(aLangKeys)#" index="iKey">
+					<cfset key = aLangKeys[iKey]>
+					<option value="#key#" <cfif key EQ session.railo_admin_lang>selected</cfif>>#languages[key]#</option>
 				</cfloop>
-				<tr>
-					<th scope="row" class="right" nowrap="nowrap">#stText.Login.language#</th>
-					<td>
-						<select name="lang" class="xlarge"><!--- onchange="changePic(this.options[this.selectedIndex].value)"--->
-							<cfloop collection="#languages#" item="key">
-								<option value="#key#" <cfif key EQ session.railo_admin_lang>selected</cfif>>#languages[key]#</option>
-							</cfloop>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<th scope="row" class="right" nowrap="nowrap">#stText.Login.rememberMe#</th>
-					<td>
-						<select name="rememberMe" class="xlarge">
-							<cfloop list="s,d,ww,m,yyyy" index="i">
-								<option value="#i#"<cfif i eq form.rememberMe> selected</cfif>>#stText.Login[i]#</option>
-							</cfloop>
-						</select>
-					</td>
-				</tr>
-			</tbody>
-			<tfoot>
-				<tr>
-					<td colspan="2" class="right"><input class="button submit" type="submit" name="submit" value="#stText.Buttons.Submit#"></td>
-				</tr>
-			</tfoot>
-		</table>
+			</select>
+		</div>
+
+		<!--- RememberMe --->
+		<label>#stText.Login.rememberMe#</label>
+	
+			<select name="rememberMe" class="medium">
+				<cfloop list="s,d,ww,m,yyyy" index="i">
+					<option value="#i#"<cfif i eq form.rememberMe> selected</cfif>>#stText.Login[i]#</option>
+				</cfloop>
+			</select>
+        </label>
+		
+		<div>
+        <input class="button submit btn btn-large btn-primary" type="submit" name="submit" value="#stText.Buttons.Submit#">
+		</div>
 	</cfform>
 </cfoutput>
