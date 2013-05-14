@@ -96,6 +96,7 @@ Error Output --->
 	
 					<div class="progress" title="#pfree#% available (#round((usage.max-usage.used)/1024/1024)#mb), #pused#% in use (#round(usage.used/1024/1024)#mb)">
 					  <div class="bar bar-danger" style="width: #pused#%; color:black;">#pused#%</div>
+					  <div class="bar bar-success" style="width: #pfree#%;"></div>
 					</div>
 	
 	
@@ -181,7 +182,7 @@ Error Output --->
 		
 		<div class="warning nofocus  alert alert-error">
 			<button type="button" class="close" data-dismiss="alert">&times;</button>
-			There is no Java Agent defined in this enviroment. 
+			There is no Java Agent defined in this environment. 
 			The Java Agent is needed to improve memory (PermGen Space) consumption for templates.
 			To enable the Java Agent follow this instructions:
 			<!---There are 2 ways to provide the Java Agent functionality:--->
